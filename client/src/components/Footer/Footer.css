@@ -1,0 +1,42 @@
+/*-----------------------------------------------
+| Footer                                         |
+------------------------------------------------*/
+
+.footer {
+  background: #2c3840;
+  color: #8aa0ae;
+  margin-top: 2.5%;
+  bottom:0;
+  width:100%;
+}
+
+@media screen and (max-width: 39.9375em) {
+  .footer .columns {
+    margin-bottom: 2rem;
+  }
+}
+
+
+.footer-bottom {
+  background: #020304;
+  padding: 1rem 0;
+}
+
+.footer-bottom p {
+  margin-bottom: 0;
+}
+
+
+@media screen and (max-width: 63.9375em) {
+  .footer-bottom .footer-bottom-links {
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (max-width: 63.9375em) {
+  .footer-bottom {
+    text-align: center;
+  }
+}
