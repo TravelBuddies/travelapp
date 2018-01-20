@@ -20,5 +20,14 @@ export default {
   getFlights: function () {
     return axios.get("/api/flights");
   },
+  getInspirationFlights: function() {
+    return axios.get("/api/inspirationflights");    
+  },
+  getCars: function () {
+    return axios.get("/api/cars");
+  },
+  getHotels: function () {
+    return axios.get("/api/hotels");
+  },
 
 };

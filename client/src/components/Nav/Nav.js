@@ -53,16 +53,16 @@ const Nav = () =>
       <span data-responsive-toggle="topbar-responsive" data-hide-for="medium">
         <button className="menu-icon" type="button" data-toggle></button>
       </span>
-      <a className="topbar-responsive-logo" href="#"><strong>Travelapp</strong></a>
+      <a className="topbar-responsive-logo" href="/"><strong>Travelapp</strong></a>
     </div>
     <div id="topbar-responsive" className="topbar-responsive-links">
       <div className="top-bar-right">
         <ul className="menu simple vertical medium-horizontal">
-          <li><a href="#">Flight</a></li>
-          <li><a href="#">Hotel</a></li>
-          <li><a href="#">Car</a></li>
-          <li><a href="#">Packages</a></li>
-          <li><a href="#">Inspire</a></li>
+          <li><a href="/">Flight</a></li>
+          <li><a href="/">Hotel</a></li>
+          <li><a href="/">Car</a></li>
+          <li><a href="/">Packages</a></li>
+          <li><a href="/">Inspire</a></li>
           <li>
             <button type="button" className="button hollow topbar-responsive-button">Account</button>
           </li>
