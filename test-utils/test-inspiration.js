@@ -14,6 +14,7 @@ API.getInspiration(params)
  .then(function (body) {
 	
 	var data = JSON.parse(body)
+	// console.log(data)
 
 	// ****************************** Flight Inspiration Search API ***************************
 // var flightInspirationUrl = 'https://api.sandbox.amadeus.com/v1.2/flights/inspiration-search?apikey=FnGOGF06PziG0dMUdXc9cXJbWDwAgurZ&departure_date=2018-03-12--2018-03-23&origin=SFO'
@@ -29,12 +30,12 @@ API.getInspiration(params)
 // These variables only display one ticket. We will have to create a for loop to data.results to display multiple results
 	
 	// Departure Airport
-// 	var departAirport = data.origin
-//   // console.log(departAirport);
+	var departAirport = data.origin
+  console.log(departAirport);
 
 //   // Departure Date
-//   var departDate = data.results[0].departure_date
-//   // console.log(departDate);
+  var departDate = data.results[0].departure_date
+  console.log(departDate);
   
 //   // Arrival Airport
 //   var arrivalAirport = data.results[0].destination
@@ -53,4 +54,4 @@ API.getInspiration(params)
 //   // console.log(airline);
 
 
-}
+})

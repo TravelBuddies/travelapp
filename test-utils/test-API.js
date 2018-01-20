@@ -11,11 +11,11 @@ var API = {
 	getFlight: function(params) {
 		var key = 'FnGOGF06PziG0dMUdXc9cXJbWDwAgurZ'
 		return rp('https://api.sandbox.amadeus.com/v1.2/flights/low-fare-search?apikey=' + key + '&origin=' + params.origin + '&destination=' +params.dest + '&travel_class=' + params.travClass + '&departure_date=' + params.depart + '&return_date=' + params.returns + '&number_of_results=' +  params.numResult)
-	}
+	},
 
 	getInspiration: function(params) {
 		var key = 'FnGOGF06PziG0dMUdXc9cXJbWDwAgurZ'
-		return rp('https://api.sandbox.amadeus.com/v1.2/flights/low-fare-search?apikey=' + key + '&origin=' + params.origin + '&destination=' +params.dest + '&travel_class=' + params.travClass + '&departure_date=' + params.depart + '&return_date=' + params.returns + '&number_of_results=' +  params.numResult)
+		return rp('https://api.sandbox.amadeus.com/v1.2/flights/inspiration-search?apikey=' + key + '&departure_date=' + params.depart + '--' + params.returns + '&origin=' + params.origin)
 	}
 		
 
