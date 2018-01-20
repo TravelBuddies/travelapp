@@ -10,185 +10,20 @@ var API = {
 	
 	getFlight: function(params) {
 		var key = 'FnGOGF06PziG0dMUdXc9cXJbWDwAgurZ'
-		
-			return rp('https://api.sandbox.amadeus.com/v1.2/flights/low-fare-search?apikey=' + key + '&origin=' + params.origin + '&destination=' +params.dest + '&travel_class=' + params.travClass + '&departure_date=' + params.depart + '&return_date=' + params.returns + '&number_of_results=' +  params.numResult)
-
+		return rp('https://api.sandbox.amadeus.com/v1.2/flights/low-fare-search?apikey=' + key + '&origin=' + params.origin + '&destination=' +params.dest + '&travel_class=' + params.travClass + '&departure_date=' + params.depart + '&return_date=' + params.returns + '&number_of_results=' +  params.numResult)
 	}
+
+	getInspiration: function(params) {
+		var key = 'FnGOGF06PziG0dMUdXc9cXJbWDwAgurZ'
+		return rp('https://api.sandbox.amadeus.com/v1.2/flights/low-fare-search?apikey=' + key + '&origin=' + params.origin + '&destination=' +params.dest + '&travel_class=' + params.travClass + '&departure_date=' + params.depart + '&return_date=' + params.returns + '&number_of_results=' +  params.numResult)
+	}
+		
+
 }
 
 
 module.exports = API;
 
-// ****************************** Flight Extensive Search API ****************************
-// var flightUrl = 'https://api.sandbox.amadeus.com/v1.2/flights/low-fare-search?apikey=FnGOGF06PziG0dMUdXc9cXJbWDwAgurZ&origin=SFO&destination=JFK&travel_class=ECONOMY&departure_date=2018-03-12&return_date=2018-03-23&number_of_results=2'; 
-
-// request(flightUrl, function (error, response, body) {
-//   console.log('error:', error); // Print the error if one occurred
-//   console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
-//   var data = JSON.parse(body)
-  
-//   ****************** OUTBOUND FLIGHT DEPARTURE AND ARRIVAL ***********************
-//   These variables only display one round trip ticket. We will have to create a for loop to data.results to display multiple round trip results
-
-//   Flight Departure Info ************************
-  
-//   Date and Time
-//   var outDepartDateTime = data.results[0].itineraries[0].outbound.flights[0].departs_at
-//   // console.log(outDepartDateTime);
-  
-//   // Airport
-//   var outDepartAirport = data.results[0].itineraries[0].outbound.flights[0].origin.airport
-//   // console.log(outDepartAirport);
-  
-//   // Terminal
-//   var outDepartTerminal = data.results[0].itineraries[0].outbound.flights[0].origin.terminal
-//   // console.log(outDepartTerminal);
-  
-//   // Flight Number
-//   var outDepartFlightNum = data.results[0].itineraries[0].outbound.flights[0].flight_number
-//   // console.log(outDepartFlightNum);
-  
-//   // Airline
-//   var outAirline = data.results[0].itineraries[0].outbound.flights[0].operating_airline
-//   // console.log(outAirline);
-  
-//   // Aircraft
-//   var outAircraft = data.results[0].itineraries[0].outbound.flights[0].aircraft
-//   // console.log(outAircraft);
-  
-//   // Travel Class
-//   var outTravelClass = data.results[0].itineraries[0].outbound.flights[0].booking_info.travel_class
-//   // console.log(outTravelClass);
-  
-//   // Seats Remaining
-//   var outSeatsRemain = data.results[0].itineraries[0].outbound.flights[0].booking_info.seats_remaining
-//   // console.log(outSeatsRemain);
-
-//   // Flight Arrival Info ***************************
-  
-//   // Date and Time
-//   var outArriveDateTime = data.results[0].itineraries[0].outbound.flights[0].arrives_at
-//   // console.log(outArriveDateTime);
-  
-//   // Airport
-//   var outArriveAirport = data.results[0].itineraries[0].outbound.flights[0].destination.airport
-//   // console.log(outArriveAirport);
-  
-//   // Terminal
-//   var outArriveTerminal = data.results[0].itineraries[0].outbound.flights[0].destination.terminal
-//   // console.log(outArriveTerminal);
-
- 
-//   // ****************** INBOUND FLIGHT DEPARTURE AND ARRIVAL ***********************
- 
-
-//   // Flight Departure Info ************************
-  
-//   // Date and Time
-//   var inDepartDateTime = data.results[0].itineraries[0].inbound.flights[0].departs_at
-//   // console.log(inDepartDateTime);
-  
-//   // Airport
-//   var inDepartAirport = data.results[0].itineraries[0].inbound.flights[0].origin.airport
-//   // console.log(inDepartAirport);
-  
-//   // Terminal
-//   var inDepartTerminal = data.results[0].itineraries[0].inbound.flights[0].origin.terminal
-//   // console.log(inDepartTerminal);
-  
-//   // Flight Number
-//   var inDepartFlightNum = data.results[0].itineraries[0].inbound.flights[0].flight_number
-//   // console.log(inDepartFlightNum);
-  
-//   // Airline
-//   var inAirline = data.results[0].itineraries[0].inbound.flights[0].operating_airline
-//   // console.log(inAirline);
-  
-//   // Aircraft
-//   var inAircraft = data.results[0].itineraries[0].inbound.flights[0].aircraft
-//   // console.log(inAircraft);
-  
-//   // Travel Class
-//   var inTravelClass = data.results[0].itineraries[0].inbound.flights[0].booking_info.travel_class
-//   // console.log(inTravelClass);
-  
-//   // Seats Remaining
-//   var inSeatsRemain = data.results[0].itineraries[0].inbound.flights[0].booking_info.seats_remaining
-//   // console.log(inSeatsRemain);
-
-//   // Flight Arrival Info ***************************
-  
-//   // Date and Time
-//   var inArriveDateTime = data.results[0].itineraries[0].inbound.flights[0].arrives_at
-//   // console.log(inArriveDateTime);
-  
-//   // Airport
-//   var inArriveAirport = data.results[0].itineraries[0].inbound.flights[0].destination.airport
-//   // console.log(inArriveAirport);
-  
-//   // Terminal
-//   var inArriveTerminal = data.results[0].itineraries[0].inbound.flights[0].destination.terminal
-//   // console.log(inArriveTerminal);
-
-
-//   // ********************************* ROUND TRIP FLIGHT FARES *******************************
-  
-//   // Round Trip Price
-//   var rtPrice = data.results[0].fare.total_price
-//   // console.log(rtPrice)
-  
-//   // Tax
-//   var rtTax = data.results[0].fare.price_per_adult.tax
-//   // console.log(rtTax)
-  
-//   // var rtTotal = (Boolean(rtPrice) + Boolean(rtTax))
-//   // console.log(rtTotal)
-  
-//   // Refundable
-//   var rtRefund = data.results[0].fare.restrictions.refundable
-//   // console.log(rtRefund)
-
-// });
-
-
-// ****************************** Flight Inspiration Search API ***************************
-// var flightInspirationUrl = 'https://api.sandbox.amadeus.com/v1.2/flights/inspiration-search?apikey=FnGOGF06PziG0dMUdXc9cXJbWDwAgurZ&departure_date=2018-03-12--2018-03-23&origin=SFO'
-
-// request(flightInspirationUrl, function (error, response, body) {
-//   console.log('error:', error); // Print the error if one occurred
-//   console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
-//   var data = JSON.parse(body)
-
-  // console.log(data)
-
-// ******************************* ONE WAY FLIGHT ********************************
-// These variables only display one ticket. We will have to create a for loop to data.results to display multiple results
-	
-	// Departure Airport
-// 	var departAirport = data.origin
-//   // console.log(departAirport);
-
-//   // Departure Date
-//   var departDate = data.results[0].departure_date
-//   // console.log(departDate);
-  
-//   // Arrival Airport
-//   var arrivalAirport = data.results[0].destination
-//   // console.log(arrivalAirport);
-
-//   // Return Date
-//   var returnDate = data.results[0].return_date
-//   // console.log(returnDate);
-
-//   // Price
-//   var price = data.results[0].price
-//   // console.log(price);
-
-//   // Airline
-//   var airline = data.results[0].airline
-//   // console.log(airline);
-
-// });
 
 
 // ******************************* Hotel Airport Search API ********************************
