@@ -3,11 +3,8 @@ var API = require("./test-API")
 
 var params = {
 		origin : 'SFO',
-		dest :'JFK',
-		travClass :'ECONOMY',
 		depart :'2018-03-12',
-		returns :'2018-03-23',
-		numResult :'2'
+		returns :'2018-03-23'
 }
 
 API.getInspiration(params)
@@ -37,21 +34,21 @@ API.getInspiration(params)
   var departDate = data.results[0].departure_date
   console.log(departDate);
   
-//   // Arrival Airport
-//   var arrivalAirport = data.results[0].destination
-//   // console.log(arrivalAirport);
+  // Arrival Airport
+  var arrivalAirport = data.results[0].destination
+  console.log(arrivalAirport);
 
-//   // Return Date
-//   var returnDate = data.results[0].return_date
-//   // console.log(returnDate);
+  // Return Date
+  var returnDate = data.results[0].return_date
+  console.log(returnDate);
 
-//   // Price
-//   var price = data.results[0].price
-//   // console.log(price);
+  // Price
+  var price = data.results[0].price
+  console.log(price);
 
-//   // Airline
-//   var airline = data.results[0].airline
-//   // console.log(airline);
+  // Airline
+  var airline = data.results[0].airline
+  console.log(airline);
 
 
 })
