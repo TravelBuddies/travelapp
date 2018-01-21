@@ -1,5 +1,6 @@
 import axios from "axios";
 
+
 export default {
   // Gets all books
   // getBooks: function() {
@@ -20,5 +21,41 @@ export default {
   getFlights: function () {
     return axios.get('https://api.sandbox.amadeus.com/v1.2/flights/low-fare-search?apikey=FnGOGF06PziG0dMUdXc9cXJbWDwAgurZ&origin=SFO&destination=JFK&travel_class=ECONOMY&departure_date=2018-03-12&return_date=2018-03-23&number_of_results=2');
   },
+  getInspirationFlights: function() {
+    return axios.get("/api/inspirationflights");    
+  },
+  getCars: function () {
+    return axios.get("/api/cars");
+  },
+  getHotels: function () {
+    return axios.get("/api/hotels");
+  },
 
 };
+
+// import axios from 'axios'
+
+// export default {
+
+//   // Gets all users
+//   getUsers: () => (axios.get('/users')),
+
+//   // Gets all conversations
+//   getConversations: () => (axios.get('/conversations')),
+
+//   // Gets the conversation with the given id
+//   getConversation: id => (axios.get(`/conversations/${id}`)),
+
+//   // Saves a book to the database
+//   createConversation: convo => (axios.post('/conversations', convo)),
+
+//   // Saves a book to the database
+//   saveMessage: msg => (axios.post('/messages', msg)),
+
+//   signup: credentials => (axios.post('/signup', credentials)),
+
+//   login: credentials => (axios.post('/login', credentials)),
+
+//   checkForSession: credentials => (axios.get('/session')),
+
+// }

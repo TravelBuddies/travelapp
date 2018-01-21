@@ -1,0 +1,115 @@
+/*-----------------------------------------------
+| Hero Section                                  |
+------------------------------------------------*/
+
+.hero-section {
+  background: url("pointing.jpeg") 50% no-repeat;
+  background-size: cover;
+  height: 70vh;
+  text-align: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.hero-section .hero-section-text {
+  color: #fefefe;
+  text-shadow: 1px 1px 2px #0a0a0a;
+  margin: 0 15% 10% 7.5%;
+}
+
+#toggle {
+  display: none;
+}
+
+.callout {
+  background-color: rgba(54, 54, 54, 0.5);
+}
+
+.floated-label-wrapper {
+  position: relative;
+}
+
+.floated-label-wrapper label {
+  background-color: white;
+  color: #FBA100;
+  font-size: 0.75rem;
+  font-weight: 600;
+  left: 0.75rem;
+  opacity: 0;
+  padding: 0 0.25rem;
+  position: absolute;
+  top: 2rem;
+  transition: all 0.15s ease-in;
+  z-index: -1;
+}
+
+.floated-label-wrapper label input[type=text],
+.floated-label-wrapper label input[type=email],
+.floated-label-wrapper label input[type=password] {
+  border-radius: 4px;
+  font-size: 3em;
+  padding: 0.5em;
+}
+
+.floated-label-wrapper label.show {
+  opacity: 1;
+  top: -0.85rem;
+  z-index: 1;
+  transition: all 0.15s ease-in;
+}
+
+.translucent-form-overlay {
+  max-width: 300px;
+  width: 100%;
+  background-color: rgba(54, 54, 54, 0.5);
+  padding: 20px;
+  color: #fefefe;
+  float: left;
+  margin-bottom: 10%;
+}
+
+#rememberMe{
+  float: left;
+}
+
+#logInButton {
+  width: 45%;
+  float: right;
+  margin-bottom: 0;
+}
+
+.rememberLabel {
+  margin: 0 !important;
+}
+
+#register {
+  margin-top: 65px;
+  margin-bottom: 0 !important;
+}
+
+.translucent-form-overlay .columns.row {
+  display: block;
+}
+
+.translucent-form-overlay input, .translucent-form-overlay select {
+  color: #6C648B;
+}
+
+.translucent-form-overlay input::-webkit-input-placeholder {
+  color: #8a8a8a;
+}
+
+.translucent-form-overlay input:-ms-input-placeholder {
+  color: #8a8a8a;
+}
+
+.translucent-form-overlay input::placeholder {
+  color: #8a8a8a;
+}
