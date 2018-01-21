@@ -1,10 +1,14 @@
 var API = require("./test-API")
-// var axios = require("axios")
+
 
 var params = {
 		origin : 'SFO',
+		dest :'JFK',
+		travClass :'ECONOMY',
+    // depart and return param's date structure is YYYY-MM-DD. 2018-01-18 is good. 2018-1-18 will break.
 		depart :'2018-03-12',
-		returns :'2018-03-23'
+		returns :'2018-03-23',
+		numResult :'2'
 }
 
 API.getInspiration(params)
@@ -14,14 +18,7 @@ API.getInspiration(params)
 	// console.log(data)
 
 	// ****************************** Flight Inspiration Search API ***************************
-// var flightInspirationUrl = 'https://api.sandbox.amadeus.com/v1.2/flights/inspiration-search?apikey=FnGOGF06PziG0dMUdXc9cXJbWDwAgurZ&departure_date=2018-03-12--2018-03-23&origin=SFO'
 
-// request(flightInspirationUrl, function (error, response, body) {
-//   console.log('error:', error); // Print the error if one occurred
-//   console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
-//   var data = JSON.parse(body)
-
-  // console.log(data)
 
 // ******************************* ONE WAY FLIGHT ********************************
 // These variables only display one ticket. We will have to create a for loop to data.results to display multiple results

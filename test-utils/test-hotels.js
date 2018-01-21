@@ -1,11 +1,11 @@
 var API = require("./test-API")
-// var axios = require("axios")
+
 
 var params = {
 		origin : 'SFO',
 		dest :'JFK',
 		travClass :'ECONOMY',
-    // depart and return param's date structure. 2018-01-18 is good. 2018-1-18 will break.
+    // depart and return param's date structure is YYYY-MM-DD. 2018-01-18 is good. 2018-1-18 will break.
 		depart :'2018-03-12',
 		returns :'2018-03-23',
 		numResult :'2'
