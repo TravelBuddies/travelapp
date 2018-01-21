@@ -4,12 +4,11 @@ import { Input, TextArea, FormBtn } from "../../components/Form";
 import API from "../../utils/API";
 
 import 'react-dates/initialize';
-import{ DateRangePicker } from 'react-dates';
+import { DateRangePicker } from 'react-dates';
 import 'react-dates/lib/css/_datepicker.css';
 
 import Nav from "../../components/Nav";
 import Hero from "../../components/Hero";
-// import Cars from "../..components/Cars";
 import Contact from "../../components/Contact";
 import Footer from "../../components/Footer";
 

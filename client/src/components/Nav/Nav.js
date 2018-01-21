@@ -17,7 +17,7 @@ const Nav = () =>
           <li><a href="/hotels">Hotel</a></li>
           <li><a href="/cars">Car</a></li>
           <li><a href="/packages">Packages</a></li>
-          <li><a href="#">Inspire</a></li>
+          <li><a href="/Inspire">Inspire</a></li>
           <li>
             <button type="button" class="button hollow topbar-responsive-button">Account</button>
           </li>
