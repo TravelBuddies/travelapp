@@ -9,49 +9,15 @@ import 'react-dates/lib/css/_datepicker.css';
 
 import Nav from "../../components/Nav";
 import Hero from "../../components/Hero";
-// import Hotels from "../..components/Hotels";
+// import Packages from "../..components/Packages";
 import Contact from "../../components/Contact";
 import Footer from "../../components/Footer";
 
 
-class Hotels extends Component {
+class Packages extends Component {
   state = {
-  	hotels: [],
-  	location: "",
-    check_in: "",
-    check_out: ""
-  };
-
-  componentDidMount() {
-    this.loadHotels();
-  };
-
-  loadHotels = () => {
-    API.getHotels()
-      .then(res =>
-        this.setState({ hotels: res.data })
-      )
-      .catch(err => console.log(err));
-  };
-
-  handleInputChange = event => {
-    const { name, value } = event.target;
-    this.setState({
-      [name]: value
-    });
-  };
-
-  handleFormSubmit = event => {
-    event.preventDefault();
-    if (this.state.location && this.state.check_in && this.state.check_out) {
-      API.getFlights({
-        location: this.state.location,
-        check_in: this.state.startDate,
-        check_out: this.state.endDate
-      })
-        .then(res => this.loadHotels())
-        .catch(err => console.log(err));
-    }
+    Packages: [],
+  // update here if any form details that are needed to be empty.
   };
 
 
@@ -60,20 +26,19 @@ render() {
 		<section className="row columns">
 	    <div className="hero-section">
 	      <div className="hero-section-text">
-	        <h1>Hotels</h1>
-	        <h5>Need a Place to Stay?</h5>
+	        <h1>Packages</h1>
+	        <h5>Check out some of our packages. These are perfect for people who want to get away but don't want the hassle of planning.</h5>
 	      </div>
 	      <div className="translucent-form-overlay">
 	        <form>
 	          <div className="row columns"></div>
-	          <div className="floated-label-wrapper">	            
-	            <Input 
-	            	value={this.state.location}
-	            	onChange={this.handleInputChange} 
-	            	id="hotel" 
-	            	name="location" 
-	            	placeholder="City" 
-	            />
+	          <div className="floated-label-wrapper">
+	            <label for="takeoff">Start Airport</label>
+	            <input type="text" id="takeoff" name="takeoff input" placeholder="Departure Airport" /> 
+	          </div>
+	          <div className="floated-label-wrapper">
+	            <label for="destination">Destination</label>
+	            <input type="text" id="destination" name="destination input" placeholder="Destination" />
 	          </div>
 	          <div className="floated-label-wrapper">
 	          <DateRangePicker
@@ -101,4 +66,4 @@ render() {
 
 }
 
-export default Hotels;
+export default Packages;
