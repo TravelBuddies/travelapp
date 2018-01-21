@@ -24,7 +24,6 @@
     "express": "^4.15.4",
     "mongoose": "^4.11.7",
     "react-material-navbar": "^1.2.0",
-    "request-promise": "^4.2.2",
-    "swagger-client": "^3.4.5"
+    "request-promise": "^4.2.2"
   }
 }
