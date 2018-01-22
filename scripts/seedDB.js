@@ -20,7 +20,7 @@ const userSeed = [
     address: '601 Van Ness',
     city: 'San Francisco',
     state: 'CA',
-    zipcode: 'CA',
+    zipcode: '94102',
     phoneNumber: '408-656-0312',
     paymentMethod: '',
     date: "2018-01-21"
