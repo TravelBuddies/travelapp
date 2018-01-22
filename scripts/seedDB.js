@@ -1,27 +1,42 @@
-// const mongoose = require("mongoose");
-// const db = require("../models");
-// mongoose.Promise = global.Promise;
+const mongoose = require("mongoose");
+const db = require("../models");
+mongoose.Promise = global.Promise;
 
-// // This file empties the Books collection and inserts the books below
+// This file empties the Books collection and inserts the books below
 
-// mongoose.connect(
-//   process.env.MONGODB_URI || "mongodb://localhost/travelbuddy",
-//   {
-//     useMongoClient: true
-//   }
-// );
+mongoose.connect(
+  process.env.MONGODB_URI || "mongodb://localhost/userinfo",
+  {
+    useMongoClient: true
+  }
+);
 
-// const bookSeed = [
-//   {
-//     firstName: "Jake",
-//     lastName: "Chaplin",
-//     password: "1234",
-//     address: '601 Van Ness',
-//     city: 'San Francisco',
-//     state: 'CA',
-//     zipcode: 'CA',
-//     phoneNumber: { type: String, required: true }
-//   }
+const userSeed = [
+  {
+    username: "jake7",
+    firstName: "Jake",
+    lastName: "Chaplin",
+    password: "1234",
+    address: '601 Van Ness',
+    city: 'San Francisco',
+    state: 'CA',
+    zipcode: 'CA',
+    phoneNumber: '408-656-0312',
+    paymentMethod: '',
+    date: "2018-01-21"
+  }
+
+db.User
+  .remove({})
+  .then(() => db.User.collection.insertMany(userSeed))
+  .then(data => {
+    console.log(data.insertedIds.length + " records inserted!");
+    process.exit(0);
+  })
+  .catch(err => {
+    console.error(err);
+    process.exit(1);
+  });
 
 // const mongoose = require("mongoose");
 // const db = require("../models");

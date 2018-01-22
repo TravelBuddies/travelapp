@@ -2,6 +2,7 @@ const mongoose = require("mongoose");
 const Schema = mongoose.Schema;
 
 const userSchema = new Schema({
+  username: { type: String, required: true },
   firstName: { type: String, required: true },
   lastName: { type: String, required: true },
   password: { type: String, required: true },
@@ -11,7 +12,7 @@ const userSchema = new Schema({
   zipcode: { type: String, required: true },
   phoneNumber: { type: String, required: true },
   paymentMethod: String,
-  date: { type: Date, default: Date.now }
+  userCreated: { type: Date, default: Date.now }
 });
 
 const User = mongoose.model("User", userSchema);
