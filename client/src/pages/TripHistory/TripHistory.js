@@ -14,9 +14,9 @@ import { List, ListItem } from "../../components/List";
 // import Contact from "../../components/Contact";
 // import Footer from "../../components/Footer";
 
-class User extends Component {
+class TripHistory extends Component {
   state = {
-    User: []
+    TripHistory: []
     // username: "",
     // firstName: "",
     // lastName: "",
@@ -31,14 +31,14 @@ class User extends Component {
   };
 
   componentDidMount() {
-    this.loadUser();
+    this.loadTrips();
   }
 
-  loadUser = () => {
-    API.getUser()
+  loadTrips = () => {
+    API.getTripHistory()
       .then(res =>
         this.setState({ 
-          User: res.data }))
+          TripHistory: res.data }))
 
   //         // username: "",
   //         // firstName: "",
@@ -85,8 +85,8 @@ class User extends Component {
       //     paymentMethod: '',
       //     date: ""
       // })
-      API.getUser()
-        .then(res => this.loadUser())
+      API.getTripHistory()
+        .then(res => this.loadTrips())
         .catch(err => console.log(err));
     }
   };
@@ -97,7 +97,7 @@ render() {
         <Row>
           <Col size="md-6">
             
-              <h1>Hello User</h1>
+              <h1>Your Trip History</h1>
             
             <form>
               <Input

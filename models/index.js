@@ -1,5 +1,6 @@
 module.exports = {
-  User: require("./userModel")
+  User: require("./userModel"),
+  TripHistory: require("./tripHistoryModel.js")
 };
 
 
