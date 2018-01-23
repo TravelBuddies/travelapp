@@ -17,7 +17,7 @@ import { List, ListItem } from "../../components/List";
 class TripHistory extends Component {
   state = {
     TripHistory: []
-    // username: "",
+    // TripHistoryname: "",
     // firstName: "",
     // lastName: "",
     // password: "",
@@ -72,8 +72,8 @@ class TripHistory extends Component {
     event.preventDefault();
     if (this.state.username && this.state.firstName) {
       // API.createUser({
-      //   User: res.data, 
-      //     username: this.state.username,
+      //   TripHistory: res.data, 
+      //     TripHistoryname: this.state.TripHistoryname,
       //     firstName: "",
       //     lastName: "",
       //     password: "",
@@ -101,10 +101,10 @@ render() {
             
             <form>
               <Input
-                value={this.state.username}
+                value={this.state.TripHistoryname}
                 onChange={this.handleInputChange}
                 name="title"
-                placeholder="User Name (required)"
+                placeholder="TripHistory Name (required)"
               />
               <Input
                 value={this.state.address}
@@ -122,22 +122,22 @@ render() {
                 // disabled={!(this.state.author && this.state.title)}
                 onClick={this.handleFormSubmit}
               >
-                Submit username
+                Submit TripHistoryname
               </FormBtn>
             </form>
           </Col>
           <Col size="md-6 sm-12">
             
-              <h1>User Info!!!</h1>
-            {console.log(this.state.User)}
+              <h1>TripHistory Info!!!</h1>
+            {console.log(this.state.TripHistory)}
 
-            {this.state.User.length ? (
+            {this.state.TripHistory.length ? (
               <List>
-                {this.state.User.map(User => (
-                  <ListItem key={User._id}>
-                    <Link to={"/user"}>
+                {this.state.TripHistory.map(TripHistory => (
+                  <ListItem key={TripHistory._id}>
+                    <Link to={"/TripHistory"}>
                       <strong>
-                        {User.username}
+                        {TripHistory.TripHistoryname}
                       </strong>
                     </Link>
                    
@@ -145,7 +145,7 @@ render() {
                  ))}
               </List>
             ) : (
-              <h3>{this.state.User}</h3>
+              <h3>{this.state.TripHistory}</h3>
             )}
           </Col>
         </Row>
@@ -154,4 +154,4 @@ render() {
   }
 }
 
-export default User;
+export default TripHistory;
