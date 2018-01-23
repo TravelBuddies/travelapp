@@ -1,20 +1,15 @@
 import React, { Component } from "react";
 import { Col, Row, Container } from "../../components/Grid";
-import { Input, TextArea, FormBtn } from "../../components/Form";
+import { Input, FormBtn } from "../../components/Form";
 import API from "../../utils/API";
 
 import 'react-dates/initialize';
 import { DateRangePicker } from 'react-dates';
 import 'react-dates/lib/css/_datepicker.css';
 
-// import Nav from "../../components/Nav";
-import Hero from "../../components/Hero";
 import { Link } from "react-router-dom";
 import { List, ListItem } from "../../components/List";
-import Contact from "../../components/Contact";
-import keys from "../Auth/config.js"
-
-// import Footer from "../../components/Footer";
+import moment from "moment";
 
 
 class Flights extends Component {
@@ -28,15 +23,17 @@ class Flights extends Component {
   };
 
   componentDidMount() {
-    // this.loadFlights();
+    this.loadFlights();
   };
 
+  // Loading the city and flight details along with lowest possible prices.
   loadFlights = () => {
-    API.getFlights()
-      .then(res =>
-        this.setState({ flights: res.data })
-      )
-      .catch(err => console.log(err));
+    // API.getFlights()
+    //   .then(res =>
+    //     this.setState({ flights: res.data })
+    //   )
+    //   .catch(err => console.log(err));
+    console.log(this.state.flights)
   };
 
   handleInputChange = event => {
@@ -48,26 +45,27 @@ class Flights extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-    console.log("clicked Search button")
+    
     var params = {
         origin: this.state.origin,
         dest: this.state.destination,
-        depart: this.state.startDate,
-        returns: this.state.endDate,
-        travClass: this.state.travClass
+        depart: moment(this.state.startDate).format('YYYY-MM-DD'),
+        returns: moment(this.state.endDate).format('YYYY-MM-DD'),
+        travClass: "Economy"//this.state.travClass
     }
-    console.log(params);
-    console.log(keys)
 
-    if (this.state.origin && this.state.destination && this.state.departure_date && this.state.return_date) {
-      API.getFlights({params})
-        .then(res => this.loadFlights())
-        .catch(err => console.log(err));
-    }
+
+    // Axios promise for getting the flight results 
+      API.getFlights(params)
+          .then(res => this.setState({ flights: res.data }))
+          .catch(err => console.log(err));
+    // }
+    //  
   };
 
 
   render() {
+      console.log(this.state.flights)
 	return (
         <Container fluid>
             <Row>
@@ -118,13 +116,6 @@ class Flights extends Component {
                                         onClick={this.handleFormSubmit}>
                                         Search
                                     </FormBtn>
-
-                                    {/* <div className="row columns">
-                                        <button type="submit" className="primary button expanded search-button" id="submit">
-                                            Search
-                                        </button>
-
-                                    </div> */}
                                 </form>
                             </div>
                         </div>
