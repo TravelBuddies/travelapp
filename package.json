@@ -26,5 +26,8 @@
     "mongoose": "^4.11.7",
     "react-dates": "^16.2.0",
     "react-material-navbar": "^1.2.0"
+  },
+  "peerDependencies": {
+    "react-dates": "^16.2.0"
   }
 }

@@ -11,7 +11,7 @@ var params = {
 		numResult :'2'
 }
 
-API.getHotel(params)
+API.getHotels(params)
  .then(function (body) {
 	
 	var data = JSON.parse(body)

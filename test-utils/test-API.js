@@ -1,3 +1,5 @@
+import Keys from "../../../../config/config.js"
+
 var rp = require('request-promise'); 
 
 
@@ -5,16 +7,25 @@ var API = {
 	
 	getFlight: function(params) {
 
+
+=======
+
 		return rp('https://api.sandbox.amadeus.com/v1.2/flights/low-fare-search?apikey=' + key + '&origin=' + params.origin + '&destination=' + params.dest + '&travel_class=' + params.travClass + '&departure_date=' + params.depart + '&return_date=' + params.returns + '&number_of_results=' + params.numResult)
 		// depart and return param's date structure is YYYY-MM-DD. 2018-01-18 is good. 2018-1-18 will break.
 	},
 
 	getInspiration: function(params) {
 
+
+=======
+
 		return rp('https://api.sandbox.amadeus.com/v1.2/flights/inspiration-search?apikey=' + key + '&departure_date=' + params.depart + '--' + params.returns + '&origin=' + params.origin)
 	},
 
 	getHotel: function(params) {
+
+
+=======
 
 		return rp('https://api.sandbox.amadeus.com/v1.2/hotels/search-airport?apikey=' + key + '&location=' + params.dest + '&check_in=' + params.depart + '&check_out=' + params.returns + '&number_of_results=' + params.numResult)
 
@@ -22,11 +33,17 @@ var API = {
 
 	getCar: function(params) {
 
+
+=======
+
 		return rp('http://api.sandbox.amadeus.com/v1.2/cars/search-airport?location=JFK&pick_up=' + params.depart + '&drop_off=' + params.returns + '&apikey=' + key)
 
   },
 
   getPOI: function(params) {
+
+
+
 
 		return rp('https://api.sandbox.amadeus.com/v1.2/points-of-interest/yapq-search-text?city_name=' + params.city + '&image_size=HD&apikey=' + key)
 
@@ -169,6 +186,15 @@ module.exports = API;
 
 // ****************************** Flight Inspiration Search API ***************************
 
+=======
+// var flightInspirationUrl = 'https://api.sandbox.amadeus.com/v1.2/flights/inspiration-search?apikey=KEY&departure_date=2018-03-12--2018-03-23&origin=SFO'
+
+// request(flightInspirationUrl, function (error, response, body) {
+//   console.log('error:', error); // Print the error if one occurred
+//   console.log('statusCode:', response && response.statusCode); // Print the response status code if a response was received
+//   var data = JSON.parse(body)
+
+
 
 // ******************************* ONE WAY FLIGHT ********************************
 // These variables only display one ticket. We will have to create a for loop to data.results to display multiple results
@@ -201,6 +227,10 @@ module.exports = API;
 
 
 // ******************************* Hotel Airport Search API ********************************
+
+=======
+// var hotelUrl = 'https://api.sandbox.amadeus.com/v1.2/hotels/search-airport?apikey=KEY&location=JFK&check_in=2018-1-18&check_out=2018-1-24&amenity=RESTAURANT&amenity=PARKING&number_of_results=2' 
+
 
 
 // ******************************** Hotels ********************************
@@ -258,6 +288,10 @@ module.exports = API;
 
 
 // *********************************** Rental Car Search API **********************************
+
+=======
+// var rentCarUrl = 'http://api.sandbox.amadeus.com/v1.2/cars/search-airport?location=JFK&pick_up=2018-1-18&drop_off=2018-1-24&apikey=KEY'
+
 
   
 // ********************************** Rental Cars **************************
@@ -317,6 +351,10 @@ module.exports = API;
 
 
 // *********************************** Points of Interest API **********************************
+
+
+=======
+// var pointsOfInterestUrl = 'https://api.sandbox.amadeus.com/v1.2/points-of-interest/yapq-search-text?city_name=New%20York&image_size=HD&apikey=KEY'
 
 
 

@@ -36,7 +36,7 @@ const Jumbotron = ({ children }) =>
 	                Login
 	            </button>
 	          </div>
-	            <p id="register">New user? <a href="/">Register Here</a></p>
+	            <p id="register">New user? <a href="/signup">Register Here</a></p>
 	       </form>
 	      </div>
 	    </div>
