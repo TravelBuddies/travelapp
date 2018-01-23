@@ -1,33 +1,30 @@
+import Keys from "../../../../config/config.js"
+
 var rp = require('request-promise'); 
 
 
 var API = {
 	
 	getFlight: function(params) {
-		var key = 'FnGOGF06PziG0dMUdXc9cXJbWDwAgurZ'
 		return rp('https://api.sandbox.amadeus.com/v1.2/flights/low-fare-search?apikey=' + key + '&origin=' + params.origin + '&destination=' + params.dest + '&travel_class=' + params.travClass + '&departure_date=' + params.depart + '&return_date=' + params.returns + '&number_of_results=' + params.numResult)
 		// depart and return param's date structure is YYYY-MM-DD. 2018-01-18 is good. 2018-1-18 will break.
 	},
 
 	getInspiration: function(params) {
-		var key = 'FnGOGF06PziG0dMUdXc9cXJbWDwAgurZ'
 		return rp('https://api.sandbox.amadeus.com/v1.2/flights/inspiration-search?apikey=' + key + '&departure_date=' + params.depart + '--' + params.returns + '&origin=' + params.origin)
 	},
 
 	getHotel: function(params) {
-		var key = 'FnGOGF06PziG0dMUdXc9cXJbWDwAgurZ'
 		return rp('https://api.sandbox.amadeus.com/v1.2/hotels/search-airport?apikey=' + key + '&location=' + params.dest + '&check_in=' + params.depart + '&check_out=' + params.returns + '&number_of_results=' + params.numResult)
 
 	},
 
 	getCar: function(params) {
-		var key = 'FnGOGF06PziG0dMUdXc9cXJbWDwAgurZ'
 		return rp('http://api.sandbox.amadeus.com/v1.2/cars/search-airport?location=JFK&pick_up=' + params.depart + '&drop_off=' + params.returns + '&apikey=' + key)
 
   },
 
   getPOI: function(params) {
-		var key = 'FnGOGF06PziG0dMUdXc9cXJbWDwAgurZ'
 		return rp('https://api.sandbox.amadeus.com/v1.2/points-of-interest/yapq-search-text?city_name=' + params.city + '&image_size=HD&apikey=' + key)
 
 		// use var city = encodeURIComponent(city) to convert the params.city "New York" into New%20York. This will keep the URL happy :)

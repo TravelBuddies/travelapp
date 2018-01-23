@@ -117,3 +117,12 @@ class Books extends Component {
 }
 
 export default Books;
+
+<div> </div>
+  <row>
+  <div col-m6> </div>
+  <div col-m6> </div>
+  <row>
+  <div> </div>
+  <div> </div>
+<div> </div>

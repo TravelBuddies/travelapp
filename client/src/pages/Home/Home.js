@@ -54,65 +54,65 @@ class Home extends Component {
     return (
       <div>        
         <Hero></Hero>
-          <div class="featured-image-block-grid">
-            <div class="featured-image-block-grid-header small-10 medium-8 large-7 columns text-center">
+          <div className="featured-image-block-grid">
+            <div className="featured-image-block-grid-header small-10 medium-8 large-7 columns text-center">
               <h2 id="destinationHeader">Top Destinations</h2>
               <p>Start planning your travels here with the latest deals for popular destinations.</p>
             </div>
-            <div class="row large-up-4 small-up-2">
-              <div class="featured-image-block column">
+            <div className="row large-up-4 small-up-2">
+              <div className="featured-image-block column">
               <a href="/">
                   <img alt="" src="https://unsplash.it/600/440?image=899" />
-                  <p class="text-center featured-image-block-title">New York</p>
+                  <p className="text-center featured-image-block-title">New York</p>
                 </a>
               </div>
               
-              <div class="featured-image-block column">
+              <div className="featured-image-block column">
               <a href="/">
                   <img alt="" src="https://unsplash.it/600/440?image=693" />
-                  <p class="text-center featured-image-block-title">San Francisco</p>
+                  <p className="text-center featured-image-block-title">San Francisco</p>
                 </a>
               </div>
               
-              <div class="featured-image-block column">
+              <div className="featured-image-block column">
               <a href="/">
                   <img alt="" src="https://unsplash.it/600/440?image=452" />
-                  <p class="text-center featured-image-block-title">Las Vegas</p>
+                  <p className="text-center featured-image-block-title">Las Vegas</p>
                 </a>
               </div>
               
-              <div class="featured-image-block column">
+              <div className="featured-image-block column">
               <a href="/">
                   <img alt="" src="https://unsplash.it/600/440?image=700" />
-                  <p class="text-center featured-image-block-title">Sacramento</p>
+                  <p className="text-center featured-image-block-title">Sacramento</p>
                 </a>
               </div>
               
-              <div class="featured-image-block column">
+              <div className="featured-image-block column">
               <a href="/">
                   <img alt="" src="https://unsplash.it/600/440?image=667" />
-                  <p class="text-center featured-image-block-title">Los Angeles</p>
+                  <p className="text-center featured-image-block-title">Los Angeles</p>
                 </a>
               </div>
             
-              <div class="featured-image-block column">
+              <div className="featured-image-block column">
               <a href="/">
                   <img alt="" src="https://unsplash.it/600/440?image=249" />
-                  <p class="text-center featured-image-block-title">Chicago</p>
+                  <p className="text-center featured-image-block-title">Chicago</p>
                 </a>
               </div>
               
-              <div class="featured-image-block column">
+              <div className="featured-image-block column">
               <a href="/">
                   <img alt="" src="https://unsplash.it/600/440?image=382" />
-                  <p class="text-center featured-image-block-title">Boston</p>
+                  <p className="text-center featured-image-block-title">Boston</p>
                 </a>
               </div>
 
-              <div class="featured-image-block column">
+              <div className="featured-image-block column">
               <a href="/">
                   <img alt="" src="https://unsplash.it/600/440?image=1075" />
-                  <p class="text-center featured-image-block-title">Seattle</p>
+                  <p className="text-center featured-image-block-title">Seattle</p>
                 </a>
               </div>
             </div>
@@ -122,6 +122,6 @@ class Home extends Component {
       </div>  
             );
   }
-}
+} // End of class 
 
 export default Home;
