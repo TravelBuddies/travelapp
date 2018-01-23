@@ -165,7 +165,7 @@ module.exports = API;
 
 
 // ****************************** Flight Inspiration Search API ***************************
-// var flightInspirationUrl = 'https://api.sandbox.amadeus.com/v1.2/flights/inspiration-search?apikey=FnGOGF06PziG0dMUdXc9cXJbWDwAgurZ&departure_date=2018-03-12--2018-03-23&origin=SFO'
+// var flightInspirationUrl = 'https://api.sandbox.amadeus.com/v1.2/flights/inspiration-search?apikey=KEY&departure_date=2018-03-12--2018-03-23&origin=SFO'
 
 // request(flightInspirationUrl, function (error, response, body) {
 //   console.log('error:', error); // Print the error if one occurred
@@ -205,7 +205,7 @@ module.exports = API;
 
 
 // ******************************* Hotel Airport Search API ********************************
-// var hotelUrl = 'https://api.sandbox.amadeus.com/v1.2/hotels/search-airport?apikey=FnGOGF06PziG0dMUdXc9cXJbWDwAgurZ&location=JFK&check_in=2018-1-18&check_out=2018-1-24&amenity=RESTAURANT&amenity=PARKING&number_of_results=2' 
+// var hotelUrl = 'https://api.sandbox.amadeus.com/v1.2/hotels/search-airport?apikey=KEY&location=JFK&check_in=2018-1-18&check_out=2018-1-24&amenity=RESTAURANT&amenity=PARKING&number_of_results=2' 
 
 // request(hotelUrl, function (error, response, body) {
 //   console.log('error:', error); // Print the error if one occurred
@@ -268,7 +268,7 @@ module.exports = API;
 
 
 // *********************************** Rental Car Search API **********************************
-// var rentCarUrl = 'http://api.sandbox.amadeus.com/v1.2/cars/search-airport?location=JFK&pick_up=2018-1-18&drop_off=2018-1-24&apikey=FnGOGF06PziG0dMUdXc9cXJbWDwAgurZ'
+// var rentCarUrl = 'http://api.sandbox.amadeus.com/v1.2/cars/search-airport?location=JFK&pick_up=2018-1-18&drop_off=2018-1-24&apikey=KEY'
 
 // request(rentCarUrl, function (error, response, body) {
 //   console.log('error:', error); // Print the error if one occurred
@@ -333,7 +333,7 @@ module.exports = API;
 
 // *********************************** Points of Interest API **********************************
 
-// var pointsOfInterestUrl = 'https://api.sandbox.amadeus.com/v1.2/points-of-interest/yapq-search-text?city_name=New%20York&image_size=HD&apikey=FnGOGF06PziG0dMUdXc9cXJbWDwAgurZ'
+// var pointsOfInterestUrl = 'https://api.sandbox.amadeus.com/v1.2/points-of-interest/yapq-search-text?city_name=New%20York&image_size=HD&apikey=KEY'
 
 // request(pointsOfInterestUrl, function (error, response, body) {
 //   console.log('error:', error); // Print the error if one occurred
