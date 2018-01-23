@@ -11,6 +11,7 @@ import Packages from "./pages/Packages";
 import NoMatch from "./pages/NoMatch";
 import Contact from "./components/Contact";
 import User from "./pages/User";
+import TripHistory from "./pages/TripHistory"
 // import Checkout from "./pages/Checkout";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
@@ -26,6 +27,7 @@ const App = () =>
         <Route exact path="/hotels" component={Hotels} />
         <Route exact path="/packages" component={Packages} />
         <Route exact path="/user" component={User} />
+        <Route exact path="/user/travelhistory" component={TripHistory} />
         <Route exact path='/login' component={Auth} />
 
         {/* <PrivateRoute exact path='/user' component={User} /> */}
