@@ -17,14 +17,19 @@ app.use(routes);
 mongoose.Promise = global.Promise;
 // Connect to the Mongo DB
 mongoose.connect(
-  process.env.MONGODB_URI || "mongodb://localhost/reactreadinglist",
+  process.env.MONGODB_URI || "mongodb://localhost/userinfo",
   {
     useMongoClient: true
   }
 );
+var db = mongoose.connection
+
+
+db.on("open", console.error.bind(console, "Connection success"))
 
 // require('./routes/authRoutes')(app);
 // require('./routes/billsRoutes')(app);
+
 
 // Start the API server
 app.listen(PORT, function() {

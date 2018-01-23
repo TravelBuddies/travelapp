@@ -25,5 +25,13 @@ export default {
     return axios.get(URL);
     
   },
+  // Gets all users
+  getUser: function() {
+    return axios.get("/api/user");
+  },
+
+  getTripHistory: function() {
+    return axios.get("/api/user/travelhistory");
+  }
 
 };
