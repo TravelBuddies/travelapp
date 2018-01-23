@@ -7,26 +7,28 @@ import 'react-dates/initialize';
 import { DateRangePicker } from 'react-dates';
 import 'react-dates/lib/css/_datepicker.css';
 
-import Nav from "../../components/Nav";
+// import Nav from "../../components/Nav";
 import Hero from "../../components/Hero";
 import { Link } from "react-router-dom";
 import { List, ListItem } from "../../components/List";
 import Contact from "../../components/Contact";
-import Footer from "../../components/Footer";
+import keys from "../Auth/config.js"
+
+// import Footer from "../../components/Footer";
 
 
 class Flights extends Component {
   state = {
   	flights: [],
     origin: "",
-    destination: "",
-    travel_class: "",
-    departure_date: "",
-    return_date: ""
+    dest: "",
+    travClass: "",
+    depart: "",
+    returns: ""
   };
 
   componentDidMount() {
-    this.loadFlights();
+    // this.loadFlights();
   };
 
   loadFlights = () => {
@@ -46,13 +48,19 @@ class Flights extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-    if (this.state.origin && this.state.destination && this.state.departure_date && this.state.return_date) {
-      API.getFlights({
+    console.log("clicked Search button")
+    var params = {
         origin: this.state.origin,
-        destination: this.state.destination,
-        departure_date: this.state.startDate,
-        return_date: this.state.endDate
-      })
+        dest: this.state.destination,
+        depart: this.state.startDate,
+        returns: this.state.endDate,
+        travClass: this.state.travClass
+    }
+    console.log(params);
+    console.log(keys)
+
+    if (this.state.origin && this.state.destination && this.state.departure_date && this.state.return_date) {
+      API.getFlights({params})
         .then(res => this.loadFlights())
         .catch(err => console.log(err));
     }
@@ -72,7 +80,9 @@ class Flights extends Component {
                             </div>
                             <div className="translucent-form-overlay">
                                 <form>
-                                    <div className="row columns"></div>
+                                    <div className="row columns">
+                                    
+                                    </div>
                                     <div className="floated-label-wrapper">	            
                                         <Input 
                                             value={this.state.origin}
@@ -92,22 +102,29 @@ class Flights extends Component {
                                         /> 
                                     </div>
                                     <div className="floated-label-wrapper">
-                                    <DateRangePicker
-                                        startDate={this.state.startDate} // momentPropTypes.momentObj or null,
-                                        startDateId="your_unique_start_date_id" // PropTypes.string.isRequired,
-                                        endDate={this.state.endDate} // momentPropTypes.momentObj or null,
-                                        endDateId="your_unique_end_date_id" // PropTypes.string.isRequired,
-                                        onDatesChange={({ startDate, endDate }) => this.setState({ startDate, endDate })} // PropTypes.func.isRequired,
-                                        focusedInput={this.state.focusedInput} // PropTypes.oneOf([START_DATE, END_DATE]) or null,
-                                        onFocusChange={focusedInput => this.setState({ focusedInput })} // PropTypes.func.isRequired,
+                                        <DateRangePicker
+                                            startDate={this.state.startDate} // momentPropTypes.momentObj or null,
+                                            startDateId="your_unique_start_date_id" // PropTypes.string.isRequired,
+                                            endDate={this.state.endDate} // momentPropTypes.momentObj or null,
+                                            endDateId="your_unique_end_date_id" // PropTypes.string.isRequired,
+                                            onDatesChange={({ startDate, endDate }) => this.setState({ startDate, endDate })} // PropTypes.func.isRequired,
+                                            focusedInput={this.state.focusedInput} // PropTypes.oneOf([START_DATE, END_DATE]) or null,
+                                            onFocusChange={focusedInput => this.setState({ focusedInput })} // PropTypes.func.isRequired,
                                         />
                                     </div>
-                                    <div className="row columns">
-                                        <button type="button" className="primary button expanded search-button" id="logInButton">
+                                    <div> </div>
+                                    <FormBtn
+                                        disabled={!(this.state.startDate && this.state.endDate && this.state.origin && this.state.destination)}
+                                        onClick={this.handleFormSubmit}>
+                                        Search
+                                    </FormBtn>
+
+                                    {/* <div className="row columns">
+                                        <button type="submit" className="primary button expanded search-button" id="submit">
                                             Search
                                         </button>
 
-                                    </div>
+                                    </div> */}
                                 </form>
                             </div>
                         </div>

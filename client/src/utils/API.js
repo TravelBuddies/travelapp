@@ -1,5 +1,6 @@
 import axios from "axios";
-
+// import request from "request-promise";
+// import Keys from "Auth/config.js"
 
 export default {
   // Gets all books
@@ -18,17 +19,21 @@ export default {
   // saveBook: function(bookData) {
   //   return axios.post("/api/books", bookData);
   // },
-  getFlights: function () {
-    return axios.get('https://api.sandbox.amadeus.com/v1.2/flights/low-fare-search?apikey=FnGOGF06PziG0dMUdXc9cXJbWDwAgurZ&origin=SFO&destination=JFK&travel_class=ECONOMY&departure_date=2018-03-12&return_date=2018-03-23&number_of_results=2');
+  getFlights: function (params) {
+    // return axios.get("/flights", params, (req, res))
   },
   getInspirationFlights: function() {
     return axios.get("/api/inspirationflights");    
   },
   getCars: function () {
-    return axios.get("/api/cars");
+    // return axios.get("/api/cars");
+    return axios.get('https://api.sandbox.amadeus.com/v1.2/flights/low-fare-search?apikey=FnGOGF06PziG0dMUdXc9cXJbWDwAgurZ&origin=SFO&destination=JFK&travel_class=ECONOMY&departure_date=2018-03-12&return_date=2018-03-23&number_of_results=2');
+    
   },
   getHotels: function () {
-    return axios.get("/api/hotels");
+    // return axios.get("/api/hotels");
+    return axios.get('https://api.sandbox.amadeus.com/v1.2/flights/low-fare-search?apikey=FnGOGF06PziG0dMUdXc9cXJbWDwAgurZ&origin=SFO&destination=JFK&travel_class=ECONOMY&departure_date=2018-03-12&return_date=2018-03-23&number_of_results=2');
+    
   },
 
 };
