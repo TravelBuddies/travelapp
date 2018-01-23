@@ -1,38 +1,66 @@
 import React, { Component } from "react";
-import DeleteBtn from "../../components/DeleteBtn";
-// import Jumbotron from "../../components/Jumbotron";
-import API from "../../utils/API";
-import { Link } from "react-router-dom";
 import { Col, Row, Container } from "../../components/Grid";
-import { List, ListItem } from "../../components/List";
 import { Input, TextArea, FormBtn } from "../../components/Form";
+import API from "../../utils/API";
 
-class Books extends Component {
+import 'react-dates/initialize';
+import { DateRangePicker } from 'react-dates';
+import 'react-dates/lib/css/_datepicker.css';
+
+import Nav from "../../components/Nav";
+import Hero from "../../components/Hero";
+import { Link } from "react-router-dom";
+import { List, ListItem } from "../../components/List";
+import Contact from "../../components/Contact";
+import Footer from "../../components/Footer";
+
+class User extends Component {
   state = {
-    books: [],
-    title: "",
-    author: "",
-    synopsis: ""
+    User: []
+    // username: "",
+    // firstName: "",
+    // lastName: "",
+    // password: "",
+    // address: '',
+    // city: '',
+    // state: '',
+    // zipcode: '',
+    // phoneNumber: '',
+    // paymentMethod: '',
+    // date: ""
   };
 
   componentDidMount() {
-    this.loadBooks();
+    this.loadUser();
   }
 
-  loadBooks = () => {
-    API.getBooks()
+  loadUser = () => {
+    API.getUser()
       .then(res =>
-        this.setState({ books: res.data, title: "", author: "", synopsis: "" })
+        this.setState({ 
+          User: res.data 
+          // username: "",
+          // firstName: "",
+          // lastName: "",
+          // password: "",
+          // address: '',
+          // city: '',
+          // state: '',
+          // zipcode: '',
+          // phoneNumber: '',
+          // paymentMethod: '',
+          // date: ""
+  })
       )
       .catch(err => console.log(err));
   };
   
 
-  deleteBook = id => {
-    API.deleteBook(id)
-      .then(res => this.loadBooks())
-      .catch(err => console.log(err));
-  };
+  // deleteBook = id => {
+  //   API.deleteBook(id)
+  //     .then(res => this.loadBooks())
+  //     .catch(err => console.log(err));
+  // };
 
   handleInputChange = event => {
     const { name, value } = event.target;
@@ -43,71 +71,82 @@ class Books extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-    if (this.state.title && this.state.author) {
-      API.saveBook({
-        title: this.state.title,
-        author: this.state.author,
-        synopsis: this.state.synopsis
-      })
-        .then(res => this.loadBooks())
+    if (this.state.username && this.state.author) {
+      // API.createUser({
+      //   User: res.data, 
+      //     username: this.state.username,
+      //     firstName: "",
+      //     lastName: "",
+      //     password: "",
+      //     address: '',
+      //     city: '',
+      //     state: '',
+      //     zipcode: '',
+      //     phoneNumber: '',
+      //     paymentMethod: '',
+      //     date: ""
+      // })
+      API.getUser()
+        .then(res => this.loadUser())
         .catch(err => console.log(err));
     }
   };
 
-  render() {
+render() {
     return (
       <Container fluid>
         <Row>
           <Col size="md-6">
-            <Jumbotron>
+            
               <h1>What Books Should I Read?</h1>
-            </Jumbotron>
+            
             <form>
               <Input
-                value={this.state.title}
+                value={this.state.username}
                 onChange={this.handleInputChange}
                 name="title"
                 placeholder="Title (required)"
               />
               <Input
-                value={this.state.author}
+                value={this.state.address}
                 onChange={this.handleInputChange}
                 name="author"
                 placeholder="Author (required)"
               />
               <TextArea
-                value={this.state.synopsis}
+                value={this.state.phoneNumber}
                 onChange={this.handleInputChange}
                 name="synopsis"
                 placeholder="Synopsis (Optional)"
               />
               <FormBtn
-                disabled={!(this.state.author && this.state.title)}
+                // disabled={!(this.state.author && this.state.title)}
                 onClick={this.handleFormSubmit}
               >
-                Submit Book
+                Submit username
               </FormBtn>
             </form>
           </Col>
           <Col size="md-6 sm-12">
-            <Jumbotron>
-              <h1>Books On My List</h1>
-            </Jumbotron>
-            {this.state.books.length ? (
+            
+              <h1>User Info!!!</h1>
+            
+
+            {this.state.User.length ? (
               <List>
-                {this.state.books.map(book => (
-                  <ListItem key={book._id}>
-                    <Link to={"/books/" + book._id}>
+                {this.state.User.map(User => (
+                  <ListItem key={User}>
+                    <Link to={"/user"}>
                       <strong>
-                        {book.title} by {book.author}
+                        {this.state.User}
                       </strong>
                     </Link>
-                    <DeleteBtn onClick={() => this.deleteBook(book._id)} />
+                   
                   </ListItem>
                 ))}
               </List>
             ) : (
-              <h3>No Results to Display</h3>
+              <h3>{this.state.User}</h3>
             )}
           </Col>
         </Row>
@@ -116,4 +155,4 @@ class Books extends Component {
   }
 }
 
-export default Books;
+export default User;

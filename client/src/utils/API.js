@@ -18,8 +18,13 @@ export default {
   // saveBook: function(bookData) {
   //   return axios.post("/api/books", bookData);
   // },
+  // Gets all users
+  getUser: function() {
+    return axios.get("/api/user");
+  },
+
   getFlights: function () {
-    return axios.get('https://api.sandbox.amadeus.com/v1.2/flights/low-fare-search?apikey=FnGOGF06PziG0dMUdXc9cXJbWDwAgurZ&origin=SFO&destination=JFK&travel_class=ECONOMY&departure_date=2018-03-12&return_date=2018-03-23&number_of_results=2');
+    return axios.get('https://api.sandbox.amadeus.com/v1.2/flights/low-fare-search?apikey=' + key + '&origin=SFO&destination=JFK&travel_class=ECONOMY&departure_date=2018-03-12&return_date=2018-03-23&number_of_results=2');
   },
   getInspirationFlights: function() {
     return axios.get("/api/inspirationflights");    

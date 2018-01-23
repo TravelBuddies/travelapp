@@ -22,7 +22,9 @@ mongoose.connect(
     useMongoClient: true
   }
 );
+var db = mongoose.connection
 
+db.on("open", console.error.bind(console, "Connection success"))
 // Start the API server
 app.listen(PORT, function() {
   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
