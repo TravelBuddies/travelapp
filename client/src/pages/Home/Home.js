@@ -1,17 +1,11 @@
 import React, { Component } from "react";
-import { Col, Row, Container } from "../../components/Grid";
-import { Input, TextArea, FormBtn } from "../../components/Form";
-import API from "../../utils/API";
+// import { Col, Row, Container } from "../../components/Grid";
+// import { Input, TextArea, FormBtn } from "../../components/Form";
+// import API from "../../utils/API";
 
-// import Nav from "../../components/Nav";
-import Navpills from "../../components/Nav"
+// import Navpills from "../../components/Nav"
 import Hero from "../../components/Hero";
-import Flights from "../Flights";
-import Cars from "../Cars";
-import Hotels from "../Hotels";
-import Packages from "../Packages";
 import Contact from "../../components/Contact";
-// import Footer from "../../components/Footer";
 
 class Home extends Component {
   state = {
