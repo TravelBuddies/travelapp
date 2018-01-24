@@ -115,38 +115,38 @@ render() {
                     <Link to={"/user"}>
                       <strong>
                         <ul>
-                          <li>User Name_  
-                            {User.username}
+                          <li>User Name --  
+                            <span> {User.username}</span>
                           </li>
-                          <li>First Name_ 
-                            {User.firstName}
+                          <li>First Name -- 
+                            <span> {User.firstName}</span>
                           </li>
-                          <li>Last Name_
-                            {User.lastName}
+                          <li>Last Name --
+                            <span> {User.lastName}</span>
                           </li>
-                          <li>Street_
-                            {User.address}
+                          <li>Street --
+                            <span> {User.address}</span>
                           </li>
-                          <li>City_
-                            {User.city}
+                          <li>City --
+                            <span> {User.city}</span>
                           </li>
-                          <li>State_
-                            {User.state}
+                          <li>State --
+                            <span> {User.state}</span>
                           </li>
-                          <li>Zipcode_
-                            {User.zipcode}
+                          <li>Zipcode --
+                            <span> {User.zipcode}</span>
                           </li>
-                          <li>Phone Number_
-                            {User.phoneNumber}
+                          <li>Phone Number --
+                            <span> {User.phoneNumber}</span>
                           </li>
-                          <li>Payment Method_
-                            {User.paymentMethod}
+                          <li>Payment Method --
+                            <span> {User.paymentMethod}</span>
                           </li>
-                          <li>User Profile Created_
-                            {User.userCreated}
+                          <li>User Profile Created --
+                            <span> {User.userCreated}</span>
                           </li>
-                          <li>User ID_
-                            {User._id}
+                          <li>User ID --
+                            <span> {User._id}</span>
                           </li>
                         </ul>
                       </strong>
