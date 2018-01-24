@@ -90,54 +90,64 @@ class TripHistory extends Component {
         .catch(err => console.log(err));
     }
   };
-
-render() {
-    return (
+  render() {
+  return (
       <Container fluid>
         <Row>
           <Col size="md-6">
             
-              <h1>Your Trip History</h1>
             
-            <form>
-              <Input
-                value={this.state.TripHistoryname}
-                onChange={this.handleInputChange}
-                name="title"
-                placeholder="TripHistory Name (required)"
-              />
-              <Input
-                value={this.state.address}
-                onChange={this.handleInputChange}
-                name="author"
-                placeholder="Address (required)"
-              />
-              <Input
-                value={this.state.phoneNumber}
-                onChange={this.handleInputChange}
-                name="synopsis"
-                placeholder="Phone Number (Optional)"
-              />
-              <FormBtn
-                // disabled={!(this.state.author && this.state.title)}
-                onClick={this.handleFormSubmit}
-              >
-                Submit TripHistoryname
-              </FormBtn>
-            </form>
+          
           </Col>
           <Col size="md-6 sm-12">
+            <br>
+            </br>
+              <h1>Hello User</h1>
             
-              <h1>TripHistory Info!!!</h1>
+              <h4>Here's Your Info!!!</h4>
             {console.log(this.state.TripHistory)}
 
             {this.state.TripHistory.length ? (
               <List>
                 {this.state.TripHistory.map(TripHistory => (
                   <ListItem key={TripHistory._id}>
-                    <Link to={"/TripHistory"}>
+                    <Link to={"/user/travelhistory"}>
                       <strong>
-                        {TripHistory.TripHistoryname}
+                        <ul>
+                          <li>TripHistory Name_  
+                            {TripHistory.TripHistoryname}
+                          </li>
+                          <li>First Name_ 
+                            {TripHistory.firstName}
+                          </li>
+                          <li>Last Name_
+                            {TripHistory.lastName}
+                          </li>
+                          <li>Street_
+                            {TripHistory.address}
+                          </li>
+                          <li>City_
+                            {TripHistory.city}
+                          </li>
+                          <li>State_
+                            {TripHistory.state}
+                          </li>
+                          <li>Zipcode_
+                            {TripHistory.zipcode}
+                          </li>
+                          <li>Phone Number_
+                            {TripHistory.phoneNumber}
+                          </li>
+                          <li>Payment Method_
+                            {TripHistory.paymentMethod}
+                          </li>
+                          <li>TripHistory Profile Created_
+                            {TripHistory.TripHistoryCreated}
+                          </li>
+                          <li>TripHistory ID_
+                            {TripHistory._id}
+                          </li>
+                        </ul>
                       </strong>
                     </Link>
                    
@@ -153,5 +163,6 @@ render() {
     );
   }
 }
+
 
 export default TripHistory;

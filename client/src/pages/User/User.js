@@ -97,38 +97,15 @@ render() {
         <Row>
           <Col size="md-6">
             
-              <h1>Hello User</h1>
             
-            <form>
-              <Input
-                value={this.state.username}
-                onChange={this.handleInputChange}
-                name="title"
-                placeholder="User Name (required)"
-              />
-              <Input
-                value={this.state.address}
-                onChange={this.handleInputChange}
-                name="author"
-                placeholder="Address (required)"
-              />
-              <Input
-                value={this.state.phoneNumber}
-                onChange={this.handleInputChange}
-                name="synopsis"
-                placeholder="Phone Number (Optional)"
-              />
-              <FormBtn
-                // disabled={!(this.state.author && this.state.title)}
-                onClick={this.handleFormSubmit}
-              >
-                Submit username
-              </FormBtn>
-            </form>
+          
           </Col>
           <Col size="md-6 sm-12">
+            <br>
+            </br>
+              <h1>Hello User</h1>
             
-              <h1>User Info!!!</h1>
+              <h4>Here's Your Info!!!</h4>
             {console.log(this.state.User)}
 
             {this.state.User.length ? (
@@ -137,7 +114,41 @@ render() {
                   <ListItem key={User._id}>
                     <Link to={"/user"}>
                       <strong>
-                        {User.username}
+                        <ul>
+                          <li>User Name_  
+                            {User.username}
+                          </li>
+                          <li>First Name_ 
+                            {User.firstName}
+                          </li>
+                          <li>Last Name_
+                            {User.lastName}
+                          </li>
+                          <li>Street_
+                            {User.address}
+                          </li>
+                          <li>City_
+                            {User.city}
+                          </li>
+                          <li>State_
+                            {User.state}
+                          </li>
+                          <li>Zipcode_
+                            {User.zipcode}
+                          </li>
+                          <li>Phone Number_
+                            {User.phoneNumber}
+                          </li>
+                          <li>Payment Method_
+                            {User.paymentMethod}
+                          </li>
+                          <li>User Profile Created_
+                            {User.userCreated}
+                          </li>
+                          <li>User ID_
+                            {User._id}
+                          </li>
+                        </ul>
                       </strong>
                     </Link>
                    
@@ -155,3 +166,9 @@ render() {
 }
 
 export default User;
+                          
+                        
+                        
+                          
+
+                        
