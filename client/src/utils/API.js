@@ -1,5 +1,5 @@
 import axios from "axios";
-import keys from '../pages/Auth/dev';
+import keys from '../pages/Auth/config.js';
 
 export default {
   getFlights: function (params) {
