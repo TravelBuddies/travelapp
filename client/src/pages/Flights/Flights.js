@@ -46,6 +46,7 @@ class Flights extends Component {
   handleFormSubmit = event => {
     event.preventDefault();
     
+    // parameters that are passed to get the flight results
     var params = {
         origin: this.state.origin,
         dest: this.state.destination,
@@ -121,11 +122,11 @@ class Flights extends Component {
                         </div>
                         {this.state.flights.length ? (
                             <List>
-                                {this.state.flights.map(flight => (
-                                <ListItem key={flight._id}>
-                                    <Link to={"/flights/" + flight._id}>
+                                {this.state.flights.map(flights => (
+                                <ListItem key={flights._id}>
+                                    <Link to={"/flights/" + flights._id}>
                                     <strong>
-                                        {flight.title} by {flight.author}
+                                        {flights} by {flights.author}
                                     </strong>
                                     </Link>
                                     

@@ -2,7 +2,7 @@ const router = require("express").Router();
 const carController = require("../../controllers/carController");
 
 // Matches with "/api/flights"
-router.route("/")
+router.route("/cars")
     .get(carController.findAll)
     .post(carController.create);
 // .get(destinationController)

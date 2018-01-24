@@ -1,12 +1,12 @@
 const router = require("express").Router();
 const hotelController = require("../../controllers/hotelController");
 
-// Matches with "/api/flights"
-router.route("/")
+// // Matches with "/api/flights"
+router.route("/hotels")
     .get(hotelController.findAll)
     .post(hotelController.create);
 
-    // Matches with "/api/books/:id"
+//     // Matches with "/api/books/:id"
 router
     .route("/:id")
     .get(hotelController.findById)

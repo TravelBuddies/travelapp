@@ -39,13 +39,16 @@ class Hotels extends Component {
 
   handleFormSubmit = event => {
 		event.preventDefault();
+
+		// parameters that are passed to get the Hotel results
 		var params = {
 			location: this.state.location,
 			depart: moment(this.state.startDate).format('YYYY-MM-DD'),
 			returns: moment(this.state.endDate).format('YYYY-MM-DD'),
 		}
-    // if (this.state.location && this.state.check_in && this.state.check_out) {
-      API.getHotels(params)
+		
+		// Axios promise for getting the Hotel results
+		API.getHotels(params)
 				.then(res => this.setState({ hotels: res.data }))
         .catch(err => console.log(err));
     // }
