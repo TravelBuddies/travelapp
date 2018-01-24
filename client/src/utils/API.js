@@ -29,7 +29,7 @@ export default {
   getUser: function() {
     return axios.get("/api/user");
   },
-
+  // Get user travel history
   getTripHistory: function() {
     return axios.get("/api/user/travelhistory");
   }
