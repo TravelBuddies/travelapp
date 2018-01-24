@@ -25,7 +25,7 @@ mongoose.connect(
 var db = mongoose.connection
 
 
-db.on("open", console.error.bind(console, "Connection success"))
+db.on("open", console.error.bind(console, " ==> ***** Connected to MongoDB userinfo *****"))
 
 // require('./routes/authRoutes')(app);
 // require('./routes/billsRoutes')(app);
