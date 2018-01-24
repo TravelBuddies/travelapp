@@ -14,5 +14,4 @@ router
     .delete(flightController.remove);
 
 
-
 module.exports = router;

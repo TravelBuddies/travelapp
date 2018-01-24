@@ -1,5 +1,5 @@
 import axios from "axios";
-import keys from '../pages/Auth/config.js';
+import keys from '../pages/Auth/dev';
 
 export default {
   getFlights: function (params) {
@@ -25,5 +25,13 @@ export default {
     return axios.get(URL);
     
   },
+  // Gets all users
+  getUser: function() {
+    return axios.get("/api/user");
+  },
+
+  getTripHistory: function() {
+    return axios.get("/api/user/travelhistory");
+  }
 
 };

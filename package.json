@@ -24,6 +24,7 @@
     "body-parser": "^1.17.2",
     "express": "^4.15.4",
     "mongoose": "^4.11.7",
+    "react-dates": "^16.2.0",
     "react-material-navbar": "^1.2.0"
   },
   "peerDependencies": {

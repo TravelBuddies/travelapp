@@ -1,9 +1,9 @@
 const router = require("express").Router();
-const bookRoutes = require("./books");
+const userRoutes = require("./user");
 const flightRoutes = require("./flights");
 const carRoutes = require("./cars");
 const hotelRoutes = require("./hotels");
-const packageRoutes = require("./hotels");
+const tripHistoryRoutes = require("./triphistory");
 const inspireRoutes = require("./hotels");
 
 // // Book routes
@@ -18,10 +18,13 @@ router.use("/cars", carRoutes);
 // hotels routes
 router.use("/hotels", hotelRoutes);
 
-// package routes
-router.use("/packages", packageRoutes);
+// user routes
+router.use("/user", userRoutes);
 
-// // hotels routes
+// travelhistory routes
+router.use("/user/travelhistory", tripHistoryRoutes);
+
+// // inspire routes
 // router.use("/inspire", inspireRoutes);
 
 module.exports = router;

@@ -13,4 +13,5 @@ router
     .put(hotelController.update)
     .delete(hotelController.remove);
 
+
 module.exports = router;
