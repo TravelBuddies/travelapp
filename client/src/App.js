@@ -29,6 +29,7 @@ const App = () =>
         <Route exact path="/user" component={User} />
         <Route exact path="/user/travelhistory" component={TripHistory} />
         <Route exact path='/login' component={Auth} />
+        <Route exact path='/newuser' component={NewUser} />
 
         {/* <PrivateRoute exact path='/user' component={User} /> */}
         {/* <PrivateRoute exact path='/checkout' component={Checkout} /> */}
