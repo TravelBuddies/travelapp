@@ -5,7 +5,9 @@ import React, { Component } from "react";
 
 // import Navpills from "../../components/Nav"
 import Hero from "../../components/Hero";
+import Trending from "../../components/Trending";
 import Contact from "../../components/Contact";
+import Testimony from "../../components/Testimony";
 
 class Home extends Component {
   state = {
@@ -48,69 +50,8 @@ class Home extends Component {
     return (
       <div>        
         <Hero></Hero>
-          <div className="featured-image-block-grid">
-            <div className="featured-image-block-grid-header small-10 medium-8 large-7 columns text-center">
-              <h2 id="destinationHeader">Top Destinations</h2>
-              <p>Start planning your travels here with the latest deals for popular destinations.</p>
-            </div>
-            <div className="row large-up-4 small-up-2">
-              <div className="featured-image-block column">
-              <a href="/">
-                  <img alt="" src="https://unsplash.it/600/440?image=899" />
-                  <p className="text-center featured-image-block-title">New York</p>
-                </a>
-              </div>
-              
-              <div className="featured-image-block column">
-              <a href="/">
-                  <img alt="" src="https://unsplash.it/600/440?image=693" />
-                  <p className="text-center featured-image-block-title">San Francisco</p>
-                </a>
-              </div>
-              
-              <div className="featured-image-block column">
-              <a href="/">
-                  <img alt="" src="https://unsplash.it/600/440?image=452" />
-                  <p className="text-center featured-image-block-title">Las Vegas</p>
-                </a>
-              </div>
-              
-              <div className="featured-image-block column">
-              <a href="/">
-                  <img alt="" src="https://unsplash.it/600/440?image=700" />
-                  <p className="text-center featured-image-block-title">Sacramento</p>
-                </a>
-              </div>
-              
-              <div className="featured-image-block column">
-              <a href="/">
-                  <img alt="" src="https://unsplash.it/600/440?image=667" />
-                  <p className="text-center featured-image-block-title">Los Angeles</p>
-                </a>
-              </div>
-            
-              <div className="featured-image-block column">
-              <a href="/">
-                  <img alt="" src="https://unsplash.it/600/440?image=249" />
-                  <p className="text-center featured-image-block-title">Chicago</p>
-                </a>
-              </div>
-              
-              <div className="featured-image-block column">
-              <a href="/">
-                  <img alt="" src="https://unsplash.it/600/440?image=382" />
-                  <p className="text-center featured-image-block-title">Boston</p>
-                </a>
-              </div>
-
-              <div className="featured-image-block column">
-              <a href="/">
-                  <img alt="" src="https://unsplash.it/600/440?image=1075" />
-                  <p className="text-center featured-image-block-title">Seattle</p>
-                </a>
-              </div>
-            </div>
-          </div>
+        <Trending></Trending>
+        <Testimony></Testimony>  
         <Contact></Contact>
         
       </div>  
