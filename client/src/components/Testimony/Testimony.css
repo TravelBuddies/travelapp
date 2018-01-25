@@ -1,90 +1,141 @@
-.full-width-testimonial {
-  background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.1)), url("../img/tower.jpeg");
-  background-size: cover;
-  background-position: center center;
-}
-
-.full-width-testimonial-icon .quote-path {
-  fill: none;
-  stroke: #ffae00;
-  stroke-width: 2.5192;
-  stroke-miterlimit: 10;
-}
-
-.full-width-testimonial-content,
-.full-width-testimonial-icon {
+.clean-hero-slider .orbit-caption {
+  width: auto;
+  height: auto;
+  background: #0a0a0a;
+  position: absolute;
   text-align: center;
+  right: 0;
+  left: 0;
+  padding: 0.2rem 2rem;
 }
 
-.full-width-testimonial-section {
-  padding-top: 2rem;
+.orbit-image {
+  height: 60vh;
+  object-fit: cover;
 }
 
-.full-width-testimonial-section .full-width-testimonial-text {
-  font-weight: 300;
-  color: #ffffff;
-  padding-left: 30px;
-  padding-right: 30px;
-  margin-top: -5px;
-  padding-left: 50px;
-  padding-right: 50px;
-  font-size: 1.5em;
+.orbit-previous {
+  left: 15px;
+}
+
+.orbit-caption {
+  margin-left: 150px;
 }
 
 @media print, screen and (min-width: 40em) {
-  .full-width-testimonial-section .full-width-testimonial-text {
-    padding-left: 100px;
-    padding-right: 100px;
-  }
-}
-
-@media print, screen and (min-width: 64em) {
-  .full-width-testimonial-section .full-width-testimonial-text {
-    padding-left: 180px;
-    padding-right: 180px;
-    font-size: 1.8em;
+  .clean-hero-slider .orbit-caption {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    text-align: left;
+    width: 70%;
+    right: 0;
+    padding: 1rem 2rem;
   }
 }
 
 @media screen and (min-width: 75em) {
-  .full-width-testimonial-section .full-width-testimonial-text {
-    padding-left: 300px;
-    padding-right: 300px;
+  .clean-hero-slider .orbit-caption {
+    padding-right: 10%;
   }
 }
 
-.full-width-testimonial-section .full-width-testimonial-source {
-  font-size: 1.2em;
-  font-weight: 600;
-  color: #ffffff;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  padding-bottom: 0;
-  margin-bottom: 0.2em;
-  font-size: 1.0em;
+@media screen and (min-width: 90em) {
+  .clean-hero-slider .orbit-caption {
+    padding-right: 20%;
+  }
 }
 
-.full-width-testimonial-section .full-width-testimonial-source-context {
-  display: block;
-  font-size: 0.9em;
-  font-weight: 500;
-  color: #ffffff;
-  text-transform: uppercase;
-  letter-spacing: 1.5px;
-  font-size: 0.8em;
+.clean-hero-slider .orbit-caption p {
+  font-size: 0.9rem;
+  line-height: 1.25;
 }
 
-.full-width-testimonial-section .slick-slider {
-  margin-bottom: 0px;
+@media print, screen and (min-width: 40em) {
+  .clean-hero-slider .orbit-caption p {
+    font-size: 1.1rem;
+  }
 }
 
-.full-width-testimonial-text,
-.full-width-testimonial-content,
-.full-width-testimonial-source,
-.full-width-testimonial-icon {
-  padding-bottom: 2rem;
+.clean-hero-slider .orbit-caption h3 {
+  color: #ffae00;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0;
 }
 
-.full-width-testimonial-content {
-  width: 100%;
+@media print, screen and (min-width: 40em) {
+  .clean-hero-slider .orbit-caption h3 {
+    font-size: 2.5rem;
+    font-weight: normal;
+  }
+}
+
+.clean-hero-slider .orbit-slide {
+  padding-bottom: 40%;
+  background: #0a0a0a;
+}
+
+@media print, screen and (min-width: 40em) {
+  .clean-hero-slider .orbit-slide {
+    padding-bottom: 0;
+  }
+}
+
+.clean-hero-slider .orbit-controls button {
+  background: #ffae00;
+  padding: 1rem 0.5rem;
+}
+
+.clean-hero-slider .orbit-controls button:hover {
+  background: #fefefe;
+  color: #0a0a0a;
+}
+
+@media print, screen and (min-width: 40em) {
+  .clean-hero-slider .orbit-controls .orbit-previous {
+/*    left: auto;*/
+    right: 2.4rem;
+  }
+}
+
+@media print, screen and (min-width: 40em) {
+  .clean-hero-slider .orbit-controls .orbit-next {
+    right: 0.5rem;
+  }
+}
+
+.clean-hero-slider .orbit-bullets {
+  display: none;
+}
+
+@media print, screen and (min-width: 40em) {
+  .clean-hero-slider .orbit-bullets {
+    display: block;
+    margin-bottom: 0;
+    margin-top: -3rem;
+    background: none;
+  }
+}
+
+.clean-hero-slider .orbit-bullets button {
+  width: 3rem;
+  height: 0.4rem;
+  border-radius: 0;
+  background-color: #fefefe;
+}
+
+.clean-hero-slider .orbit-bullets button.is-active {
+  background-color: #ffae00;
+}
+
+.clean-hero-slider ul.orbit-container {
+  height: auto !important;
+}
+
+.clean-hero-slider li.orbit-slide {
+  max-height: none !important;
 }
