@@ -22,6 +22,8 @@ const App = () =>
     <div>
       <Nav />
       <Switch>
+        
+
         <Route exact path="/" component={Home} />
         <Route exact path="/flights" component={Flights} />
         <Route exact path="/cars" component={Cars} />
@@ -29,7 +31,8 @@ const App = () =>
         <Route exact path="/packages" component={Packages} />
         <Route exact path="/user" component={User} />
         <Route exact path="/user/travelhistory" component={TripHistory} />
-        <Route exact path='/login' component={Auth} />
+        <Route exact path="/login" component={Auth} />
+        <Route exact path="/About" component={About} />
 
         {/* <PrivateRoute exact path='/user' component={User} /> */}
         {/* <PrivateRoute exact path='/checkout' component={Checkout} /> */}
@@ -44,7 +47,7 @@ const App = () =>
         <Route component={NoMatch} />
       </Switch>
       <Contact />
-      <Footer />
+      <Footer/>
     </div>
   </Router>;
 

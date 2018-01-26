@@ -7,6 +7,7 @@ const Footer = () =>
         <div className="footer-bottom">
           <div className="column">
             <p>&copy; 2018 Travel App</p>
+            <p><a href="/About">About Us</a></p>
           </div>
         </div>
     </footer>;

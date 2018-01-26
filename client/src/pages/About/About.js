@@ -47,7 +47,15 @@ class About extends Component {
   render() {
     return (
       <div>        
-        <Hero></Hero>
+        <section>
+          <div class="hero-section">
+
+            <div class="hero-section-text">
+              <h1>Meet the Team</h1>
+              <h3>Will you join us on our journey?</h3>
+            </div>
+          </div>
+        </section> 
         <TeamMembers></TeamMembers>  
         <Contact></Contact>
         
