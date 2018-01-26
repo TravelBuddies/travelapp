@@ -4,6 +4,7 @@ import Auth from './pages/Auth'
 import PrivateRoute from './utils/PrivateRoute'
 
 import Home from "./pages/Home";
+import About from "./pages/About";
 import Flights from "./pages/Flights";
 import Cars from "./pages/Cars";
 import Hotels from "./pages/Hotels";
