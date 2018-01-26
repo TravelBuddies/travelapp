@@ -4,6 +4,7 @@ import React, { Component } from "react";
 // import API from "../../utils/API";
 
 // import Navpills from "../../components/Nav"
+import "./About.css";
 import Contact from "../../components/Contact";
 import TeamMembers from "../../components/TeamMembers";
 

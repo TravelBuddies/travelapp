@@ -1,0 +1,34 @@
+.mainCard {
+  width: 80%;
+  float: right;
+  margin: 1rem 2% 1rem 0;
+}
+
+.cardSections {
+  margin-top: 10px;
+  width: 100%;
+  /*border: 1px solid black;*/
+  overflow: hidden; 
+}
+
+
+.cardHolder {
+  width: 25%;
+  margin: 5px;
+  float:left; /* add this */
+}
+
+.cardImg {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.cardDesc {
+  margin: 5px;
+  padding-left: 5%; 
+  overflow: hidden;
+  
+}
+
+.apply {
+  margin: 5px 35%;
+}
