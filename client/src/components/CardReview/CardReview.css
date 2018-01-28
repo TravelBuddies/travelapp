@@ -1,7 +1,7 @@
 .mainCard {
   width: 80%;
-  float: right;
   margin: 1rem 2% 1rem 0;
+  display: inline-block;
 }
 
 .cardSections {
