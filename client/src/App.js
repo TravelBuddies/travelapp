@@ -14,6 +14,7 @@ import NoMatch from "./pages/NoMatch";
 import Contact from "./components/Contact";
 import User from "./pages/User";
 import TripHistory from "./pages/TripHistory"
+import NewUser from "./pages/Test-NewUserSignUp"
 // import Checkout from "./pages/Checkout";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";
@@ -34,7 +35,9 @@ const App = () =>
         <Route exact path="/user/travelhistory" component={TripHistory} />
         <Route exact path="/login" component={Auth} />
         <Route exact path="/About" component={About} />
+          <Route exact path='/newuser' component={NewUser} />
         <Route exact path="/Cards" component={Cards} />
+
         {/* <PrivateRoute exact path='/user' component={User} /> */}
         {/* <PrivateRoute exact path='/checkout' component={Checkout} /> */}
         {/* <Route exact path="/" component={Users} /> */}
