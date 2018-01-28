@@ -4,6 +4,9 @@ import React, { Component } from "react";
 // import API from "../../utils/API";
 
 // import Navpills from "../../components/Nav"
+import $ from 'jquery';
+
+import 'foundation-sites';
 import "./About.css";
 import Contact from "../../components/Contact";
 import TeamMembers from "../../components/TeamMembers";
@@ -15,10 +18,12 @@ class About extends Component {
   };
 
   componentDidMount() {
+    $(document).foundation();
     // Mounting the Most common deals that are found for specific destinations we choose. 
     // this.loadFlights();
     // this.loadInspirationFlights();
     // this.loadPackageDeals();
+
   }
 
   handlePageChange = page => {
@@ -49,9 +54,9 @@ class About extends Component {
     return (
       <div>        
         <section>
-          <div class="hero-section">
+          <div class="hero-about">
 
-            <div class="hero-section-text">
+            <div class="hero-about-text">
               <h1>Meet the Team</h1>
               <h3>Will you join us on our journey?</h3>
             </div>

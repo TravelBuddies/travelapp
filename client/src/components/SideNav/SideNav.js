@@ -1,17 +1,15 @@
 // Edited by Mark
 import React from "react";
 import "./SideNav.css";
-import Platinum from "./platinumcard.png";
-import csr from "./csr.jpg"
-import citiExec from "./citiExec.jpg"
+
 
 const SideNav = () =>
 
 <aside className="sideNav">
   <div className="switch-toggle-wrapper">
     <div className="switch tiny">
-      <input className="switch-input" id="exampleSwitch2" type="checkbox" name="exampleSwitch2">
-      <label className="switch-paddle" for="exampleSwitch2">
+      <input className="switch-input" id="switch2" type="checkbox" name="switch2"/>
+      <label className="switch-paddle" for="switch2">
         <span className="show-for-sr">Recent</span>
       </label>
     </div>
@@ -20,8 +18,8 @@ const SideNav = () =>
 
   <div className="switch-toggle-wrapper">
     <div className="switch tiny">
-      <input className="switch-input" id="exampleSwitch3" type="checkbox" name="exampleSwitch3">
-      <label className="switch-paddle" for="exampleSwitch3">
+      <input className="switch-input" id="switch3" type="checkbox" name="switch3"/>
+      <label className="switch-paddle" for="switch3">
         <span className="show-for-sr">Best Offer</span>
       </label>
     </div>
@@ -30,27 +28,28 @@ const SideNav = () =>
 
   <div className="switch-toggle-wrapper">
     <div className="switch tiny">
-      <input className="switch-input" id="exampleSwitch4" type="checkbox" name="exampleSwitch4">
-      <label className="switch-paddle" for="exampleSwitch4">
-        <span className="show-for-sr">No F/X Fee</span>
+      <input className="switch-input" id="switch4" type="checkbox" name="switch4"/>
+      <label className="switch-paddle" for="switch4">
+        <span className="show-for-sr">No FX Fee</span>
       </label>
     </div>
-    <span>No F/X Fee</span>
+    <span>No FX Fee</span>
   </div>
 
   <div className="switch-toggle-wrapper">
     <div className="switch tiny">
-      <input className="switch-input" id="exampleSwitch5" type="checkbox" name="exampleSwitch5">
-      <label className="switch-paddle" for="exampleSwitch5">
+      <input className="switch-input" id="switch5" type="checkbox" name="switch5"/>
+      <label className="switch-paddle" for="switch5">
         <span className="show-for-sr">No Annual Fee</span>
       </label>
     </div>
     <span>No Annual Fee</span>
   </div>
+
   <div className="switch-toggle-wrapper">
     <div className="switch tiny">
-      <input className="switch-input" id="exampleSwitch6" type="checkbox" name="exampleSwitch6">
-      <label className="switch-paddle" for="exampleSwitch6">
+      <input className="switch-input" id="switch6" type="checkbox" name="switch6"/>
+      <label className="switch-paddle" for="switch6">
         <span className="show-for-sr">Airport Lounges</span>
       </label>
     </div>

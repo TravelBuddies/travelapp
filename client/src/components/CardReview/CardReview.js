@@ -48,8 +48,8 @@ const CardReview = () =>
             Google Search Trends
           </h5>
           <form>
-            <label><input type="radio" name="mode" value="grouped"> Grouped</label>
-            <label><input type="radio" name="mode" value="stacked" checked> Stacked</label>
+            <label><input type="radio" name="mode" value="grouped"/> Grouped</label>
+            <label><input type="radio" name="mode" value="stacked" checked/> Stacked</label>
           </form>
           <svg width="760" height="400"></svg>
         </div> 
@@ -93,11 +93,6 @@ const CardReview = () =>
         </div>
         <div className="cardDesc">
           <h3>Chase Saphire Reserve</h3>
-          <form>
-            <label><input type="radio" name="mode" value="grouped"> Grouped</label>
-            <label><input type="radio" name="mode" value="stacked" checked> Stacked</label>
-          </form>
-          <svg width="760" height="500"></svg>
         </div> 
       </div>
     </div>
@@ -139,11 +134,6 @@ const CardReview = () =>
         </div>
         <div className="cardDesc">
           <h3>Citi / AAdvantage Executive World Elite </h3>
-          <form>
-            <label><input type="radio" name="mode" value="grouped"> Grouped</label>
-            <label><input type="radio" name="mode" value="stacked" checked> Stacked</label>
-          </form>
-          <svg width="760" height="500"></svg>
         </div> 
       </div>
     </div>

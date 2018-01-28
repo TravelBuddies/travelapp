@@ -2,7 +2,7 @@
 | Hero Section                                  |
 ------------------------------------------------*/
 
-.hero-section {
+.hero-home {
   background: url("pointing.jpeg") 50% no-repeat;
   background-size: cover;
   height: 70vh;
@@ -18,7 +18,7 @@
           justify-content: center;
 }
 
-.hero-section .hero-section-text {
+.hero-home .hero-home-text {
   color: #fefefe;
   text-shadow: 1px 1px 2px #0a0a0a;
   margin: 0 15% 10% 7.5%;

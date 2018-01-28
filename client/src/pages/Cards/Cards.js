@@ -4,6 +4,9 @@ import React, { Component } from "react";
 // import API from "../../utils/API";
 
 // import Navpills from "../../components/Nav"
+import $ from 'jquery';
+
+import 'foundation-sites';
 import "./Cards.css";
 import Contact from "../../components/Contact";
 import SideNav from "../../components/SideNav";
@@ -18,8 +21,9 @@ class Cards extends Component {
   };
 
   componentDidMount() {
+    $(document).foundation();
     // Mounting the Most common deals that are found for specific destinations we choose. 
-    // this.loadFlights();
+    //  this.loadFlights();
     // this.loadInspirationFlights();
     // this.loadPackageDeals();
   }
@@ -50,54 +54,54 @@ class Cards extends Component {
 
   render() {
     return (
-      <div>        
-        <div class="row columns">
-          <div class="hero-section">
+    <section>         
+      <div class="row columns">
+        <div class="hero-card">
 
-            <div class="hero-section-text">
-              <h1>Credit Card Reviews</h1>
-              <h5>Where will your points take you?</h5>
-            </div>
-            <div class="row">
+          <div class="hero-card-text">
+            <h1>Credit Card Reviews</h1>
+            <h5>Where will your points take you?</h5>
+          </div>
+          <div class="row">
 
-              <select class="creditDropdown">
-                <option value="">Credit Range</option>
-                <option value="option1">750+</option>
-                <option value="option2">700 - 749</option>
-                <option value="option3">650 - 699</option>
-                <option value="option3">650- </option>
-                </optgroup>
-              </select>
-              <select class="creditDropdown">
-                <option value="">Type</option>
-                <option value="option1">Credit</option>
-                <option value="option2">Charge</option>
-                </optgroup>
-              </select>
-              <select class="creditDropdown">
-                <option value="">Hotel</option>
-                <option value="option1">Hilton</option>
-                <option value="option2">Hyatt</option>
-                <option value="option3">Marriot</option>
-                <option value="option4">Ritz</option>
-                <option value="option4">SPG</option>
-                </optgroup>
-              </select>
-              <select class="creditDropdown">
-                <option value="">Airline</option>
-                <option value="option1">Alaska</option>
-                <option value="option2">Option Two</option>
-                </optgroup>
-              </select>
-              <button class="basic button">Search</button>
-            </div>
+            <select class="creditDropdown">
+              <option value="">Credit Range</option>
+              <option value="option1">750+</option>
+              <option value="option2">700 - 749</option>
+              <option value="option3">650 - 699</option>
+              <option value="option3">650- </option>
+              
+            </select>
+            <select class="creditDropdown">
+              <option value="">Type</option>
+              <option value="option1">Credit</option>
+              <option value="option2">Charge</option>
+              
+            </select>
+            <select class="creditDropdown">
+              <option value="">Hotel</option>
+              <option value="option1">Hilton</option>
+              <option value="option2">Hyatt</option>
+              <option value="option3">Marriot</option>
+              <option value="option4">Ritz</option>
+              <option value="option4">SPG</option>
+              
+            </select>
+            <select class="creditDropdown">
+              <option value="">Airline</option>
+              <option value="option1">Alaska</option>
+              <option value="option2">Option Two</option>
+              
+            </select>
+            <button class="basic button">Search</button>
           </div>
         </div>
-        <SideNav></SideNav>
-        <CardReview></CardReview>
-        <Contact></Contact>
-        
-      </div>  
+      </div>
+      <SideNav></SideNav>
+      <CardReview></CardReview>
+      <Contact></Contact>
+      
+    </section>  
             );
   }
 } // End of class 

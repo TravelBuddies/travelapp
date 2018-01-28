@@ -12,14 +12,18 @@ const Nav = () =>
     </div>
       <div id="topbar-responsive" className="topbar-responsive-links">
       <div className="top-bar-right">
-        <ul className="menu simple vertical medium-horizontal">
+        <ul className="menu simple vertical medium-horizontal dropdown menu" data-dropdown-menu>
           <li><a href="/flights">Flight</a></li>
           <li><a href="/hotels">Hotel</a></li>
           <li><a href="/cars">Car</a></li>
           <li><a href="/packages">Packages</a></li>
           <li><a href="/Inspire">Inspire</a></li>
           <li>
-            <button type="button" className="button hollow topbar-responsive-button">Account</button>
+            <a href="/">Account</a>
+            <ul class="menu">
+              <li><a href="/Cards">Card Reviews</a></li>
+              <li><a href="/">Travel Buddy</a></li>
+            </ul>
           </li>
         </ul>
       </div>

@@ -9,8 +9,8 @@ import "./Hero.css";
 
 const Jumbotron = ({ children }) =>
 		<section className="row columns">
-	    <div className="hero-section">
-	      <div className="hero-section-text">
+	    <div className="hero-home">
+	      <div className="hero-home-text">
 	        <h1>Header</h1>
 	        <h5>subtitle about anything you like</h5>
 	      </div>
