@@ -4,6 +4,10 @@ import React, { Component } from "react";
 // import API from "../../utils/API";
 
 // import Navpills from "../../components/Nav"
+import $ from 'jquery';
+
+import 'foundation-sites';
+
 import Hero from "../../components/Hero";
 import Trending from "../../components/Trending";
 import Contact from "../../components/Contact";
@@ -16,6 +20,7 @@ class Home extends Component {
   };
 
   componentDidMount() {
+    $(document).foundation();
     // Mounting the Most common deals that are found for specific destinations we choose. 
     // this.loadFlights();
     // this.loadInspirationFlights();

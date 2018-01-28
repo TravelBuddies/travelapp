@@ -24,11 +24,11 @@
 
 .footer-bottom p {
   margin-bottom: 0;
+  display: inline-block;
 }
 
-
 @media screen and (max-width: 63.9375em) {
-  .footer-bottom .footer-bottom-links {
+  .footer-bottom {
     -webkit-justify-content: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -39,4 +39,12 @@
   .footer-bottom {
     text-align: center;
   }
+}
+
+.footerFirst {
+  margin-left: 2.5%;
+}
+
+.footerspace {
+  padding: 0 1%;
 }

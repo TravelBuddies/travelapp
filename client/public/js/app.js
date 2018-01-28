@@ -26,10 +26,3 @@ $(function () {
     $(this).trigger('checkval');
   });
 });
-
-
-$(function() {
-    $('#click').click(function() {
-        $('#toggle').toggle();
-    });                        
-});
