@@ -37,6 +37,12 @@ export default {
   getUser: function() {
       return axios.get("/api/user");
   },
+
+  // Saves a user to the database
+  saveUser: function(userData) {
+    return axios.post("/api/newuser", userData);
+  },
+
   
   // Get user travel history
   getTripHistory: function() {

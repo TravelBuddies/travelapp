@@ -21,6 +21,9 @@ router.use("/hotels", hotelRoutes);
 // user routes
 router.use("/user", userRoutes);
 
+// test new user routes
+router.use("/newuser", userRoutes);
+
 // travelhistory routes
 router.use("/user/travelhistory", tripHistoryRoutes);
 
