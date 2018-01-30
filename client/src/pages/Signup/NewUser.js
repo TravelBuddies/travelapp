@@ -210,7 +210,7 @@ class NewUser extends Component {
                                         disabled={!(this.state.username && this.state.firstName && this.state.lastName && this.state.password
                             && this.state.address && this.state.city && this.state.state && this.state.zipcode 
                             && this.state.phoneNumber)}
-                                        onClick={this.handleFormSubmit}>
+                                        onClick={this.handleFormSubmit}><a href="http://localhost:3000/user"></a>
                                         Submit Into Database
                                     </FormBtn>
                                     </div>
