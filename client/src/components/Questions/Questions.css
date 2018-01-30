@@ -1,0 +1,66 @@
+.hero-FAQs{
+  background: url("./faq.jpeg") 100% no-repeat;
+  background-size: cover;
+  height: 100vh;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.hero-FAQs .hero-FAQs-text {
+  padding-top: 50px;
+  color: #fefefe;
+  text-shadow: 1px 1px 2px #0a0a0a;
+}
+
+
+.padding-10 {
+  padding:10px;
+}
+
+
+
+h4 {
+    color: black;
+}
+
+
+.material-accordion {
+    margin-top: 5%;
+}
+
+
+.material-accordion .menu li {
+    background: transparent;
+    cursor: pointer;
+    color: #777;
+    border-bottom: 1px solid #e1e1e1;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+    width: 60%;
+    margin-left: 20%;
+}
+
+.material-accordion .menu li[aria-expanded="true"] {
+    -moz-box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.18824);
+    -webkit-box-shadow: 0 8px 17px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.18824);
+    box-shadow: 0 10px 20px 0 rgba(0,0,0,0.2), 0 10px 28px 0 rgba(0,0,0,0.18824);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.15);
+    position: relative;
+    margin: 1% 15%;
+}
+
+.material-accordion .menu li[aria-expanded="true"] > a {
+    background: #A4A4CA;
+    color: #fff;
+}
+
+.material-accordion .menu li[aria-expanded="true"] ul li[aria-expanded="true"] > a {
+        background: #e3e3e3;
+    color: #444;
+}
+
+.faq {
+  color: black;
+}

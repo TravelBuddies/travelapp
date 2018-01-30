@@ -11,19 +11,19 @@ const Jumbotron = ({ children }) =>
 		<section className="row columns">
 	    <div className="hero-home">
 	      <div className="hero-home-text">
-	        <h1>Header</h1>
-	        <h5>subtitle about anything you like</h5>
+	        <h1>Travel App</h1>
+	        <h2>Find the vacation of your dreams!</h2>
 	      </div>
 	      <div className="translucent-form-overlay">
 	        <form>
 	          <div className="row columns"></div>
 	          <div className="floated-label-wrapper">
 	            <label for="email">Email</label>
-	            <input type="email" id="email" name="email input" placeholder="Email" /> 
+	            <input className="userInput" type="email" id="email" name="email input" placeholder="Email" /> 
 	          </div>
 	          <div className="floated-label-wrapper">
 	            <label for="pass">Password</label>
-	            <input type="password" id="pass" name="password input" placeholder="Password" />
+	            <input className="userInput" type="password" id="pass" name="password input" placeholder="Password" />
 	          </div>
 	          <div className="row columns">
 	            <div id="rememberMe">
@@ -36,7 +36,7 @@ const Jumbotron = ({ children }) =>
 	                Login
 	            </button>
 	          </div>
-	            <p id="register">New user? <a href="/signup">Register Here</a></p>
+	            <p id="register"><a href="/signup" className="register">New users Register Here</a></p>
 	       </form>
 	      </div>
 	    </div>

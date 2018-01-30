@@ -5,18 +5,15 @@ import React, { Component } from "react";
 
 // import Navpills from "../../components/Nav"
 import $ from 'jquery';
-
 import 'foundation-sites';
-
-
-import Hero from "../../components/Hero";
-import Trending from "../../components/Trending";
+import "./FAQs.css";
+import Questions from "../../components/Questions";
 import Contact from "../../components/Contact";
-import Testimony from "../../components/Testimony";
 
-class Home extends Component {
+
+class FAQs extends Component {
   state = {
-    currentPage: "Home",
+    currentPage: "FAQs",
   // update here if any form details that are needed to be empty.
   };
 
@@ -26,6 +23,7 @@ class Home extends Component {
     // this.loadFlights();
     // this.loadInspirationFlights();
     // this.loadPackageDeals();
+
   }
 
   handlePageChange = page => {
@@ -55,9 +53,8 @@ class Home extends Component {
   render() {
     return (
       <div>        
-        <Hero></Hero>
-        <Trending></Trending>
-        <Testimony></Testimony>  
+        
+        <Questions></Questions>
         <Contact></Contact>
         
       </div>  
@@ -65,4 +62,4 @@ class Home extends Component {
   }
 } // End of class 
 
-export default Home;
+export default FAQs;

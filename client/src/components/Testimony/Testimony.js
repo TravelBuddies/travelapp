@@ -11,8 +11,8 @@ const Testimony = () =>
 <section className="orbit clean-hero-slider" role="region" aria-label="Favorite Space Pictures" data-orbit>
   <div className="orbit-wrapper">
     <div className="orbit-controls">
-      <button className="orbit-previous"><span className="show-for-sr">Previous Slide</span>&/9664;&/xFE0E;</button>
-      <button className="orbit-next"><span className="show-for-sr">Next Slide</span>&/9654;&/xFE0E;</button>
+      <button className="orbit-previous"><span className="show-for-sr">Previous Slide</span> <i className="fi fi-arrow-left"/></button>
+      <button className="orbit-next"><span className="show-for-sr">Next Slide</span><i className="fi fi-arrow-right"/></button>
     </div>
     <ul className="orbit-container">
       <li className="orbit-slide">
