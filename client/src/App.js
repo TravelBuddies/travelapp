@@ -15,7 +15,7 @@ import NoMatch from "./pages/NoMatch";
 import Contact from "./components/Contact";
 import User from "./pages/User";
 import TripHistory from "./pages/TripHistory"
-import NewUser from "./pages/Test-NewUserSignUp"
+import NewUser from "./pages/Signup"
 // import Checkout from "./pages/Checkout";
 import Nav from "./components/Nav";
 import Footer from "./components/Footer";

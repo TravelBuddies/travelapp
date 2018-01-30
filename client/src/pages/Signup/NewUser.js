@@ -2,6 +2,10 @@ import React, { Component } from "react";
 import { Col, Row, Container } from "../../components/Grid";
 import { Input, FormBtn } from "../../components/Form";
 import API from "../../utils/API";
+import $ from 'jquery';
+import 'foundation-sites';
+import "./signup.css";
+import Hero from "../../components/Hero";
 
 import 'react-dates/initialize';
 import { DateRangePicker } from 'react-dates';
@@ -28,6 +32,7 @@ class NewUser extends Component {
 
   componentDidMount() {
     this.loadUser();
+    $(document).foundation();
     console.log(NewUser)
     // this.autoComp()
   }
@@ -93,119 +98,136 @@ class NewUser extends Component {
 
   render() {
     return (
-      <div className="translucent-form-overlay">
-        <form>
-            <div className="row columns">
-            
-            </div>
-            <br>
-            </br>
-            <br>
-            </br>
-            <h1>New User Test Input</h1>
-            <div className="floated-label-wrapper">             
-                <Input 
-                    value={this.state.username}
-                    onChange={this.handleInputChange} 
-                    id="username" 
-                    name="username" 
-                    placeholder="User Name" 
-                />
-            </div>
-            <div className="floated-label-wrapper">
-                <Input 
-                    value={this.state.firstName}
-                    onChange={this.handleInputChange} 
-                    id="firstName" 
-                    name="firstName" 
-                    placeholder="First Name" 
-                /> 
-            </div>
-            <div className="floated-label-wrapper">             
-                <Input 
-                    value={this.state.lastName}
-                    onChange={this.handleInputChange} 
-                    id="lastName" 
-                    name="lastName" 
-                    placeholder="Last Name" 
-                />
-            </div>
-            <div className="floated-label-wrapper">
-                <Input 
-                    value={this.state.password}
-                    onChange={this.handleInputChange} 
-                    id="password" 
-                    name="password" 
-                    type="password" 
-                /> 
-            </div>
-            <div className="floated-label-wrapper">             
-                <Input 
-                    value={this.state.address}
-                    onChange={this.handleInputChange} 
-                    id="address" 
-                    name="address" 
-                    placeholder="Address" 
-                />
-            </div>
-            <div className="floated-label-wrapper">
-                <Input 
-                    value={this.state.city}
-                    onChange={this.handleInputChange} 
-                    id="city" 
-                    name="city" 
-                    placeholder="City" 
-                /> 
-            </div>
-            <div className="floated-label-wrapper">             
-                <Input 
-                    value={this.state.state}
-                    onChange={this.handleInputChange} 
-                    id="state" 
-                    name="state" 
-                    placeholder="State" 
-                />
-            </div>
-            <div className="floated-label-wrapper">
-                <Input 
-                    value={this.state.zipcode}
-                    onChange={this.handleInputChange} 
-                    id="zipcode" 
-                    name="zipcode" 
-                    placeholder="Zipcode" 
-                /> 
-            </div>
-            <div className="floated-label-wrapper">             
-                <Input 
-                    value={this.state.phoneNumber}
-                    onChange={this.handleInputChange} 
-                    id="phoneNumber" 
-                    name="phoneNumber" 
-                    placeholder="Phone Number" 
-                />
-            </div>
-            <div className="floated-label-wrapper">
-                <Input 
-                    value={this.state.paymentMethod}
-                    onChange={this.handleInputChange} 
-                    id="paymentMethod" 
-                    name="paymentMethod" 
-                    placeholder="Payment Method" 
-                /> 
-            </div>
-            
-            <div> </div>
-            <FormBtn
-                disabled={!(this.state.username && this.state.firstName && this.state.lastName && this.state.password
-    && this.state.address && this.state.city && this.state.state && this.state.zipcode 
-    && this.state.phoneNumber)}
-                onClick={this.handleFormSubmit}>
-                Submit Into Database
-            </FormBtn>
-        </form>
-      </div>
+    <div id="signup-body">
+        <Container fluid>
+            <Row>
+                <Col size="md-12">
+                    <section className="row columns">
+                        <div className="hero-section">
+                        <div className="hero-section-text">
+                                <h1>Join Us</h1>
+                                <h5>And explore the endless possibilities your next journey has to offer.</h5>
+                            </div>
+                            <div className="sign-up-form" id="sign-up">
+                                <form>
+                                    <div className="row columns">
+                                    
+                                   
+                                    <h1>Create Account</h1>
+                                    <div className="floated-label-wrapper">             
+                                        <Input 
+                                            value={this.state.username}
+                                            onChange={this.handleInputChange} 
+                                            id="signup-input" 
+                                            name="username" 
+                                            placeholder="User Name" 
+                                        />
+                                    </div>
+                                    <div className="floated-label-wrapper">
+                                        <Input 
+                                            value={this.state.firstName}
+                                            onChange={this.handleInputChange} 
+                                            id="signup-input" 
+                                            name="firstName" 
+                                            placeholder="First Name" 
+                                        /> 
+                                    </div>
+                                    <div className="floated-label-wrapper">             
+                                        <Input 
+                                            value={this.state.lastName}
+                                            onChange={this.handleInputChange} 
+                                            id="signup-input" 
+                                            name="lastName" 
+                                            placeholder="Last Name" 
+                                        />
+                                    </div>
+                                    <div className="floated-label-wrapper">
+                                        <Input 
+                                            value={this.state.password}
+                                            onChange={this.handleInputChange} 
+                                            id="signup-input" 
+                                            name="password" 
+                                            type="password" 
+                                        /> 
+                                    </div>
+                                    <div className="floated-label-wrapper">             
+                                        <Input 
+                                            value={this.state.address}
+                                            onChange={this.handleInputChange} 
+                                            id="signup-input" 
+                                            name="address" 
+                                            placeholder="Address" 
+                                        />
+                                    </div>
+                                    <div className="floated-label-wrapper">
+                                        <Input 
+                                            value={this.state.city}
+                                            onChange={this.handleInputChange} 
+                                            id="signup-input" 
+                                            name="city" 
+                                            placeholder="City" 
+                                        /> 
+                                    </div>
+                                    <div className="floated-label-wrapper">             
+                                        <Input 
+                                            value={this.state.state}
+                                            onChange={this.handleInputChange} 
+                                            id="signup-input" 
+                                            name="state" 
+                                            placeholder="State" 
+                                        />
+                                    </div>
+                                    <div className="floated-label-wrapper">
+                                        <Input 
+                                            value={this.state.zipcode}
+                                            onChange={this.handleInputChange} 
+                                            id="signup-input" 
+                                            name="zipcode" 
+                                            placeholder="Zipcode" 
+                                        /> 
+                                    </div>
+                                    <div className="floated-label-wrapper">             
+                                        <Input 
+                                            value={this.state.phoneNumber}
+                                            onChange={this.handleInputChange} 
+                                            id="signup-input" 
+                                            name="phoneNumber" 
+                                            placeholder="Phone Number" 
+                                        />
+                                    </div>
+                                    <div className="floated-label-wrapper">
+                                        <Input 
+                                            value={this.state.paymentMethod}
+                                            onChange={this.handleInputChange} 
+                                            id="signup-input" 
+                                            name="paymentMethod" 
+                                            placeholder="Payment Method" 
+                                        /> 
+                                    </div>
+                                    
+                                    
+                                    <FormBtn
+                                        disabled={!(this.state.username && this.state.firstName && this.state.lastName && this.state.password
+                            && this.state.address && this.state.city && this.state.state && this.state.zipcode 
+                            && this.state.phoneNumber)}
+                                        onClick={this.handleFormSubmit}>
+                                        Submit Into Database
+                                    </FormBtn>
+                                    </div>
+                                </form>
+                              
+                            </div>
+                        </div>
+                    </section>
+                </Col>
+            </Row>
+        </Container>            
+      </div>  
+
+    
     );
   }
 }
 
 export default NewUser;
+

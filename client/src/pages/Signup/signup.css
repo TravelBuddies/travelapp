@@ -1,0 +1,52 @@
+
+#signup-body {
+	background-image: url("../../components/Testimony/balloon.jpeg");
+	background-position: center;
+	height: 100%; 
+	background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.sign-up-form {
+  width: 60%;
+  background-color: rgba(54, 54, 54, 0.5);
+  padding: 20px;
+  color: #fefefe;
+  float: left;
+  margin-bottom: 10%;
+  margin-top: 450px;
+  margin-right: 5%;
+}
+
+.sign-up-form input, .sign-up-form select {
+  color: #6C648B;
+}
+
+.sign-up-form input::-webkit-input-placeholder {
+  color: #8a8a8a;
+}
+
+.sign-up-form input:-ms-input-placeholder {
+  color: #8a8a8a;
+}
+
+.sign-up-form input::placeholder {
+  color: #8a8a8a;
+}
+
+#signup-input {
+	width: 300px;
+	padding: 3px;
+	margin: 8px;
+	overflow: auto;
+}
+
+/*PASSWORD STYLE NOT WORKING????*/
+input[type=password] {
+	width: 300px;
+	padding: 6px;
+	margin: 6px;
+	overflow: auto;
+}
+
+
