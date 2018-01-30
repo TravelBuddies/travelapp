@@ -4,21 +4,23 @@
 
 
 .topbar-responsive {
-  background-color: transparent;	
+  background-color: #6BBAA7;	
   position: fixed;
   width: 100%;
   padding-left: 20px;
   padding-right: 20px;
-  z-index: 3;
+  z-index: 1000;
+  top: 0;
 }
 
 .topbar-responsive .topbar-responsive-logo {
-  color: #fefefe;
+  color: black;
   vertical-align: middle;
 }
 
 .topbar-responsive .menu {
-  background-color: transparent;
+  background-color: #6BBAA7;
+  text-align: center;
 }
 
 .topbar-responsive .menu li:last-of-type {
@@ -26,7 +28,7 @@
 }
 
 .topbar-responsive .menu a {
-  color: white;
+  color: black;
   transition: color 0.15s ease-in;
 }
 

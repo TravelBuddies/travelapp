@@ -10,7 +10,7 @@ const Footer = () =>
             <p className="footerspace">|</p>
 	        <p><a href="/"> Terms of Service</a></p>
 	        <p className="footerspace">|</p>
-	        <p><a href="/"> FAQs</a></p>
+	        <p><a href="/FAQs"> FAQs</a></p>
 	        <p className="footerspace">|</p>
 	        <p><a href="/About"> About Us</a></p>
 	        <p className="footerspace">|</p>

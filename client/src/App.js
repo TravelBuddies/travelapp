@@ -5,6 +5,7 @@ import PrivateRoute from './utils/PrivateRoute'
 
 import Home from "./pages/Home";
 import About from "./pages/About";
+import FAQs from "./pages/FAQs";
 import Cards from "./pages/Cards";
 import Flights from "./pages/Flights";
 import Cars from "./pages/Cars";
@@ -37,6 +38,7 @@ const App = () =>
         <Route exact path="/About" component={About} />
           <Route exact path='/newuser' component={NewUser} />
         <Route exact path="/Cards" component={Cards} />
+        <Route exact path="/FAQs" component={FAQs} />
 
         {/* <PrivateRoute exact path='/user' component={User} /> */}
         {/* <PrivateRoute exact path='/checkout' component={Checkout} /> */}

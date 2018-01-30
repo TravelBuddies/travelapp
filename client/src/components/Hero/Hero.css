@@ -3,7 +3,7 @@
 ------------------------------------------------*/
 
 .hero-home {
-  background: url("pointing.jpeg") 50% no-repeat;
+  background: url("pointing.jpeg") 20% no-repeat;
   background-size: cover;
   height: 70vh;
   text-align: center;
@@ -16,16 +16,22 @@
   -webkit-justify-content: center;
       -ms-flex-pack: center;
           justify-content: center;
+       
+}
+
+.rememberLabel{
+  color: white;
+  padding-left: 5px;
+}
+
+.register {
+  color: white;
 }
 
 .hero-home .hero-home-text {
   color: #fefefe;
   text-shadow: 1px 1px 2px #0a0a0a;
   margin: 0 15% 10% 7.5%;
-}
-
-#toggle {
-  display: none;
 }
 
 .callout {

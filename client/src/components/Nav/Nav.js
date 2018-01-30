@@ -20,8 +20,9 @@ const Nav = () =>
           <li><a href="/Inspire">Inspire</a></li>
           <li>
             <a href="/">Account</a>
-            <ul class="menu">
-              <li><a href="/Cards">Card Reviews</a></li>
+            <ul className="menu">
+              <li><a href="/Cards" className="cardNav">Card Reviews</a></li>
+              <li><a href="/">Travel Reviews</a></li>
               <li><a href="/">Travel Buddy</a></li>
             </ul>
           </li>

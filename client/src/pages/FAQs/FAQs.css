@@ -1,13 +1,14 @@
-.hero-about {
-  background: url("./aboutUs.jpeg") 50% no-repeat;
+.hero-FAQs{
+  background: url("./faq.jpeg") 10% no-repeat;
   background-size: cover;
   height: 50vh;
   text-align: center;
   margin-top: 50px;
 }
 
-.hero-about .hero-about-text {
+.hero-FAQs .hero-FAQs-text {
   padding-top: 50px;
   color: #fefefe;
   text-shadow: 1px 1px 2px #0a0a0a;
 }
+
