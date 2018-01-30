@@ -2,10 +2,14 @@ import React, { Component } from "react";
 import { Col, Row, Container } from "../../components/Grid";
 import { Input, FormBtn } from "../../components/Form";
 import API from "../../utils/API";
+import $ from 'jquery';
+
+import 'foundation-sites';
 
 import 'react-dates/initialize';
 import { DateRangePicker } from 'react-dates';
 import 'react-dates/lib/css/_datepicker.css';
+import Hero from "../../components/Hero";
 
 import { Link } from "react-router-dom";
 import { List, ListItem } from "../../components/List";
@@ -22,10 +26,20 @@ class Flights extends Component {
     returns: ""
   };
 
-  componentDidMount() {
-    this.loadFlights();
-  };
+  // componentDidMount() {
+  //   this.loadFlights();
+  // };
 
+  handlePageChange = page => {
+    this.setState({ currentPage: page });
+  };
+componentDidMount() {
+    $(document).foundation();
+    // Mounting the Most common deals that are found for specific destinations we choose. 
+    // this.loadFlights();
+    // this.loadInspirationFlights();
+    // this.loadPackageDeals();
+  }
   // Loading the city and flight details along with lowest possible prices.
   loadFlights = () => {
     // API.getFlights()
@@ -73,16 +87,18 @@ class Flights extends Component {
                 <Col size="md-12">
                     <section className="row columns">
                         <div className="hero-section">
+                            <Hero>
                             <div className="hero-section-text">
                                 <h1>Flights</h1>
                                 <h5>Where would you like to go?</h5>
                             </div>
+                                
                             <div className="translucent-form-overlay">
                                 <form>
                                     <div className="row columns">
                                     
                                     </div>
-                                    <div className="floated-label-wrapper">	            
+                                    <div className="floated-label-wrapper">             
                                         <Input 
                                             value={this.state.origin}
                                             onChange={this.handleInputChange} 
@@ -119,6 +135,7 @@ class Flights extends Component {
                                     </FormBtn>
                                 </form>
                             </div>
+                            </Hero>
                         </div>
                         {this.state.flights.length ? (
                             <List>
