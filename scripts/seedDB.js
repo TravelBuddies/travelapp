@@ -13,55 +13,87 @@ mongoose.connect(
 
 const userSeed = [
   {
-    username: "jake7",
-    firstName: "Jake",
-    lastName: "Chaplin",
-    password: "1234",
-    address: '601 Van Ness Ave.',
-    city: 'San Francisco',
-    state: 'CA',
-    zipcode: '94102',
-    phoneNumber: '408-656-0312',
-    paymentMethod: '',
-    date: new Date(Date.now())
-  },
-  {
-    username: "bobster",
-    firstName: "Bob",
-    lastName: "Lends",
-    password: "4321",
-    address: '426 Cool St.',
-    city: 'Oakland',
-    state: 'CA',
-    zipcode: '89342',
-    phoneNumber: '111-222-3333',
-    paymentMethod: 'Bitcoin',
-    date: new Date(Date.now())
-  },
-  {
-    username: "slater674",
-    firstName: "Steve",
-    lastName: "Richardson",
-    password: "8724",
-    address: '3781 Rode St.',
-    city: 'Sunnyvale',
-    state: 'CA',
-    zipcode: '97320',
-    phoneNumber: '222-333-4444',
-    paymentMethod: 'Visa',
-    date: new Date(Date.now())
-  }
+        "_id": "5a669cfdfbcce50ee4c0a8b2",
+        "username": "bobster",
+        "firstName": "Bob",
+        "lastName": "test",
+        "password": "12345",
+        "address": "5432 postman",
+        "city": "san fran",
+        "state": "ca",
+        "zipcode": "94102",
+        "phoneNumber": "1234567",
+        "paymentMethod": "bitcoin",
+        "__v": 0,
+        "userCreated": "2018-01-23T02:25:01.111Z"
+    }
+    // {
+    //     "_id": "5a6df506672a6d0b634cfc99",
+    //     "username": "audiofile",
+    //     "firstName": "Rick",
+    //     "lastName": "Rubin",
+    //     "password": "0987",
+    //     "address": "2021 Glastonbury Rd",
+    //     "city": "Westlake Village",
+    //     "state": "CA",
+    //     "zipcode": "91361",
+    //     "phoneNumber": "323-873-8965",
+    //     "__v": 0,
+    //     "userCreated": "2018-01-28T16:06:30.564Z"
+    // },
+    // {
+    //     "_id": "5a705b355cb8150a9109e4ec",
+    //     "username": "jaguarsurfer",
+    //     "firstName": "Dick",
+    //     "lastName": "Dale",
+    //     "password": "5938",
+    //     "address": "857 Surfer Way",
+    //     "city": "Long Beach",
+    //     "state": "CA",
+    //     "zipcode": "94832",
+    //     "phoneNumber": "496-930-3946",
+    //     "__v": 0,
+    //     "userCreated": "2018-01-30T11:47:01.293Z"
+    // },
+    // {
+    //     "_id": "5a70ecb71e99ab0b6d3997ae",
+    //     "username": "traveljunky92",
+    //     "firstName": "Chris",
+    //     "lastName": "Holloway",
+    //     "password": "jakela",
+    //     "address": "1555 Riviera",
+    //     "city": "Walnut Creek",
+    //     "state": "CA",
+    //     "zipcode": "94596",
+    //     "phoneNumber": "329-592-0845",
+    //     "__v": 0,
+    //     "userCreated": "2018-01-30T22:07:51.354Z"
+    // },
+    // {
+    //     "_id": "5a70edaf1e99ab0b6d3997af",
+    //     "username": "steveo",
+    //     "firstName": "Steve",
+    //     "lastName": "Jobs",
+    //     "password": "8749403",
+    //     "address": "838 Apple Rd",
+    //     "city": "Mountain View",
+    //     "state": "CA",
+    //     "zipcode": "94757",
+    //     "phoneNumber": "839-856-5859",
+    //     "__v": 0,
+    //     "userCreated": "2018-01-30T22:11:59.451Z"
+    // }
 ]
 
-// db.User
-//   .remove({})
-//   .then(() => db.User.collection.insertMany(userSeed))
-//   .then(data => {
-//     console.log(data.insertedIds.length + " records inserted!");
-//     process.exit(0);
-//   })
-//   .catch(err => {
-//     console.error(err);
-//     process.exit(1);
-//   });
+db.User
+  .remove({})
+  .then(() => db.User.collection.insertMany(userSeed))
+  .then(data => {
+    console.log(data.insertedIds.length + " records inserted!");
+    process.exit(0);
+  })
+  .catch(err => {
+    console.error(err);
+    process.exit(1);
+  });
 
