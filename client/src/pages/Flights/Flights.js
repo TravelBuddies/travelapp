@@ -7,7 +7,7 @@ import 'react-dates/initialize';
 import { DateRangePicker } from 'react-dates';
 import 'react-dates/lib/css/_datepicker.css';
 
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import { List, ListItem } from "../../components/List";
 import moment from "moment";
 
@@ -58,7 +58,7 @@ class Flights extends Component {
 
     // Axios promise for getting the flight results 
       API.getFlights(params)
-          .then(res => this.setState({ flights: res.data }))
+          .then(res => this.setState({ flights: res.data.results }))
           .catch(err => console.log(err));
     // }
     //  
@@ -66,7 +66,6 @@ class Flights extends Component {
 
 
   render() {
-      console.log(this.state.flights)
 	return (
         <Container fluid>
             <Row>
@@ -119,23 +118,65 @@ class Flights extends Component {
                                     </FormBtn>
                                 </form>
                             </div>
-                        </div>
+                        </div >
+                        <div>
                         {this.state.flights.length ? (
                             <List>
-                                {this.state.flights.map(flights => (
-                                <ListItem key={flights._id}>
-                                    <Link to={"/flights/" + flights._id}>
-                                    <strong>
-                                        {flights} by {flights.author}
-                                    </strong>
-                                    </Link>
-                                    
-                                </ListItem>
-                                ))}
+                                {this.state.flights.map(result => {return(
+                                    result.itineraries.map( itinerary => {
+                                        return[
+                                        
+                                        itinerary.outbound.flights.map((flyout,index) => {
+                                            return (
+                                            <List>    
+                                                <ListItem key={index} >
+                                                   <li>
+                                                    <h4><strong>OUTBOUND</strong> </h4>   
+                                                    <h5> 
+                                                        <strong> Origin : </strong> {flyout.origin.airport} 
+                                                        <strong> Destination :</strong>  {flyout.destination.airport} 
+                                                        <strong> Airlines :</strong>  {flyout.marketing_airline}
+                                                        <strong> through :</strong>  {flyout.operating_airline}
+                                                        <strong> Flight No :</strong> {flyout.flight_number} 
+                                                        <strong> Departure Time :</strong> {flyout.departs_at} 
+                                                        <strong> Arrival Time :</strong>  {flyout.arrives_at}
+                                                    </h5>
+
+                                                    </li>
+                                                </ListItem>
+                                            </List>    
+                                            ) // outbound return end
+                                        }),
+                                        itinerary.inbound.flights.map((flyin, index) => {
+                                            return (
+                                                <List>
+                                                    <ListItem key={index} >
+                                                        <li>
+                                                            <h4><strong>INBOUND</strong> </h4>   
+                                                            <h5>  
+                                                                <strong> Origin : </strong> {flyin.origin.airport}
+                                                                <strong> Destination :</strong>  {flyin.destination.airport}
+                                                                <strong> Airlines :</strong>  {flyin.marketing_airline}
+                                                                <strong> through :</strong>  {flyin.operating_airline}
+                                                                <strong> Flight No :</strong> {flyin.flight_number}
+                                                                <strong> Departure Time :</strong> {flyin.departs_at}
+                                                                <strong> Arrival Time :</strong>  {flyin.arrives_at}
+                                                            </h5>
+                                                        </li>
+                                                    </ListItem>
+                                                </List>
+                                            ) //inbound return end
+                                            })
+                                        ]; // Array of Itinerary objects Inbound and Outbound.
+                                        
+                                      })
+                                      );
+                                    })}
                             </List>
                             ) : (
-                            <h3>No Results to Display</h3>
+                            <h3>Query the Flights</h3>
                             )}
+                          </div> 
                     </section>
                 </Col>
             </Row>

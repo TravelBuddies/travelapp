@@ -9,7 +9,7 @@ import 'react-dates/lib/css/_datepicker.css';
 
 import { Link } from "react-router-dom";
 import { List, ListItem } from "../../components/List";
-import moment from "moment";
+// import moment from "moment";
 // import AutoCompForm from "../../components/AutoCompForm";
 
 class User extends Component {
