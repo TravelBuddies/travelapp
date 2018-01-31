@@ -6,7 +6,6 @@ import React, { Component } from "react";
 // import Navpills from "../../components/Nav"
 import $ from 'jquery';
 import 'foundation-sites';
-import "./FAQs.css";
 import Questions from "../../components/Questions";
 import Contact from "../../components/Contact";
 

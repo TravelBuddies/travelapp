@@ -6,6 +6,9 @@ import { Redirect } from 'react-router-dom'
 import { Col, Row, Container } from '../../components/Grid'
 import { Input, FormBtn } from '../../components/Form'
 import ErrorDisplay from '../../components/ErrorDisplay'
+import $ from 'jquery';
+import 'foundation-sites';
+
 
 class Auth extends Component {
 
@@ -17,6 +20,7 @@ class Auth extends Component {
   }
 
   componentDidMount() {
+    $(document).foundation();
     API.checkForSession()
       .then( res => {
         const { user } = res.data

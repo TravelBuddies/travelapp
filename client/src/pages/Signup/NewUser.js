@@ -105,9 +105,9 @@ class NewUser extends Component {
                     <section className="row columns">
                         <div className="hero-section">
                         <div className="hero-section-text">
-                                <h1>Join Us</h1>
-                                <h5>And explore the endless possibilities your next journey has to offer.</h5>
-                            </div>
+                            <h1>Join Us</h1>
+                            <h3>And explore the endless possibilities your next journey has to offer.</h3>
+                        </div>
                             <div className="sign-up-form" id="sign-up">
                                 <form>
                                     <div className="row columns">

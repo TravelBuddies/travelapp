@@ -1,33 +1,23 @@
 .hero-FAQs{
-  background: url("./faq.jpeg") 100% no-repeat;
+  background: url("./faq.jpeg") 10% no-repeat;
   background-size: cover;
   height: 100vh;
   text-align: center;
-  margin-top: 50px;
 }
 
 .hero-FAQs .hero-FAQs-text {
-  padding-top: 50px;
+  padding-top: 10vh;
   color: #fefefe;
   text-shadow: 1px 1px 2px #0a0a0a;
 }
-
-
-.padding-10 {
-  padding:10px;
-}
-
-
 
 h4 {
     color: black;
 }
 
-
 .material-accordion {
     margin-top: 5%;
 }
-
 
 .material-accordion .menu li {
     background: transparent;
@@ -63,4 +53,9 @@ h4 {
 
 .faq {
   color: black;
+}
+
+.answers {
+  background: rgba(128, 128, 128, 0.5);
+  margin-left: 0px !important;
 }

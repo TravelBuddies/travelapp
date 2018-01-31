@@ -6,6 +6,8 @@ import API from "../../utils/API";
 import 'react-dates/initialize';
 import{ DateRangePicker } from 'react-dates';
 import 'react-dates/lib/css/_datepicker.css';
+import $ from 'jquery';
+import 'foundation-sites';
 
 // import Nav from "../../components/Nav";
 // import Hero from "../../components/Hero";
@@ -27,6 +29,7 @@ class Packages extends Component {
   // update here if any form details that are needed to be empty.
   };
 	componentDidMount() {
+		$(document).foundation();
 		this.loadFlights();
 	};
 
