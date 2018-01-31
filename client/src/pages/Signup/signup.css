@@ -1,14 +1,13 @@
 
 #signup-body {
-	background-image: url("../../components/Testimony/balloon.jpeg");
-	background-position: center;
-	height: 100%; 
-	background-position: center;
-  background-repeat: no-repeat;
+	background-image: url("./SignUp.jpeg");
   background-size: cover;
+  height:95vh;
+  text-align: center;
+
 }
 .sign-up-form {
-  width: 60%;
+  width: 50%;
   background-color: rgba(54, 54, 54, 0.5);
   padding: 20px;
   color: #fefefe;
@@ -42,11 +41,11 @@
 }
 
 /*PASSWORD STYLE NOT WORKING????*/
-input[type=password] {
+/*input[type=password] {
 	width: 300px;
 	padding: 6px;
 	margin: 6px;
 	overflow: auto;
 }
-
+*/
 

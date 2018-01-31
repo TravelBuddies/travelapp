@@ -1,0 +1,12 @@
+.hero-TravelBuddy {
+  background: url("./TravelBuddy.jpeg") 100% no-repeat;
+  background-size: cover;
+  height:95vh;
+  text-align: center;
+}
+
+.hero-TravelBuddy .hero-TravelBuddy-text {
+  padding-top: 10vh;
+  color: white;
+  text-shadow: 1px 1px 2px #0a0a0a;
+}

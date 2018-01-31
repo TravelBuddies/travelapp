@@ -8,7 +8,8 @@ import { DateRangePicker } from 'react-dates';
 import 'react-dates/lib/css/_datepicker.css';
 
 import moment from "moment";
-
+import $ from 'jquery';
+import 'foundation-sites';
 
 class Cars extends Component {
   state = {
@@ -21,6 +22,7 @@ class Cars extends Component {
   };
 
   componentDidMount() {
+  	$(document).foundation();
     // this.loadCarRentals();
   };
 

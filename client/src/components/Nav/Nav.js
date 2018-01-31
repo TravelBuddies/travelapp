@@ -22,8 +22,8 @@ const Nav = () =>
             <a href="/">Account</a>
             <ul className="menu navDrop" text-align-center>
               <li><a href="/Cards">Card Reviews</a></li>
-              <li><a href="/">Travel Reviews</a></li>
-              <li><a href="/">Travel Buddy</a></li>
+              <li><a href="/TravelReview">Travel Reviews</a></li>
+              <li><a href="/TravelBuddy">Travel Buddy</a></li>
             </ul>
           </li>
         </ul>

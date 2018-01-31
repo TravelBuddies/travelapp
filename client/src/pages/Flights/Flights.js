@@ -3,7 +3,6 @@ import { Col, Row, Container } from "../../components/Grid";
 import { Input, FormBtn } from "../../components/Form";
 import API from "../../utils/API";
 import $ from 'jquery';
-
 import 'foundation-sites';
 
 import 'react-dates/initialize';

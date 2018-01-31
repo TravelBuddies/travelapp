@@ -22,6 +22,8 @@ class Hotels extends Component {
   };
 
   componentDidMount() {
+  	$(document).foundation();
+  	
     // this.loadHotels();
   };
 
