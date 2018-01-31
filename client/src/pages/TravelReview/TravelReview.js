@@ -8,7 +8,7 @@ import $ from 'jquery';
 import 'foundation-sites';
 import "./TravelReview.css";
 import Contact from "../../components/Contact";
-
+import Review from "../../components/Review";
 
 class TravelReview extends Component {
   state = {
@@ -53,19 +53,22 @@ class TravelReview extends Component {
     return (
       <div>        
         <section>
-          <div className="hero-TravelReview">
+          <div class="hero-TravelReview">
 
-            <div className="hero-TravelReview-text">
-              <h1>Travel Reviews</h1>
-              <h3>This page is currently under construction</h3>
+            <div class="hero-TravelReview-text">
+              <h1>Reviews</h1>
+              <h3>Here's what people have to say about Travelapp</h3>
             </div>
           </div>
         </section> 
+        <Review></Review>  
         <Contact></Contact>
         
       </div>  
             );
   }
 } // End of class 
+
+
 
 export default TravelReview;

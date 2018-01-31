@@ -1,12 +1,12 @@
 .hero-TravelReview {
-  background: url("./TravelReview.jpeg") 100% no-repeat;
+  background: url("./TravelReview.jpeg") 50% no-repeat;
   background-size: cover;
-  height:95vh;
+  height: 50vh;
   text-align: center;
 }
 
 .hero-TravelReview .hero-TravelReview-text {
   padding-top: 10vh;
-  color: maroon;
+  color: #fefefe;
   text-shadow: 1px 1px 2px #0a0a0a;
 }

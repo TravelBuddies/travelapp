@@ -1,0 +1,97 @@
+.about-the-author {
+  background-color: #fefefe;
+  padding: 1rem;
+  width: 80%;
+  overflow: hidden;
+  margin: 1% 0 0 10%;
+} 
+
+.about-the-author .separator-left {
+  text-align: left;
+}
+
+#teamLeft {
+  width: 20%;
+  margin: 5px;
+  float:left;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.author-image {
+  width: 100%;
+  height: 250px;
+
+}
+
+.aboutImg {
+  width: 100%;
+  height: 100%;
+}
+
+#teamRight {
+  padding-left: 5%;
+  overflow: hidden;
+
+}
+
+.about-the-author .separator-left::before, .about-the-author .separator-left::after {
+  display: table;
+  content: ' ';
+  -webkit-flex-basis: 0;
+      -ms-flex-preferred-size: 0;
+          flex-basis: 0;
+  -webkit-order: 1;
+      -ms-flex-order: 1;
+          order: 1;
+}
+
+.about-the-author .separator-left::after {
+  clear: both;
+}
+
+.about-the-author .separator-left::after {
+  position: relative;
+  width: 5rem;
+  margin: 0.3rem auto 0;
+  margin-left: 0;
+}
+
+.about-the-author .author-title {
+  text-transform: uppercase;
+}
+
+.about-the-author .author-social {
+  text-align: center;
+  margin-top: 0.7rem;
+  margin-bottom: 0.7rem;
+}
+
+.about-the-author .author-social .fi {
+  display: inline-block;
+  margin-left: 7.5%;
+  font-size: 40px;
+}
+
+.about-the-author .author-social .fi-social-linkedin {
+  color: #4c70ba;
+}
+
+.about-the-author .author-social .fi-social-linkedin:hover, .about-the-author .author-social .fi-social-linkedin:focus {
+  color: #3b5998;
+}
+
+.about-the-author .author-social .fi-social-stack-overflow {
+  color: #83c3f3;
+}
+
+.about-the-author .author-social .fi-social-stack-overflow:hover, .about-the-author .author-social .fi-social-stack-overflow:focus {
+  color: #55acee;
+}
+
+.about-the-author .author-social .fi-social-github {
+  color: #009ee8;
+}
+
+.about-the-author .author-social .fi-social-github:hover, .about-the-author .author-social .fi-social-github:focus {
+  color: #007bb5;
+}
