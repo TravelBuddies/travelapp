@@ -23,10 +23,7 @@
     "bcrypt-nodejs": "^0.0.3",
     "body-parser": "^1.17.2",
     "express": "^4.15.4",
-<<<<<<< HEAD
-=======
     "foundation": "^4.2.1-1",
->>>>>>> 1b6549a9504f6558b0827a1ba0612ac8aeafe521
     "foundation-sites": "^6.4.4-rc1",
     "jquery": "^3.3.1",
     "mongoose": "^4.11.7",
