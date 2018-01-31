@@ -84,89 +84,111 @@ const Trending = () =>
         </a>
       </div>
     </div>
-  </div>
+  </div> 
 
   <div className="featured-image-block-grid">
     <div className="featured-image-block-grid-header small-10 medium-8 large-7 columns text-center">
-      <h2 id="destinationHeader">Trending Countries</h2>
-      <p>Do not know where to go? Let us guide you.</p>
+      <h2 id="destinationHeader">Get Inspired</h2>
+      <div className="card">
+        <div className="card-divider">
+          <h4>Adventure Seekers</h4>
+        </div>
+        <div className="card-divider">
+          <p>With endless hiking trails, these destinations will satisfy the wildest explorers!</p>
+        </div>
+        <div className="row">
+          <div className="columns">
+            <div className="accordion" data-accordion data-multi-expand="false">
+              <div className="accordion-item" id="sf" data-accordion-item>
+                <a href="#" className="accordion-title"><h5 className="locationName">San Francisco</h5></a>
+                <div className="accordion-content" id="content" data-tab-content >
+                  <button className="button warning bookNow">Book Now</button>
+                </div>
+              </div>
+              <div className="accordion-item" id="chicago" data-accordion-item>
+                <a href="#" className="accordion-title"><h5 className="locationName">Chicago</h5></a>
+                <div className="accordion-content" id="content" data-tab-content >
+                  <button className="button warning bookNow">Book Now</button>
+                </div>
+              </div>
+              <div className="accordion-item" id="ny" data-accordion-item>
+                <a href="#" className="accordion-title"><h5 className="locationName">New York</h5></a>
+                <div className="accordion-content" id="content" data-tab-content >
+                  <button className="button warning bookNow">Book Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> 
+      </div>
+
+      <div className="card">
+        <div className="card-divider">
+          <h4>Foodie Trips</h4>
+        </div>
+        <div className="card-divider">
+          <p>With endless hiking trails, these destinations will satisfy the wildest explorers!</p>
+        </div>
+        <div className="row">
+          <div className="columns">
+            <div className="accordion" data-accordion data-multi-expand="false">
+              <div className="accordion-item" id="sf" data-accordion-item>
+                <a href="#" className="accordion-title"><h5 className="locationName">San Francisco</h5></a>
+                <div className="accordion-content" id="content" data-tab-content >
+                  <button className="button warning bookNow">Book Now</button>
+                </div>
+              </div>
+              <div className="accordion-item" id="chicago" data-accordion-item>
+                <a href="#" className="accordion-title"><h5 className="locationName">Chicago</h5></a>
+                <div className="accordion-content" id="content" data-tab-content >
+                  <button className="button warning bookNow">Book Now</button>
+                </div>
+              </div>
+              <div className="accordion-item" id="ny" data-accordion-item>
+                <a href="#" className="accordion-title"><h5 className="locationName">New York</h5></a>
+                <div className="accordion-content" id="content" data-tab-content >
+                  <button className="button warning bookNow">Book Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> 
+      </div>
+
+      <div className="card">
+        <div className="card-divider">
+          <h4>Historical Sites</h4>
+        </div>
+        <div className="card-divider">
+          <p>With endless hiking trails, these destinations will satisfy the wildest explorers!</p>
+        </div>
+        <div className="row">
+          <div className="columns">
+            <div className="accordion" data-accordion data-multi-expand="false">
+              <div className="accordion-item" id="sf" data-accordion-item>
+                <a href="#" className="accordion-title"><h5 className="locationName">San Francisco</h5></a>
+                <div className="accordion-content" id="content" data-tab-content >
+                  <button className="button warning bookNow">Book Now</button>
+                </div>
+              </div>
+              <div className="accordion-item" id="chicago" data-accordion-item>
+                <a href="#" className="accordion-title"><h5 className="locationName">Chicago</h5></a>
+                <div className="accordion-content" id="content" data-tab-content >
+                  <button className="button warning bookNow">Book Now</button>
+                </div>
+              </div>
+              <div className="accordion-item" id="ny" data-accordion-item>
+                <a href="#" className="accordion-title"><h5 className="locationName">New York</h5></a>
+                <div className="accordion-content" id="content" data-tab-content >
+                  <button className="button warning bookNow">Book Now</button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> 
+      </div>
     </div>
-    <div className="row large-up-4 small-up-2">
-      <div className="image-hover-wrapper">
-        <span className="image-hover-wrapper-banner">Chille</span>
-        <a href="/"><img className="cities"
-          src={"https://unsplash.it/600/440?image=832"}/>
-          <span className="image-hover-wrapper-reveal">
-            <p>Flights starting from $200<br/><i className="fa fa-link" aria-hidden="true"></i></p>
-          </span>
-        </a>
-      </div>
-
-      <div className="image-hover-wrapper">
-        <span className="image-hover-wrapper-banner">South Korea</span>
-        <a href="/"><img className="cities" src={"https://unsplash.it/600/440?image=453"}/>
-          <span className="image-hover-wrapper-reveal">
-            <p>Flights starting from $200<br/><i className="fa fa-link" aria-hidden="true"></i></p>
-          </span>
-        </a>
-      </div>
-
-      <div className="image-hover-wrapper">
-        <span className="image-hover-wrapper-banner">Portugal</span>
-        <a href="/"><img className="cities" src={"https://unsplash.it/600/440?image=212"}/>
-          <span className="image-hover-wrapper-reveal">
-            <p>Flights starting from $200<br/><i className="fa fa-link" aria-hidden="true"></i></p>
-          </span>
-        </a>
-      </div>
-
-      <div className="image-hover-wrapper">
-        <span className="image-hover-wrapper-banner">Djibouti</span>
-        <a href="/"><img className="cities" src={"https://unsplash.it/600/440?image=100"}/>
-          <span className="image-hover-wrapper-reveal">
-            <p>Flights starting from $200<br/><i className="fa fa-link" aria-hidden="true"></i></p>
-          </span>
-        </a>
-      </div>
-      
-      <div className="image-hover-wrapper">
-        <span className="image-hover-wrapper-banner">New Zealand</span>
-        <a href="/"><img className="cities" src={"https://unsplash.it/600/440?image=627"}/>
-          <span className="image-hover-wrapper-reveal">
-            <p>Flights starting from $200<br/><i className="fa fa-link" aria-hidden="true"></i></p>
-          </span>
-        </a>
-      </div>
-
-          
-      <div className="image-hover-wrapper">
-        <span className="image-hover-wrapper-banner">Malta</span>
-        <a href="/"><img className="cities" src={"https://unsplash.it/600/440?image=949"}/>
-          <span className="image-hover-wrapper-reveal">
-            <p>Flights starting from $200<br/><i className="fa fa-link" aria-hidden="true"></i></p>
-          </span>
-        </a>
-      </div>
-    
-      <div className="image-hover-wrapper">
-        <span className="image-hover-wrapper-banner">Georgia</span>
-        <a href="/"><img className="cities" src={"https://unsplash.it/600/440?image=352"}/>
-          <span className="image-hover-wrapper-reveal">
-            <p>Flights starting from $200<br/><i className="fa fa-link" aria-hidden="true"></i></p>
-          </span>
-        </a>
-      </div>
-      
-      <div className="image-hover-wrapper">
-        <span className="image-hover-wrapper-banner">Mauritius</span>
-        <a href="/"><img className="cities" src={"https://unsplash.it/600/440?image=567"}/>
-          <span className="image-hover-wrapper-reveal">
-            <p>Flights starting from $200<br/><i className="fa fa-link" aria-hidden="true"></i></p>
-          </span>
-        </a>
-      </div>
-    </div> 
-  </div>  
+  </div>
 </section>
 
 export default Trending;

@@ -1,10 +1,29 @@
+.card {
+  width: 387px;
+  border: none !important;
+  display: inline-block;
+  margin-left: 2%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.locationName {
+  color: white;
+}
+
+
 .cities {
-	max-height: 200px;
-	max-width: 270px;
+  max-height: 200px;
+  max-width: 270px;
+}
+
+.card-divider {
+  padding-bottom: 0;
+  background-color: white!important;
+
 }
 
 #destinationHeader {
-	margin-top: 30px;
+  margin-top: 30px;
 }
 
 .featured-image-block-grid-header {
@@ -13,6 +32,34 @@
   margin-bottom: 50px;
 }
 
+#ny {
+  background: url("./ny.jpeg") no-repeat;
+}
+
+#sf {
+  background: url("./sf.jpeg") no-repeat;
+}
+
+
+#chicago {
+  background: url("./chicago.jpeg") no-repeat;
+}
+
+#content {
+  background: transparent;
+  height: 159px;
+}
+
+.accordion-title  {
+  border: none !important;
+}
+
+.accordion-content {
+  border: none !important;
+}
+
+
+/*For Trending Cities*/
 
 .image-hover-wrapper {
   position: relative;
