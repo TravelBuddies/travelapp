@@ -1,16 +1,18 @@
 $(document).foundation()
 
-// $(window).scroll(function () {
-// 	const navScrollBG = "#6BBAA7"
-// 	// const navTopColor = "#FBA100"
-// if ($(window).scrollTop() >= 50) {
-// $('.topbar-responsive').css('background', navScrollBG);
-// } else {
-// $('.topbar-responsive').css('background','transparent');
-// $('.menu').css('background','transparent');
-// // $('.topbar-responsive.menu').css('color', navTopColor);
-// }
-// });
+$(window).scroll(function () {
+	const navScrollBG = "#6BBAA7"
+	// const navTopColor = "#FBA100"
+if ($(window).scrollTop() <= 50) {
+  $('.topbar-responsive').css('background','RGBA(107, 186, 167, .6)');
+$('.menu').css('background','RGBA(107, 186, 167, 0)');
+$('.navDrop').css('background','RGBA(107, 186, 167, .6)');
+// $('.topbar-responsive.menu').css('color', navTopColor);
+
+} else {
+  $('.topbar-responsive').css('background', navScrollBG);
+}
+});
 
 $(function () {
   var showClass = 'show';

@@ -4,7 +4,7 @@
 
 
 .topbar-responsive {
-  background-color: #6BBAA7;	
+  background-color: RGBA(107, 186, 167, .6);	
   position: fixed;
   width: 100%;
   padding-left: 20px;
@@ -19,7 +19,7 @@
 }
 
 .topbar-responsive .menu {
-  background-color: #6BBAA7;
+  background-color: RGBA(107, 186, 167, 0);
   text-align: center;
 }
 

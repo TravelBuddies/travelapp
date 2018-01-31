@@ -9,6 +9,7 @@ import $ from 'jquery';
 import 'foundation-sites';
 
 
+
 import Hero from "../../components/Hero";
 import Trending from "../../components/Trending";
 import Contact from "../../components/Contact";
