@@ -1,14 +1,18 @@
 
 'use strict'
-console.log('potatoes')
+console.log('potaotes')
 // Requiring our models
 const db = require('../models')
-const router = require("express").Router();
+// const router = require("express").Router();
+
 // Requiring our custom middleware for checking if a user is logged in
 const isAuthenticated = require('../middleware/isAuthenticated')
 
 
-module.exports = ( passport) => {
+
+module.exports = (app, passport) => {
+    console.log('something to log in')
+
   // Using the passport.authenticate middleware with our local strategy.
   // If the user has valid login credentials, then respond with the user.
   // Otherwise send an error
@@ -19,7 +23,9 @@ module.exports = ( passport) => {
   // Route for signing up a user. The user's password is automatically hashed and stored securely thanks to
   // how we configured our Sequelize User Model. If the user is created successfully, proceed to log the user in,
   // otherwise send back an error
-  router.post('/signup', async function(req, res, next) {
+  app.post('/signup', async function(req, res, next) {
+    console.log("another potato of 4500")
+
 
     const { username, password } = req.body
 

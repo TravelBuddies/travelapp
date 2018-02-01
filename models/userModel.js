@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const bcrypt = require('bcrypt-nodejs')
 const Schema = mongoose.Schema;
 
 const userSchema = new Schema({
@@ -14,6 +15,15 @@ const userSchema = new Schema({
   // paymentMethod: String,
   // userCreated: { type: Date, default: Date.now }
 });
+
+userSchema.pre('save', function(next) {
+  if(this.password) {
+    var salt = bcrypt.genSaltSync(10)
+    this.password = bcrypt.hashSync(this.password, salt)
+
+  }
+  next()
+})
 
 const User = mongoose.model("User", userSchema);
 

@@ -137,7 +137,7 @@ class NewUser extends Component {
                                             onChange={this.handleInputChange} 
                                             id="signup-input" 
                                             name="password" 
-                                            type="password" 
+                                            type="signup-password" 
                                         /> 
                                     </div>
                                     <div className="floated-label-wrapper">             

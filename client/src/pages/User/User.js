@@ -30,7 +30,7 @@ class User extends Component {
   };
 
   componentDidMount() {
-    (document).foundation();
+    $(document).foundation();
     this.loadUser();
     // this.autoComp()
   }

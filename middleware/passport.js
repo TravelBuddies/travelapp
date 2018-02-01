@@ -2,7 +2,7 @@
 'use strict'
 
 const { Strategy: LocalStrategy } = require('passport-local')
-const { Strategy: GoogleStrategy } = require('passport-google-oauth20')
+// const { Strategy: GoogleStrategy } = require('passport-google-oauth20')
 const db = require('../models')
 
 // Telling passport we want to use a Local Strategy. In other words, we want login with a username/username and password
@@ -34,18 +34,6 @@ module.exports = function (passport) {
     }
   ))
 
-  passport.use(new GoogleStrategy({
-    clientID: '922670117255-bcnqfjfaqpc8h7d1ct293i25t1465gv5.apps.googleusercontent.com',
-    clientSecret: 'C26VJGFvSwS0cd261A3ZlFtE',
-    callbackURL: 'http://www.example.com/auth/google/callback'
-  },
-  function(accessToken, refreshToken, profile, cb){
-    User.findOrCreate({ googleId: profile.id }, function(err, user){
-      return cb(err, user);
-    });
-  }
-  
-));
 
   // Configure Passport authenticated session persistence.
   //
@@ -67,4 +55,5 @@ module.exports = function (passport) {
   })
   
 }
-}
+
+

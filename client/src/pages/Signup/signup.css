@@ -41,11 +41,11 @@
 }
 
 /*PASSWORD STYLE NOT WORKING????*/
-/*input[type=password] {
+input[type=signup-password] {
 	width: 300px;
 	padding: 6px;
 	margin: 6px;
 	overflow: auto;
 }
-*/
+
 
