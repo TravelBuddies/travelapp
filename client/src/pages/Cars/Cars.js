@@ -56,7 +56,7 @@ class Cars extends Component {
 		}
 			// Axios promise for getting the car results 
       API.getCars(params)
-				.then(res => this.setState({ cars: res.data.results }))
+		.then(res => this.setState({ cars: res.data.results }))
         .catch(err => console.log(err));
   };
 
@@ -122,32 +122,32 @@ render() {
 					</div>
 				</div>
 				<div>
+
 					{this.state.cars.length ? (
 						<List>
 							{this.state.cars.map((result, index) => {
 								return [
-									<List> 
-										<ListItem> 
+									 
 											<li>
-												<h4>
-													<strong> Address </strong>
-													<h6>City :  { result.address.city }
-														Country :  { result.address.city }
-														Street :  { result.address.line1 }
-														Region :  { result.address.region }
-													</h6>
-													<h5>
-														Company Code: { result.provider.company_code }
-														Company Name: { result.provider.company_name }
-													</h5>
-												</h4>,
+											<div class="travel-feature-card">
+				                                <div class="travel-feature-card-header">
+					                                <div class="row">
+					                                   <div class="medium-12 columns">
+					                                     <h5 class="travel-feature-card-subtitle">{result.provider.company_name}</h5>
+					                                      <div class="travel-feature-card-header-address">
+					                                        <h5>{result.address.line1} | {result.address.city} </h5>
+					                                     </div>
+					                                  </div>
+					                                </div>  
+					                              </div>
+					                              
+					                          </div>
 												{result.cars.map((car, index) => { 
 												    return(
 													
-													<List>
+													
 													    <ListItem key={index}>
 															
-															<li>
 																<h5>
 																	<span>Rate: { car.rates["0"].price.amount }</span>
 																	<span>Rate Type: { car.rates["0"].type }</span>
@@ -159,20 +159,47 @@ render() {
 																Transmission: { car.vehicle_info.transmission } 
 																Type: { car.vehicle_info.type } 
 																acriss_code: { car.vehicle_info.acriss_code} </h6>
-															</li>
+															
 														 </ListItem>
-													</List>
+													
 													)
 												})}
 											</li>
-										</ListItem>
-									</List>
+										
 									
 								]
 							})};
 						</List>
 					) : (
-							<h3>Query the Cars</h3>
+							<div class="travel-feature-card">
+                                <div class="travel-feature-card-header">
+	                                <div class="row">
+	                                   <div class="medium-12 columns">
+	                                     <h5 class="travel-feature-card-subtitle">Rental Company</h5>
+	                                      <div class="travel-feature-card-header-controls">
+	                                        
+	                                     </div>
+	                                  </div>
+	                                </div>  
+	                              </div>
+	                              <div class="travel-feature-card-details">
+	                                <div class="small-4 medium-2 columns travel-feature-card-image" >
+	                                    <img src="https://iplegalforum.files.wordpress.com/2017/04/virgin-america-logo.jpg" />
+	                                    <h6>Flght No</h6>
+	                                </div>
+	                                  <div class="small-12 medium-9 columns travel-feature-card-content">
+	                                    <h6 class="travel-feature-card-date-range">Jan 31 - Feb 7</h6> 
+	                                        <h6 class="travel-feature-card-title">Origin : Destination</h6>
+	                                        <p>Deaprture Time : Arrival time</p>   
+	                                  </div>
+
+	                                  <div class="small-12 medium-3 columns travel-feature-card-price">
+	                                    <h6>$249</h6>
+	                                    
+	                                  </div>
+	                                 
+	                              </div>
+	                          </div>
 						)}
 				</div> 
 			</section>
