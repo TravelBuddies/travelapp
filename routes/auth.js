@@ -4,16 +4,19 @@ console.log('potaotes')
 // Requiring our models
 const db = require('../models')
 // const router = require("express").Router();
+
 // Requiring our custom middleware for checking if a user is logged in
 const isAuthenticated = require('../middleware/isAuthenticated')
 
 
+
 module.exports = (app, passport) => {
     console.log('something to log in')
+
   // Using the passport.authenticate middleware with our local strategy.
   // If the user has valid login credentials, then respond with the user.
   // Otherwise send an error
-  app.post('/login', passport.authenticate('local'), ({ user }, res) => {
+  router.post('/login', passport.authenticate('local'), ({ user }, res) => {
     res.send({ user })
   })
 
@@ -22,6 +25,8 @@ module.exports = (app, passport) => {
   // otherwise send back an error
   app.post('/signup', async function(req, res, next) {
     console.log("another potato of 4500")
+
+
     const { username, password } = req.body
 
     try {
@@ -37,14 +42,14 @@ module.exports = (app, passport) => {
   })
 
   // Route for logging user out
-  app.get('/logout', (req, res) => {
+  router.get('/logout', (req, res) => {
     req.logout()
     res.send({})
   })
 
 
   // Route for client to check if there's still a live server session
-  app.get('/session', isAuthenticated, (req, res) => {
+  router.get('/session', isAuthenticated, (req, res) => {
     const { username, id } = req.user
 
     res.json({ user: { username, id }})

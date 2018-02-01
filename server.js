@@ -7,7 +7,10 @@ const router = require("express").Router();
 
 const passport = require("passport")
 const app = express();
+
 const PORT = process.env.PORT || 3001;
+
+
 
 // Configure body parser for AJAX requests
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -28,6 +31,8 @@ app.use(passport.initialize())
 app.use(passport.session())
 require("./routes/auth")(app, passport)
 require("./routes")
+
+require('./routes/auth.js')(passport)
 
 // Set up promises with mongoose
 mongoose.Promise = global.Promise;

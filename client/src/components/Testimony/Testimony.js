@@ -17,7 +17,7 @@ const Testimony = () =>
     <ul className="orbit-container">
       <li className="orbit-slide">
         <figure className="orbit-figure">
-          <img className="orbit-image" src={Tower} />
+          <img alt="" className="orbit-image" src={Tower} />
           <figcaption className="orbit-caption">
             <h3>Some Grand Tower</h3>
             <p>Etiam porta sem malesuada magna mollis euismod. Vestibulum id ligula porta felis euismod semper.</p>
@@ -27,7 +27,7 @@ const Testimony = () =>
       </li>
       <li className="orbit-slide">
         <figure className="orbit-figure">
-          <img className="orbit-image" src={Clifside} />
+          <img alt="" className="orbit-image" src={Clifside} />
           <figcaption className="orbit-caption">
             <h3>Buildings on the Cliff</h3>
             <p>Nullam quis risus eget urna mollis ornare vel eu leo. Donec ullamcorper nulla non metus auctor fringilla. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -37,7 +37,7 @@ const Testimony = () =>
       </li>
       <li className="orbit-slide">
         <figure className="orbit-figure">
-          <img className="orbit-image" src={Balloon} />
+          <img alt="" className="orbit-image" src={Balloon} />
           <figcaption className="orbit-caption">
             <h3>Sky with Balloons</h3>
             <p>Fusce dapibus, tellus ac cursus commodo, sit amet risus. Cras mattis consectetur purus sit amet fermentum. Maecenas sed diam sit amet non magna.</p>
@@ -47,7 +47,7 @@ const Testimony = () =>
       </li>
       <li className="orbit-slide">
         <figure className="orbit-figure">
-          <img className="orbit-image" src={Beach}/>
+          <img alt="" className="orbit-image" src={Beach}/>
           <figcaption className="orbit-caption">
             <h3>The Beach</h3>
             <p>Fusce dapibus, tellus ac cursus commodo, sit amet risus. Cras mattis consectetur purus sit amet fermentum. Maecenas sed diam sit amet non magna.</p>

@@ -12,6 +12,7 @@ import 'react-dates/lib/css/_datepicker.css';
 import { List, ListItem } from "../../components/List";
 
 import moment from "moment";
+import "./Hotels.css";
 
 
 class Hotels extends Component {
@@ -58,14 +59,14 @@ class Hotels extends Component {
 				.then(res => this.setState({ hotels: res.data.results }))
         .catch(err => console.log(err));
     // }
+
   };
 
 
 render() {
+
 	return (
-		<Container fluid>
-			<Row>
-				<Col size="md-12">
+		
 					<section className="row columns">
 						<div className="hero-section">
 							<div className="hero-section-text">
@@ -108,98 +109,149 @@ render() {
 								<List>
 									{this.state.hotels.map((result, index) => {
 										return [
-											<List>
-												<ListItem>
-													<li>
-														<h3>{ result.property_name } </h3>
-														<h4>
-															<strong> Address </strong>
-															<h6>City :  { result.address.city }
-																Street :  { result.address.line1 }
-																Postal Code : { result.address.postal_code }
-																Region :  { result.address.region }
-																Country :  { result.address.city }
-															</h6>
-															<h5>
-																Daily Rate $ :  { result.min_daily_rate.amount }
-																Total Price $ : { result.total_price.currency}{ result.total_price.amount }
-															</h5>
-														</h4> 
-														<h5>Amenities: </h5>,
-												{result.amenities.map((amenity, index) => {
-															return (
-																<List>
-																	<ListItem key={index}>
-																		<li>
-																			<h6>
-																				{/* <span>{ amenity.amenity }</span> */}
-																				<span>{ amenity.description } </span>
-																			</h6>
-																			
-																		</li>
-																	</ListItem>
-																</List>
-															)
-														})},
-														{result.contacts.map((contact, index) => {
-															return (
-																<List>
-																	<ListItem key={index}>
-																		<li>
-																			<h5>
-																				<span>Contact: { contact.type }</span>
-																				<span>Detail: { contact.detail }</span>
-																			</h5>
-																		</li>
-																	</ListItem>
-																</List>
-															)
-														})},
-														{result.rooms.map((room, index) => {
-															return (
-																<List>
-																	<ListItem key={index}>
-																		<li>
-																			<h5>
-																				<span>Start Date : {room.rates["0"].start_date}</span>
-																				<span>End Date : {room.rates["0"].end_date}</span>
-																				<span>Price $ : {room.rates["0"].price}</span>
-																			</h5>
-																			<h5>
-																				<h6><span>Booking Code: { room.booking_code }</span></h6>
-																				<h6><span>Rate Plan Code: { room.rate_plan_code }</span></h6>
-																				<h6><span>Rate Type Code: { room.rate_type_code }</span></h6>
-																				<h6><span>Room Type Code: { room.room_type_code }</span></h6>
-																				<h6><span>Room Info</span></h6>
-																				<h6><span>Bed Type: { room.room_type_info.bed_type }</span></h6>
-																				<h6><span>Number of Beds: { room.room_type_info.number_of_beds }</span></h6>
-																				<h6><span>Room Type: { room.room_type_info.room_type }</span></h6>
-																			</h5>
-																			<h5>
-																				<h6><span>{ room.descriptions["0"] } </span></h6>
-																				<h6><span>{ room.descriptions["1"] } </span></h6>
-																				<h6><span>{ room.descriptions["2"] } </span></h6>
-																			</h5>	
-																		</li>
-																	</ListItem>
-																</List>
-															)
-														})}
-													</li>
-												</ListItem>
-											</List>
+											
+													
+														<div class="travel-feature-card">
+				                                          <div class="travel-feature-card-header">
+				                                            <div class="row">
+				                                               <div class="medium-12 columns">
+				                                                 <h5 class="travel-feature-card-subtitle">{result.property_name}</h5>
+				                                              </div>
+				                                            </div>  
+				                                          </div>
+				                                          <div class="travel-feature-card-contact">
+				                                          		
+				                                          			
+				                                          			
+				                                          			<p>
+					                                          			City : {result.address.city} | 
+																		Street : {result.address.line1} | 
+																		Postal Code : {result.address.postal_code} | 
+																		Country :  {result.address.country}
+																	</p>
+				                                            			{result.contacts.map((contact, index) => {
+																			return (
+																				
+																					<div key={index}>
+																						
+																							
+																					{ contact.type }
+																					{ contact.detail }
+																							
+																						
+																					</div>
+																				
+																			)
+																		})}
+				                                            		
+				                                          		
+				                                            </div>
+				                                          <div class="travel-feature-card-details">
+
+
+				                                              <div class="small-12 medium-9 columns travel-feature-card-content">
+				                                              	
+				                                              	
+				                                                <h6 class="travel-feature-card-date-range">Daily Rate: ${result.min_daily_rate.amount} | Total: ${result.total_price.amount} ({result.total_price.currency})</h6> 
+				                                                  <div class="small-12 medium-3 columns travel-feature-card-price">
+				                                                {result.rooms.map((room, index) => {
+																	return (
+																		
+																			<div key={index}>
+																					
+																						<button>${room.rates["0"].price}/night</button>
+																					
+																				
+																					<h5>
+																						<span><i class="fi-calendar"> </i>Check In : {room.rates["0"].start_date}</span> <br></br> 
+																						<span><i class="fi-calendar"> </i> Check Out : {room.rates["0"].end_date}</span>
+																						
+																					</h5>
+																					<p>
+																						Booking Code: { room.booking_code } <br></br>
+																						
+																						Room Info: <br></br>
+																						Bed Type: { room.room_type_info.bed_type }
+																						Number of Beds: { room.room_type_info.number_of_beds }
+																						Room Type: { room.room_type_info.room_type }
+																					</p>
+																					<p>
+																						{ room.descriptions["0"] } |   
+																						{ room.descriptions["1"] } |  
+																						{ room.descriptions["2"] }
+																					</p>	
+																				
+																			</div>
+																		
+																	)
+																})}
+				                                              </div>  
+				                                              </div>
+
+				                                              
+				                                              <div class="am-list">
+				                                                    <h6 class="travel-feature-card-title">Amenities</h6>
+				                                                     {result.amenities.map((amenity, index) =>{
+				                                          			return (
+				                                          				
+				                                          					<div class="amenities" key={index}>
+				                                          						
+				                                          							
+				                                          								<span> &#10004; {amenity.description}</span>
+				                                          								
+				                                          							
+				                                          						
+				                                          					</div>
+				                                          				
+				                                          					)
+				                                          			})}  
+				                                                     </div>			                                         
+				                                          </div>
+				                                        </div> 
+													
+												
 
 										]
 									})};
 						</List>
 							) : (
-									<h3>Query the Hotels</h3>
+									    <div class="travel-feature-card">
+                                          <div class="travel-feature-card-header">
+                                            <div class="row">
+                                               <div class="medium-12 columns">
+                                                 <h5 class="travel-feature-card-subtitle">Holiday Inn Express</h5>
+                                                  <div class="travel-feature-card-header-controls">
+                                                    
+                                                 </div>
+                                              </div>
+                                            </div>  
+                                          </div>
+                                          <div class="travel-feature-card-details">
+                                            
+                                              <div class="small-12 medium-9 columns travel-feature-card-content">
+                                              	<p>City : Chicago | 
+													Street : 2881 Touhy Ave | 
+													Postal Code : 60007 | 
+													Country :  USA
+												</p>
+                                                <h6 class="travel-feature-card-date-range">Rate information</h6> 
+                                                    <h6 class="travel-feature-card-title">Amenities</h6>
+                                                       
+                                              </div>
+
+                                              <div class="small-12 medium-3 columns travel-feature-card-price">
+                                                <h6>$249</h6>
+                                                
+                                              </div>
+                                             
+                                          </div>
+                                        </div>
+
+
 								)}
 						</div>	
 					</section>
-				</Col>
-			</Row>
-		</Container>			
+							
 	);
 };
 

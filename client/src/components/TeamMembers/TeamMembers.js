@@ -9,7 +9,7 @@ const TeamMembers = () =>
     <div className="row">
       <div className="small-12 medium-4 columns" id="teamLeft">
         <div className="author-image">
-          <img className="aboutImg" src={"https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/President_Barack_Obama.jpg/480px-President_Barack_Obama.jpg"}/>
+          <img alt="" className="aboutImg" src={"https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/President_Barack_Obama.jpg/480px-President_Barack_Obama.jpg"}/>
         </div>
         <div className="author-social">
           <a href="/">
@@ -38,7 +38,7 @@ const TeamMembers = () =>
     <div className="row">
       <div className="small-12 medium-4 columns" id="teamLeft">
         <div className="author-image">
-          <img className="aboutImg" src={"https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/President_Barack_Obama.jpg/480px-President_Barack_Obama.jpg"}/>
+          <img alt="" className="aboutImg" src={"https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/President_Barack_Obama.jpg/480px-President_Barack_Obama.jpg"}/>
         </div>
         <div className="author-social">
           <a href="/">
@@ -67,7 +67,7 @@ const TeamMembers = () =>
     <div className="row">
       <div className="small-12 medium-4 columns" id="teamLeft">
         <div className="author-image">
-          <img className="aboutImg" src={"https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/President_Barack_Obama.jpg/480px-President_Barack_Obama.jpg"}/>
+          <img alt="" className="aboutImg" src={"https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/President_Barack_Obama.jpg/480px-President_Barack_Obama.jpg"}/>
         </div>
         <div className="author-social">
           <a href="/">
@@ -96,7 +96,7 @@ const TeamMembers = () =>
     <div className="row">
       <div className="small-12 medium-4 columns" id="teamLeft">
         <div className="author-image">
-          <img className="aboutImg" src={"https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/President_Barack_Obama.jpg/480px-President_Barack_Obama.jpg"}/>
+          <img alt="" className="aboutImg" src={"https://upload.wikimedia.org/wikipedia/commons/thumb/8/8d/President_Barack_Obama.jpg/480px-President_Barack_Obama.jpg"}/>
         </div>
         <div className="author-social">
           <a href="/">
