@@ -21,7 +21,7 @@ import Nav from "./components/Nav";
 import Footer from "./components/Footer";
 import TravelReview from "./pages/TravelReview";
 import TravelBuddy from "./pages/TravelBuddy";
-
+import Checkout from "./pages/Checkout";
 const App = () =>
   <Router>
     <div>
@@ -43,6 +43,7 @@ const App = () =>
         <Route exact path="/FAQs" component={FAQs} />
         <Route exact path="/TravelReview" component={TravelReview} />
         <Route exact path="/TravelBuddy" component={TravelBuddy} />
+        <Route exact path="/Checkout" component={Checkout} />
 
         {/* <PrivateRoute exact path='/user' component={User} /> */}
         {/* <PrivateRoute exact path='/checkout' component={Checkout} /> */}

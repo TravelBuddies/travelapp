@@ -178,7 +178,7 @@ const Trending = () =>
       <h2 id="destinationHeader">Get Inspired</h2>
       <div className="card cardOne">
         <div className="card-divider">
-          <h4>Adventure Seekers</h4>
+          <h4>Adventure</h4>
         </div>
         <div className="card-divider">
           <p>With endless hiking trails, these destinations will satisfy the wildest explorers!</p>
