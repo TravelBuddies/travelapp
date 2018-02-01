@@ -32,7 +32,7 @@ app.use(passport.session())
 require("./routes/auth")(app, passport)
 require("./routes")
 
-require('./routes/auth.js')(passport)
+// require('./routes/auth.js')(passport)
 
 // Set up promises with mongoose
 mongoose.Promise = global.Promise;
