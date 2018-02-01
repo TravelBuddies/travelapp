@@ -44,6 +44,7 @@ module.exports = function (passport) {
       return cb(err, user);
     });
   }
+  
 ));
 
   // Configure Passport authenticated session persistence.
