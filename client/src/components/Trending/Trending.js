@@ -15,7 +15,7 @@ const Trending = () =>
     <div className="row large-up-4 small-up-2">
       <div className="image-hover-wrapper card cityCard">
         <span className="image-hover-wrapper-banner"></span>
-        <a href="/"><img className="cities"
+        <a href="/flights"><img alt="" className="cities"
                 src={"https://unsplash.it/600/440?image=899"}/>
           <span className="image-hover-wrapper-reveal">
            <h5>Flights starting from $200<br/><button className="button warning bookNow">Book Now</button></h5>
@@ -34,7 +34,7 @@ const Trending = () =>
 
       <div className="image-hover-wrapper card cityCard">
         <span className="image-hover-wrapper-banner"></span>
-        <a href="/"><img className="cities"
+        <a href="/flights"><img alt="" className="cities"
                 src={"https://unsplash.it/600/440?image=693"}/>
           <span className="image-hover-wrapper-reveal">
            <h5>Flights starting from $200<br/><button className="button warning bookNow">Book Now</button></h5>
@@ -53,7 +53,7 @@ const Trending = () =>
 
       <div className="image-hover-wrapper card cityCard">
         <span className="image-hover-wrapper-banner"></span>
-        <a href="/"><img className="cities"
+        <a href="/flights"><img alt="" className="cities"
                 src={"https://unsplash.it/600/440?image=452"}/>
           <span className="image-hover-wrapper-reveal">
            <h5>Flights starting from $200<br/><button className="button warning bookNow">Book Now</button></h5>
@@ -73,7 +73,7 @@ const Trending = () =>
 
       <div className="image-hover-wrapper card cityCard">
         <span className="image-hover-wrapper-banner"></span>
-        <a href="/"><img className="cities"
+        <a href="/flights"><img alt="" className="cities"
                 src={"https://unsplash.it/600/440?image=700"}/>
           <span className="image-hover-wrapper-reveal">
            <h5>Flights starting from $200<br/><button className="button warning bookNow">Book Now</button></h5>
@@ -93,7 +93,7 @@ const Trending = () =>
 
       <div className="image-hover-wrapper card cityCard">
         <span className="image-hover-wrapper-banner"></span>
-        <a href="/"><img className="cities"
+        <a href="/flights"><img alt="" className="cities"
                 src={"https://unsplash.it/600/440?image=667"}/>
           <span className="image-hover-wrapper-reveal">
            <h5>Flights starting from $200<br/><button className="button warning bookNow">Book Now</button></h5>
@@ -113,7 +113,7 @@ const Trending = () =>
 
       <div className="image-hover-wrapper card cityCard">
         <span className="image-hover-wrapper-banner"></span>
-        <a href="/"><img className="cities"
+        <a href="/flights"><img alt="" className="cities"
                 src={"https://unsplash.it/600/440?image=249"}/>
           <span className="image-hover-wrapper-reveal">
            <h5>Flights starting from $200<br/><button className="button warning bookNow">Book Now</button></h5>
@@ -133,7 +133,7 @@ const Trending = () =>
       
       <div className="image-hover-wrapper card cityCard">
         <span className="image-hover-wrapper-banner"></span>
-        <a href="/"><img className="cities"
+        <a href="/flights"><img alt="" className="cities"
                 src={"https://unsplash.it/600/440?image=382"}/>
           <span className="image-hover-wrapper-reveal">
            <h5>Flights starting from $200<br/><button className="button warning bookNow">Book Now</button></h5>
@@ -153,7 +153,7 @@ const Trending = () =>
 
       <div className="image-hover-wrapper card cityCard">
         <span className="image-hover-wrapper-banner"></span>
-        <a href="/"><img className="cities"
+        <a href="/flights"><img alt="" className="cities"
                 src={"https://unsplash.it/600/440?image=1075"}/>
           <span className="image-hover-wrapper-reveal">
            <h5>Flights starting from $200<br/><button className="button warning bookNow">Book Now</button></h5>
@@ -187,19 +187,19 @@ const Trending = () =>
           <div className="columns">
             <div className="accordion" data-accordion data-multi-expand="false">
               <div className="accordion-item" id="sf" data-accordion-item>
-                <a href="#" className="accordion-title"><h5 className="locationName">San Francisco</h5></a>
+                <a href="/flights" className="accordion-title"><h5 className="locationName">San Francisco</h5></a>
                 <div className="accordion-content" id="content" data-tab-content >
                   <button className="button warning bookNow">Book Now</button>
                 </div>
               </div>
               <div className="accordion-item" id="chicago" data-accordion-item>
-                <a href="#" className="accordion-title"><h5 className="locationName">Chicago</h5></a>
+                <a href="/flights" className="accordion-title"><h5 className="locationName">Chicago</h5></a>
                 <div className="accordion-content" id="content" data-tab-content >
                   <button className="button warning bookNow">Book Now</button>
                 </div>
               </div>
               <div className="accordion-item" id="ny" data-accordion-item>
-                <a href="#" className="accordion-title"><h5 className="locationName">New York</h5></a>
+                <a href="/flights" className="accordion-title"><h5 className="locationName">New York</h5></a>
                 <div className="accordion-content" id="content" data-tab-content >
                   <button className="button warning bookNow">Book Now</button>
                 </div>
@@ -220,19 +220,19 @@ const Trending = () =>
           <div className="columns">
             <div className="accordion" data-accordion data-multi-expand="false">
               <div className="accordion-item" id="sf" data-accordion-item>
-                <a href="#" className="accordion-title"><h5 className="locationName">San Francisco</h5></a>
+                <a href="/flights" className="accordion-title"><h5 className="locationName">San Francisco</h5></a>
                 <div className="accordion-content" id="content" data-tab-content >
                   <button className="button warning bookNow">Book Now</button>
                 </div>
               </div>
               <div className="accordion-item" id="chicago" data-accordion-item>
-                <a href="#" className="accordion-title"><h5 className="locationName">Chicago</h5></a>
+                <a href="/flights" className="accordion-title"><h5 className="locationName">Chicago</h5></a>
                 <div className="accordion-content" id="content" data-tab-content >
                   <button className="button warning bookNow">Book Now</button>
                 </div>
               </div>
               <div className="accordion-item" id="ny" data-accordion-item>
-                <a href="#" className="accordion-title"><h5 className="locationName">New York</h5></a>
+                <a href="/flights" className="accordion-title"><h5 className="locationName">New York</h5></a>
                 <div className="accordion-content" id="content" data-tab-content >
                   <button className="button warning bookNow">Book Now</button>
                 </div>
@@ -253,19 +253,19 @@ const Trending = () =>
           <div className="columns">
             <div className="accordion" data-accordion data-multi-expand="false">
               <div className="accordion-item" id="sf" data-accordion-item>
-                <a href="#" className="accordion-title"><h5 className="locationName">San Francisco</h5></a>
+                <a href="/flights" className="accordion-title"><h5 className="locationName">San Francisco</h5></a>
                 <div className="accordion-content" id="content" data-tab-content >
                   <button className="button warning bookNow">Book Now</button>
                 </div>
               </div>
               <div className="accordion-item" id="chicago" data-accordion-item>
-                <a href="#" className="accordion-title"><h5 className="locationName">Chicago</h5></a>
+                <a href="/flights" className="accordion-title"><h5 className="locationName">Chicago</h5></a>
                 <div className="accordion-content" id="content" data-tab-content >
                   <button className="button warning bookNow">Book Now</button>
                 </div>
               </div>
               <div className="accordion-item" id="ny" data-accordion-item>
-                <a href="#" className="accordion-title"><h5 className="locationName">New York</h5></a>
+                <a href="/flights" className="accordion-title"><h5 className="locationName">New York</h5></a>
                 <div className="accordion-content" id="content" data-tab-content >
                   <button className="button warning bookNow">Book Now</button>
                 </div>
@@ -286,19 +286,19 @@ const Trending = () =>
           <div className="columns">
             <div className="accordion" data-accordion data-multi-expand="false">
               <div className="accordion-item" id="sf" data-accordion-item>
-                <a href="#" className="accordion-title"><h5 className="locationName">San Francisco</h5></a>
+                <a href="/flights" className="accordion-title"><h5 className="locationName">San Francisco</h5></a>
                 <div className="accordion-content" id="content" data-tab-content >
                   <button className="button warning bookNow">Book Now</button>
                 </div>
               </div>
               <div className="accordion-item" id="chicago" data-accordion-item>
-                <a href="#" className="accordion-title"><h5 className="locationName">Chicago</h5></a>
+                <a href="/flights" className="accordion-title"><h5 className="locationName">Chicago</h5></a>
                 <div className="accordion-content" id="content" data-tab-content >
                   <button className="button warning bookNow">Book Now</button>
                 </div>
               </div>
               <div className="accordion-item" id="ny" data-accordion-item>
-                <a href="#" className="accordion-title"><h5 className="locationName">New York</h5></a>
+                <a href="/flights" className="accordion-title"><h5 className="locationName">New York</h5></a>
                 <div className="accordion-content" id="content" data-tab-content >
                   <button className="button warning bookNow">Book Now</button>
                 </div>

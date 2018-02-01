@@ -16,7 +16,7 @@ const CardReview = () =>
     <div className="tabs-content" data-tabs-content="example-tabs">
       <div className="tabs-panel is-active" id="panel1">
         <div className="cardHolder">
-          <img className="cardImg" src={Platinum}/>
+          <img alt="" className="cardImg" src={Platinum}/>
           <button className="button basic apply small">Apply</button>
         </div>
         <div className="cardDesc">
@@ -44,7 +44,7 @@ const CardReview = () =>
       </div>
       <div className="tabs-panel" id="panel2">
         <div className="cardHolder">
-          <img className="cardImg" src={Platinum}/>
+          <img alt="" className="cardImg" src={Platinum}/>
           <button className="button basic apply small">Apply</button>
         </div>
         <div className="cardDesc">
@@ -65,7 +65,7 @@ const CardReview = () =>
     <div className="tabs-content" data-tabs-content="example-tabs">
       <div className="tabs-panel is-active" id="panel4">
         <div className="cardHolder">
-          <img className="cardImg" src={csr}/>
+          <img alt="" className="cardImg" src={csr}/>
           <button className="button basic apply small">Apply</button>
         </div>
         <div className="cardDesc">
@@ -93,7 +93,7 @@ const CardReview = () =>
       </div>
       <div className="tabs-panel" id="panel5">
         <div className="cardHolder">
-          <img className="cardImg" src={csr}/>
+          <img alt="" className="cardImg" src={csr}/>
           <button className="button basic apply small">Apply</button>
         </div>
         <div className="cardDesc">
@@ -114,7 +114,7 @@ const CardReview = () =>
     <div className="tabs-content" data-tabs-content="example-tabs">
       <div className="tabs-panel is-active" id="panel7">
         <div className="cardHolder">
-          <img className="cardImg" src={citiExec}/>
+          <img alt="" className="cardImg" src={citiExec}/>
           <button className="button basic apply small">Apply</button>
         </div>
         <div className="cardDesc">
@@ -141,7 +141,7 @@ const CardReview = () =>
       </div>
       <div className="tabs-panel" id="panel8">
         <div className="cardHolder">
-          <img className="cardImg" src={citiExec}/>
+          <img alt="" className="cardImg" src={citiExec}/>
           <button className="button basic apply small">Apply</button>
         </div>
         <div className="cardDesc">

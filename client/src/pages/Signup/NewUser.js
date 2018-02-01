@@ -86,16 +86,6 @@ class NewUser extends Component {
     }
     
 
-
-
-    // Axios promise for getting the flight results 
-      // API.getFlights(params)
-      //     .then(res => this.setState({ flights: res.data }))
-      //     .catch(err => console.log(err));
-    // }
-    //  
-  // };
-
   render() {
     return (
     <div id="signup-body">
@@ -141,7 +131,7 @@ class NewUser extends Component {
                                             placeholder="Last Name" 
                                         />
                                     </div>
-                                    <div className="floated-label-wrapper">
+                                    <div className="password-wrapper">
                                         <Input 
                                             value={this.state.password}
                                             onChange={this.handleInputChange} 

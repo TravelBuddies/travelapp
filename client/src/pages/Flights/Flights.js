@@ -66,6 +66,7 @@ class Flights extends Component {
 
 
     render() {
+        console.log(this.state.flights)
         return (
             <Container fluid>
                 <Row>
@@ -112,7 +113,7 @@ class Flights extends Component {
                                         </div>
                                         <div> </div>
                                         <FormBtn
-                                            disabled={!(this.state.startDate && this.state.endDate && this.state.origin && this.state.destination)}
+                                            disabled={!(this.state.startDate && this.state.origin && this.state.destination)} //&& this.state.endDate
                                             onClick={this.handleFormSubmit}>
                                             Search
                                     </FormBtn>
