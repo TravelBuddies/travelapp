@@ -11,12 +11,12 @@ const isAuthenticated = require('../middleware/isAuthenticated')
 
 
 module.exports = (app, passport) => {
-    console.log('something to log in')
+    // console.log('something to log in')
 
   // Using the passport.authenticate middleware with our local strategy.
   // If the user has valid login credentials, then respond with the user.
   // Otherwise send an error
-  router.post('/login', passport.authenticate('local'), ({ user }, res) => {
+  app.post('/login', passport.authenticate('local'), ({ user }, res) => {
     res.send({ user })
   })
 
@@ -34,6 +34,7 @@ module.exports = (app, passport) => {
       next()
     }
     catch (err) {
+      console.log("abcdefgh", err)
       res.json(err)
     }
 
@@ -42,14 +43,14 @@ module.exports = (app, passport) => {
   })
 
   // Route for logging user out
-  router.get('/logout', (req, res) => {
+  app.get('/logout', (req, res) => {
     req.logout()
     res.send({})
   })
 
 
   // Route for client to check if there's still a live server session
-  router.get('/session', isAuthenticated, (req, res) => {
+  app.get('/session', isAuthenticated, (req, res) => {
     const { username, id } = req.user
 
     res.json({ user: { username, id }})

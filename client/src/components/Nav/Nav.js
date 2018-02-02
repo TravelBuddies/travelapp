@@ -8,7 +8,7 @@ const Nav = () =>
       <span data-responsive-toggle="topbar-responsive" data-hide-for="medium">
         <button className="menu-icon" type="button" data-toggle></button>
       </span>
-      <a className="topbar-responsive-logo" href="/"><strong>Travelapp</strong></a>
+      <a className="topbar-responsive-logo" src="./logo.png" href="/"><strong>Travelapp</strong></a>
     </div>
       <div id="topbar-responsive" className="topbar-responsive-links">
       <div className="top-bar-right">
@@ -16,7 +16,7 @@ const Nav = () =>
           <li><a href="/flights">Flight</a></li>
           <li><a href="/hotels">Hotel</a></li>
           <li><a href="/cars">Car</a></li>
-          <li><a href="/packages">Packages</a></li>
+          {/* <li><a href="/packages">Packages</a></li> */}
           <li><a href="/Inspire">Inspire</a></li>
           <li>
             <a href="/">Account</a>
