@@ -32,7 +32,7 @@ app.use(passport.session())
 require("./routes/auth")(app, passport)
 require("./routes")
 
-// require('./routes/auth.js')(app, passport)
+
 
 // Set up promises with mongoose
 mongoose.Promise = global.Promise;
@@ -48,8 +48,6 @@ var db = mongoose.connection
 
 db.on("open", console.error.bind(console, " ==> ***** Connected to MongoDB userinfo *****"))
 
-// require('./routes/authRoutes')(app);
-// require('./routes/billsRoutes')(app);
 
 
 // Start the API server

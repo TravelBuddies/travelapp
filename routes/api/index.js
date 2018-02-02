@@ -10,6 +10,6 @@ router.use("/user", userRoutes);
 router.use("/newuser", userRoutes);
 
 // travelhistory routes
-router.use("/user/travelhistory", tripHistoryRoutes);
+router.use("/triphistory", tripHistoryRoutes);
 
 module.exports = router;
