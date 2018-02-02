@@ -109,8 +109,10 @@ render() {
                                                   <div>
                                                   <p>
                                                   flight Number:
-                                                  {result.fightNumber}
                                                   </p>
+                                                  <span>
+                                                  {result.fightNumber}
+                                                  </span>
                                                   </div>)
                                                    })}
                                             </List>
