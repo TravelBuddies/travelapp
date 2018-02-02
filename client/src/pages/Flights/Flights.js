@@ -28,7 +28,6 @@ class Flights extends Component {
 
     componentDidMount() {
         $(document).foundation();
-
         this.loadFlights();
     };
 
@@ -234,7 +233,7 @@ class Flights extends Component {
                                           </div>
                                           <div class="travel-feature-card-details">
                                             <div class="small-4 medium-2 columns travel-feature-card-image" >
-                                                <img src="https://iplegalforum.files.wordpress.com/2017/04/virgin-america-logo.jpg" />
+                                                <img src="https://iplegalforum.files.wordpress.com/2017/04/virgin-america-logo.jpg" alt= " " />
                                                 <h6>Flght No</h6>
                                             </div>
                                               <div class="small-12 medium-9 columns travel-feature-card-content">

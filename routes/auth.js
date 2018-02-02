@@ -11,7 +11,7 @@ const isAuthenticated = require('../middleware/isAuthenticated')
 
 
 module.exports = (app, passport) => {
-    console.log('something to log in')
+    // console.log('something to log in')
 
   // Using the passport.authenticate middleware with our local strategy.
   // If the user has valid login credentials, then respond with the user.
@@ -34,6 +34,7 @@ module.exports = (app, passport) => {
       next()
     }
     catch (err) {
+      console.log("abcdefgh", err)
       res.json(err)
     }
 

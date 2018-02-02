@@ -153,7 +153,7 @@ render() {
 																	<span>Rate Type: { car.rates["0"].type }</span>
 																	<span>Estimated Total: {car.estimated_total.amount} </span>
 																</h5>
-																<img src={ car.images["0"].url } alt="" /> 
+																<img src={ car.images["0"].url } alt="car" /> 
 																VEHICLE INFO:
 																<h6>Category: { car.vehicle_info.category } 
 																Transmission: { car.vehicle_info.transmission } 

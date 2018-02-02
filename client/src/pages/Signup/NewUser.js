@@ -38,6 +38,7 @@ class NewUser extends Component {
   }
 
   loadUser = () => {
+
     API.getUser()
       .then(res =>
         this.setState({ 
