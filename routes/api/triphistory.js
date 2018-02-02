@@ -14,4 +14,7 @@ router.route("/")
 //   .put(triphistoryController.update)
 //   .delete(triphistoryController.remove);
 
+router.route("/:userId")
+  .get(triphistoryController.findById)
+
 module.exports = router;

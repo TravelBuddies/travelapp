@@ -38,17 +38,20 @@ export default {
       return axios.get("/api/user");
   },
 
+  // Gets one user
+  getUserById: function(id) {
+      return axios.get("/api/user/" + id);
+  },
+
   // Saves a user to the database
   saveUser: function(userData) {
     return axios.post("/signup", userData);
   },
 
-  
   // Get user travel history
-  getTripHistory: function() {
-      return axios.get("/api/user/travelhistory");
+  getUserHistory: function(userId) {
+      return axios.get("/api/triphistory/" + userId);
   }
-
 };
    
 
