@@ -26,7 +26,7 @@ class User extends Component {
     this.loadUserHistory()
     // this.autoComp()
   }
-
+  // pass in the userId param when the user signs in or signs up
   loadUser = () => {
     API.getUserById("5a72a59ad7106e08775c4d0f")
       .then(res =>
@@ -35,6 +35,7 @@ class User extends Component {
 
       .catch(err => console.log(err));
   };
+  // pass in the userId param when the user signs in or signs up
 
   loadUserHistory = () => {
     API.getUserHistory("5a72a59ad7106e08775c4d0f")
@@ -115,7 +116,7 @@ render() {
                                             </List>
                                           </div>
                                           ) : ( <div>
-                                          somthing
+                                          
                                                 </div>
                                                 )}
                                       </div>
