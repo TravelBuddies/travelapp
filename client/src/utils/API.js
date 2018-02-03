@@ -33,8 +33,8 @@ export default {
       return axios.get(URL);
   },
   
+  // Post User login information
   userLogin: function(credentials) {
-    console.log(credentials)
     return axios.post('/login', credentials)
 
   },
@@ -54,12 +54,13 @@ export default {
     return axios.post("/api/user", userData);
   },
 
-  // Get user travel history
-
+  // Session status checking
   checkForSession: function(re, res) {
     return (axios.get('/session'))
   },
-getUserHistory: function(userId) {
+
+  // Get user History
+  getUserHistory: function(userId) {
       return axios.get("/api/triphistory/" + userId);
   }
 };
