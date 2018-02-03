@@ -29,9 +29,9 @@ app.use(session(
 require('./middleware/passport')(passport)
 app.use(passport.initialize())
 app.use(passport.session())
+
 require("./routes/auth")(app, passport)
 require("./routes")
-
 
 
 // Set up promises with mongoose

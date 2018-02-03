@@ -33,6 +33,12 @@ export default {
       return axios.get(URL);
   },
   
+  userLogin: function(credentials) {
+    console.log(credentials)
+    return axios.post('/login', credentials)
+
+  },
+
   // Gets all users
   getUser: function() {
       return axios.get("user");
@@ -40,18 +46,20 @@ export default {
 
   // Gets one user
   getUserById: function(id) {
-    console.log("shit", id)
       return axios.get("/api/user/" + id);
   },
 
   // Saves a user to the database
   saveUser: function(userData) {
-    console.log(userData)
     return axios.post("/api/user", userData);
   },
 
   // Get user travel history
-  getUserHistory: function(userId) {
+
+  checkForSession: function(re, res) {
+    return (axios.get('/session'))
+  }
+getUserHistory: function(userId) {
       return axios.get("/api/triphistory/" + userId);
   }
 };

@@ -14,27 +14,39 @@ import { DateRangePicker } from 'react-dates';
 import { Link } from "react-router-dom";
 import { List, ListItem } from "../../components/List";
 
-class NewUser extends Component {
-
+class Login extends Component {
+    
   state = {
-    NewUser: [],
-    currentPage: "signup"
+    Login: []
   };
 
   componentDidMount() {
     this.loadUser();
     $(document).foundation();
-    console.log(NewUser)
+    console.log(Login)
     // this.autoComp()
   }
 
-  loadUser = (res) => {
+  loadUser = () => {
     API.getUser()
       .then(res =>
         this.setState({ 
           User: res.data }))
 
-  
+  //         // username: "",
+  //         // firstName: "",
+  //         // lastName: "",
+  //         // password: "",
+  //         // address: '',
+  //         // city: '',
+  //         // state: '',
+  //         // zipcode: '',
+  //         // phoneNumber: '',
+  //         // paymentMethod: '',
+  //         // date: ""
+      .catch(err => console.log(err));
+  };
+
   handleInputChange = event => {
     const { name, value } = event.target;
     this.setState({
@@ -44,6 +56,9 @@ class NewUser extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
+    // if (this.state.username && this.state.firstName && this.state.lastName && this.state.password
+    // && this.state.address && this.state.city && this.state.state && this.state.zipcode 
+    // && this.state.phoneNumber) {
       API.saveUser({
         
         username: this.state.username,
@@ -59,10 +74,6 @@ class NewUser extends Component {
         .then(res => this.loadUser())
         .catch(err => console.log(err));
     }
-
-handlePageChange = page => {
-    this.setState({ currentPage: page });
-  };
     
 
   render() {
@@ -114,10 +125,9 @@ handlePageChange = page => {
                                         <Input 
                                             value={this.state.password}
                                             onChange={this.handleInputChange} 
-                                            id="pass" 
+                                            id="signup-input" 
                                             name="password" 
-                                            type="password" 
-                                            placeholder="Password"
+                                            type="signup-password" 
                                         /> 
                                     </div>
                                     <div className="floated-label-wrapper">             
@@ -199,5 +209,4 @@ handlePageChange = page => {
   }
 }
 
-export default NewUser;
-
+export default Login;
