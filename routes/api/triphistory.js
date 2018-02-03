@@ -1,13 +1,13 @@
 const router = require("express").Router();
 const triphistoryController = require("../../controllers/triphistoryController");
 
-// Matches with "/api/flights"
+// Matches with "/api/trips"
 router.route("/")
   .get(triphistoryController.findAll)
   // .delete(triphistoryController.remove);
   .post(triphistoryController.create);
   // .get(destinationController)
-// Matches with "/api/books/:id"
+// Matches with "/api/trip/:id"
 // router
 //   .route("/:id")
 //   .get(triphistoryController.findById)

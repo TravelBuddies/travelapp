@@ -1,8 +1,3 @@
-// 'use strict'
-
-// const mongoose = require('mongoose')
-
-// const db = {}
 
 module.exports = {
   User: require("./userModel"),
@@ -10,8 +5,3 @@ module.exports = {
 };
 
 
-
-// module.exports = {
-//   Book: require("./book"),
-//   User: require("./user")
-// };

@@ -39,23 +39,13 @@ const App = () =>
 
         <Route exact path="/login" component={Auth} />
         <Route exact path="/About" component={About} />
-          <Route exact path='/signup' component={NewUser} />
+        <Route exact path='/signup' component={NewUser} />
         <Route exact path="/Cards" component={Cards} />
         <Route exact path="/FAQs" component={FAQs} />
         <Route exact path="/TravelReview" component={TravelReview} />
         <Route exact path="/TravelBuddy" component={TravelBuddy} />
         <Route exact path="/Checkout" component={Checkout} />
         <Route exact path="/Cart" component={Cart} />
-
-        {/* <PrivateRoute exact path='/user' component={User} /> */}
-        {/* <PrivateRoute exact path='/checkout' component={Checkout} /> */}
-        {/* <Route exact path="/" component={Users} /> */}
-        {/* <Route exact path="/" component={Checkout} /> */}
-        
-        
-        {/* <Route exact path="/" component={Books} /> */}
-        {/* <Route exact path="/books" component={Books} /> */}
-        {/* <Route exact path="/books/:id" component={Detail} /> */}
 
         <Route component={NoMatch} />
       </Switch>

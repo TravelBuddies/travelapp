@@ -1,13 +1,11 @@
 import React, { Component } from "react";
 import { Col, Row, Container } from "../../components/Grid";
-import { Input, FormBtn } from "../../components/Form";
 import API from "../../utils/API";
 import $ from 'jquery';
 import 'foundation-sites';
 import "./User.css";
 
-import { Link } from "react-router-dom";
-import { List, ListItem } from "../../components/List";
+import { List } from "../../components/List";
 // import moment from "moment";
 // import AutoCompForm from "../../components/AutoCompForm";
 
@@ -21,7 +19,6 @@ class User extends Component {
     $(document).foundation();
     this.loadUser();
     this.loadUserHistory()
-    // this.autoComp()
   }
   // pass in the userId param when the user signs in or signs up
   loadUser = () => {
@@ -39,14 +36,12 @@ class User extends Component {
       .then(res =>
         this.setState({ 
           UserHistory: res.data }))
-       //console.log(res))
       .catch(err => console.log(err));
   };
   
 
 
   handleInputChange = event => {
-    // API.gitAutoComp()
     const { name, value } = event.target;
     this.setState({
       [name]: value

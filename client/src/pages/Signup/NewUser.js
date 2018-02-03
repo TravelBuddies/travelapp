@@ -5,14 +5,6 @@ import API from "../../utils/API";
 import $ from 'jquery';
 import 'foundation-sites';
 import "./signup.css";
-import Hero from "../../components/Hero";
-
-import 'react-dates/initialize';
-import { DateRangePicker } from 'react-dates';
-
-
-import { Link } from "react-router-dom";
-import { List, ListItem } from "../../components/List";
 
 class NewUser extends Component {
 
@@ -25,7 +17,6 @@ class NewUser extends Component {
     this.loadUser();
     $(document).foundation();
     console.log(NewUser)
-    // this.autoComp()
   }
 
   loadUser = (res) => {
