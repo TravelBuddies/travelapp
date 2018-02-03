@@ -40,23 +40,24 @@ class NewUser extends Component {
 
   loadUser = () => {
 
-    API.getUser()
-      .then(res =>
-        this.setState({ 
-          User: res.data }))
+  //   API.getUser()
+  //     .then(res =>
+  //       this.setState({ 
+  //         User: res.data }))
 
-  //         // username: "",
-  //         // firstName: "",
-  //         // lastName: "",
-  //         // password: "",
-  //         // address: '',
-  //         // city: '',
-  //         // state: '',
-  //         // zipcode: '',
-  //         // phoneNumber: '',
-  //         // paymentMethod: '',
-  //         // date: ""
-      .catch(err => console.log(err));
+  // //         // username: "",
+  // //         // firstName: "",
+  // //         // lastName: "",
+  // //         // password: "",
+  // //         // address: '',
+  // //         // city: '',
+  // //         // state: '',
+  // //         // zipcode: '',
+  // //         // phoneNumber: '',
+  // //         // paymentMethod: '',
+  // //         // date: ""
+  //     .catch(err => console.log(err));
+  console.log("poop")
   };
 
   handleInputChange = event => {
@@ -141,9 +142,10 @@ handlePageChange = page => {
                                         <Input 
                                             value={this.state.password}
                                             onChange={this.handleInputChange} 
-                                            id="signup-input" 
+                                            id="pass" 
                                             name="password" 
-                                            type="signup-password" 
+                                            type="password" 
+                                            placeholder="Password"
                                         /> 
                                     </div>
                                     <div className="floated-label-wrapper">             
@@ -206,8 +208,8 @@ handlePageChange = page => {
                                         disabled={!(this.state.username && this.state.firstName && this.state.lastName && this.state.password
                             && this.state.address && this.state.city && this.state.state && this.state.zipcode 
                             && this.state.phoneNumber)}
-                                        onClick={this.handleFormSubmit}><a href="/user">
-                                        </a>Submit Into Database
+                                        onClick={this.handleFormSubmit}>
+                                        Submit Into Database
                                     </FormBtn>
                                     </div>
                                 </form>

@@ -35,17 +35,19 @@ export default {
   
   // Gets all users
   getUser: function() {
-      return axios.get("/api/user");
+      return axios.get("user");
   },
 
   // Gets one user
   getUserById: function(id) {
+    console.log("shit", id)
       return axios.get("/api/user/" + id);
   },
 
   // Saves a user to the database
   saveUser: function(userData) {
-    return axios.post("/signup", userData);
+    console.log(userData)
+    return axios.post("/api/user", userData);
   },
 
   // Get user travel history
