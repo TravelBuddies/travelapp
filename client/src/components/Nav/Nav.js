@@ -29,7 +29,7 @@ const Nav = () =>
   // </nav>
 <section>
   <header>
-    <div id="logo"><a className="topbar-responsive-logo" src="./logo.png" href="/"><strong>Travelapp</strong></a></div>
+    <div id="logo"><a className="topbar-responsive-logo" src="./logo.png" href="/home"><strong>Travelapp</strong></a></div>
 
     <div id="cd-hamburger-menu"><a className="cd-img-replace" href="#0">Menu</a></div>
     <div id="cd-cart-trigger"><a className="cd-img-replace" href="#0">Cart</a></div>

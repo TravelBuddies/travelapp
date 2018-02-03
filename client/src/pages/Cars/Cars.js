@@ -137,25 +137,28 @@ render() {
 												{result.cars.map((car, index) => { 
 												    return(
 													    <ListItem key={index}>
-															<div className= "car-card">
-																<div className="car-card-header">
-																	<div className="row">
-																		<div className="medium-12 columns">
-																			<h5>
-																				<span>Rate: { car.rates["0"].price.amount }</span>
-																				<span>Rate Type: { car.rates["0"].type }</span>
-																				<span>Estimated Total: {car.estimated_total.amount} </span>
-																			</h5>
-																			<img src={ car.images["0"].url } alt="car" /> 
-																			VEHICLE INFO:
-																			<h6>Category: { car.vehicle_info.category } 
-																			Transmission: { car.vehicle_info.transmission } 
-																			Type: { car.vehicle_info.type } 
-																			acriss_code: { car.vehicle_info.acriss_code} </h6>
-																		</div>
-																	</div>
+													    	<div class="all-car-info">
+													    	<img src={ car.images["0"].url } alt="car" />
+
+													    	<div class="car-info">
+																	<h5>VEHICLE INFO: </h5>
+																	<br></br>
+																	<p>Category: { car.vehicle_info.category } </p>
+																	<p>Transmission: { car.vehicle_info.transmission }</p>
+																	<p>Type: { car.vehicle_info.type }</p> 
+																	
 																</div>
-															</div>		
+
+													    	<div class="daily-rates">
+													    	
+													    		{car.rates['0'].type} RATE:  ${car.rates['0'].price.amount}
+													    	
+															</div>
+																<div class="car-total">
+																	Estimated Total: ${car.estimated_total.amount}
+																</div>
+																
+															</div>
 														 </ListItem>
 													
 													)
@@ -180,19 +183,10 @@ render() {
 								</div>
 								<div class="travel-feature-card-details">
 									<div class="small-4 medium-2 columns travel-feature-card-image" >
-											<img src="https://iplegalforum.files.wordpress.com/2017/04/virgin-america-logo.jpg" alt="car" />
-											<h6>Flght No</h6>
-									</div>
-										<div class="small-12 medium-9 columns travel-feature-card-content">
-											<h6 class="travel-feature-card-date-range">Jan 31 - Feb 7</h6> 
-													<h6 class="travel-feature-card-title">Origin : Destination</h6>
-													<p>Deaprture Time : Arrival time</p>   
-										</div>
-
-										<div class="small-12 medium-3 columns travel-feature-card-price">
-											<h6>$249</h6>
 											
-										</div>
+											<h6>Rentals for your Trip</h6>
+											
+									</div>
 										
 								</div>
 							</div>

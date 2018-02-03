@@ -22,7 +22,33 @@
   position: relative;
   margin-top: 15px;
 }
- 
+ .all-car-info{
+  display: flex;
+  justify-content: space-around;
+  border-bottom: 1px solid black;
+  padding-bottom: 20px
+}
+.daily-rates {
+  position: relative;
+  font-weight: 500;
+  padding-top: 50px;
+}
+.car-info h5{
+  margin-bottom: -10px;
+  
+  padding-right: 30px;
+
+}
+.car-info p{
+
+  display: block;
+}
+.car-total{
+  padding: 30px;
+  background-color: grey;
+  color: white;
+  text-align: center;
+}
 .travel-feature-card-header .travel-feature-card-subtitle {
   float: left;
   font-weight: 800;
