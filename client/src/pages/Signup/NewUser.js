@@ -181,7 +181,7 @@ handlePageChange = page => {
                             && this.state.address && this.state.city && this.state.state && this.state.zipcode 
                             && this.state.phoneNumber)}
                                         onClick={this.handleFormSubmit}>
-                                        Submit Into Database
+                                        Submit
                                     </FormBtn>
                                     </div>
                                 </form>
