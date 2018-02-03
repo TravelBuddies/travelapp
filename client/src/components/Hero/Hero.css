@@ -55,10 +55,19 @@
   transition: all 0.15s ease-in;
   z-index: -1;
 }
+#pass {
 
+  display: -webkit-inline-box;
+  width: 300px;
+  padding: 6px;
+  margin: 4px;
+  overflow: auto;
+
+}
 .floated-label-wrapper label input[type=text],
-.floated-label-wrapper label input[type=email],
-.floated-label-wrapper label input[type=password] {
+.floated-label-wrapper label input[type=email]
+ {
+
   border-radius: 4px;
   font-size: 3em;
   padding: 0.5em;
