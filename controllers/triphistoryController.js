@@ -1,10 +1,7 @@
 const db = require("../models");
-console.log('check yo')
-// Defining methods for the booksController
+// Defining methods for the Trip History Controller
 module.exports = {
   findAll: function(req, res) {
-    console.log("check check")
-    console.log("yoyoyoyoyp", req.query)
 
     db.TripHistory
       .find({})
@@ -14,7 +11,6 @@ module.exports = {
   },
   findById: function(req, res) {
     db.TripHistory
-      //.findById(req.params.id)
       .find({ _user: req.params.userId })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));

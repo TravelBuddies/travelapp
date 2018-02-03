@@ -1,7 +1,6 @@
 const mongoose = require("mongoose");
 const bcrypt = require('bcrypt-nodejs')
 const Schema = mongoose.Schema;
-// const passportLocalMongoose = require('passport-local-mongoose')
 
 const userModel = new Schema({
   username: { type: String, required: true },
@@ -17,7 +16,6 @@ const userModel = new Schema({
   userCreated: { type: Date, default: Date.now }
 });
 
-// User.plugin(passportLocalMongoose);
 
 userModel.pre('save', function(next) {
   if(this.password) {
@@ -32,8 +30,6 @@ userModel.prototype.validPassword = function(password){
 
   next()
 })
-
-// const User = mongoose.model("User", User);
 
 // module.exports = User;
 module.exports = mongoose.model('User', userModel)

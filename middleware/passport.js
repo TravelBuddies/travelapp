@@ -6,13 +6,9 @@ const mongoose = require("mongoose");
 const { Strategy: LocalStrategy } = require('passport-local')
 // const { Strategy: GoogleStrategy } = require('passport-google-oauth20')
 const db = require('../models')
-// const User = require('../models/userModel')
 
 // Telling passport we want to use a Local Strategy. In other words, we want login with a username/username and password
 module.exports = function (passport) {
-
-  // const test = db.User({where: {username}})
-  // console.log(test)
 
   passport.use(new LocalStrategy(
     {
@@ -20,27 +16,15 @@ module.exports = function (passport) {
     },
      async function(username, password, done) {
       // When a user tries to sign in this code runs
-      console.log("passport.js file line 18 " + username, password)
       let uname = username
-      // const dbUser = await db.User.findOne({ {username} })
       const dbUser = await db.User.find({username: uname})
       
-      console.log(dbUser + " line 27")
-
       if ( !dbUser ) {
         console.log('no user, sorry')
         return done(null, false, {
           message: 'Incorrect username.'
         })
       }
-
-      // If there is a user with the given username, but the password the user gives us is incorrect
-      // else if ( !dbUser.validPassword(password) ) {
-      //   console.log('wrong password')
-      //   return done(null, false, {
-      //     message: 'Incorrect password.'
-      //   })
-      // }
 
       // If none of the above, then the user has been successfully authenticated!
       return done(null, dbUser + ' code is getting to here')
