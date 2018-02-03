@@ -16,7 +16,8 @@ import { List, ListItem } from "../../components/List";
 
 class NewUser extends Component {
   state = {
-    NewUser: []
+    NewUser: [],
+    currentPage: "signup"
     // username: "",
     // firstName: "",
     // lastName: "",
@@ -85,6 +86,10 @@ class NewUser extends Component {
         .then(res => this.loadUser())
         .catch(err => console.log(err));
     }
+
+handlePageChange = page => {
+    this.setState({ currentPage: page });
+  };
     
 
   render() {
@@ -201,8 +206,8 @@ class NewUser extends Component {
                                         disabled={!(this.state.username && this.state.firstName && this.state.lastName && this.state.password
                             && this.state.address && this.state.city && this.state.state && this.state.zipcode 
                             && this.state.phoneNumber)}
-                                        onClick={this.handleFormSubmit}>
-                                        Submit Into Database
+                                        onClick={this.handleFormSubmit}><a href="/user">
+                                        </a>Submit Into Database
                                     </FormBtn>
                                     </div>
                                 </form>
