@@ -163,7 +163,7 @@ $1,742</h5>
 		<div className="grid-container">
 		    <div className="grid-x grid-padding-x">
 		    	<div className="medium-3 cell">
-		    		<button className="button warning"><a href="/Checkout">Continue</a></button>
+		    		<button className="button warning hollow"><a href="/Checkout">Continue</a></button>
 				</div>	
 	    	</div>
 		</div>
