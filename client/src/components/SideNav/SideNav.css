@@ -1,7 +1,7 @@
 .sideNav {
   width: 15%;
-  margin: 1rem;
-  padding: .5rem;
+  margin: 1rem 0;
+  padding: .5rem 0;
   display: inline-block;
   vertical-align: top;
   
@@ -24,4 +24,8 @@
 
 .switch-toggle-wrapper .switch {
   margin-bottom: 0;
+}
+
+.reviewSwitch {
+  width: 113px;
 }
