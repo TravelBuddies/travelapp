@@ -1,12 +1,13 @@
-.hero-checkout {
-  background: url("./Checkout.jpeg") 100% no-repeat;
+.hero-cart {
+  background: url("./Cart.jpeg") 100% no-repeat;
   background-size: cover;
   height: 40vh;
   text-align: center;
 }
 
-.hero-checkout .hero-checkout-text {
+.hero-cart .hero-cart-text {
   padding-top: 10vh;
-  color: white;
+  color: black;
   text-shadow: 1px 1px 2px #0a0a0a;
 }
+

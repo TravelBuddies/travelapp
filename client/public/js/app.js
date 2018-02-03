@@ -3,7 +3,7 @@ $(document).foundation()
 $(window).scroll(function () {
 	const navScrollBG = "#6BBAA7"
 	// const navTopColor = "#FBA100"
-if ($(window).scrollTop() <= 50) {
+if ($(window).scrollTop() <= 10) {
   $('.topbar-responsive').css('background','RGBA(107, 186, 167, .6)');
 $('.menu').css('background','RGBA(107, 186, 167, 0)');
 $('.navDrop').css('background','RGBA(107, 186, 167, .6)');
