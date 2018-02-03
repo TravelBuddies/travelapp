@@ -1,3 +1,21 @@
+.hero-flightsection {
+  background: url("luft.jpeg") 20% no-repeat;
+  background-size: cover;
+  height: 70vh;
+  text-align: center;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+       
+}
+
+
 
 .travel-feature-card-header {
   margin-top: 30px;
@@ -7,27 +25,7 @@
   margin-top: 15px;
 }
 
-/*.travel-feature-card-header.icon:after {
-  font: normal normal normal 14px/1 FontAwesome;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  position: absolute;
-  left: 20px;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-      -ms-transform: translateY(-50%);
-          transform: translateY(-50%);
-  color: #fefefe;
-}*/
 
-/*.travel-feature-card-header.hotel-icon:after {
-  content: "\f236";
-}
-
-.travel-feature-card-header.car-icon:after {
-  content: "\f1b9";
-}*/
 
 .travel-feature-card-header .travel-feature-card-subtitle {
   float: left;
@@ -38,15 +36,6 @@
   color: #fff;
 }
 
-/*.travel-feature-card-header-controls a {
-  color: #fefefe;
-}
-
-.travel-feature-card-header-controls i {
-  height: 20px;
-  width: 20px;
-  margin-left: 10px;
-}*/
 
 .travel-feature-card-image {
   margin-top: 5px;
@@ -76,22 +65,6 @@
   letter-spacing: 0.5px;
   font-size: 0.8em;
 }
-
-/*.travel-feature-card-details button.added-button img {
-  margin-right: 5px;
-}
-
-.travel-feature-card-details button.added-button:hover {
-  color: #505050;
-  border: 1px solid #747474;
-}
-
-.travel-feature-card-details button.add-button {
-  color: #fff;
-  font-weight: 700;
-  letter-spacing: 0.5px;
-  font-size: 0.8em;
-}*/
 
 @media screen and (max-width: 39.9375em) {
   .travel-feature-card-content {

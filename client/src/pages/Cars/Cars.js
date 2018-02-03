@@ -7,11 +7,11 @@ import 'react-dates/initialize';
 import { DateRangePicker } from 'react-dates';
 import 'react-dates/lib/css/_datepicker.css';
 
-// import { Link } from "react-router-dom";
 import { List, ListItem } from "../../components/List";
 import moment from "moment";
 import $ from 'jquery';
 import 'foundation-sites';
+import "./Cars.css"
 
 class Cars extends Component {
   state = {
@@ -25,16 +25,8 @@ class Cars extends Component {
 
   componentDidMount() {
   	$(document).foundation();
-    // this.loadCarRentals();
   };
 
-  // loadCarRentals = () => {
-  //   API.getCars()
-  //     .then(res =>
-  //       this.setState({ cars: res.data })
-  //     )
-  //     .catch(err => console.log(err));
-  // };
 
   handleInputChange = event => {
     const { name, value } = event.target;
@@ -56,7 +48,7 @@ class Cars extends Component {
 		}
 			// Axios promise for getting the car results 
       API.getCars(params)
-		.then(res => this.setState({ cars: res.data.results }))
+				.then(res => this.setState({ cars: res.data.results }))
         .catch(err => console.log(err));
   };
 
@@ -67,7 +59,7 @@ render() {
 			<Row>
 				<Col size="md-12">
            	<section className="row columns">
-				<div className="hero-section">
+				<div className="hero-carsection">
 					<div className="hero-section-text">
 						<h1>Cars</h1>
 						<h5>Need a car?</h5>
@@ -172,34 +164,34 @@ render() {
 						</List>
 					) : (
 							<div class="travel-feature-card">
-                                <div class="travel-feature-card-header">
-	                                <div class="row">
-	                                   <div class="medium-12 columns">
-	                                     <h5 class="travel-feature-card-subtitle">Rental Company</h5>
-	                                      <div class="travel-feature-card-header-controls">
-	                                        
-	                                     </div>
-	                                  </div>
-	                                </div>  
-	                              </div>
-	                              <div class="travel-feature-card-details">
-	                                <div class="small-4 medium-2 columns travel-feature-card-image" >
-	                                    <img src="https://iplegalforum.files.wordpress.com/2017/04/virgin-america-logo.jpg" />
-	                                    <h6>Flght No</h6>
-	                                </div>
-	                                  <div class="small-12 medium-9 columns travel-feature-card-content">
-	                                    <h6 class="travel-feature-card-date-range">Jan 31 - Feb 7</h6> 
-	                                        <h6 class="travel-feature-card-title">Origin : Destination</h6>
-	                                        <p>Deaprture Time : Arrival time</p>   
-	                                  </div>
+								<div class="travel-feature-card-header">
+									<div class="row">
+											<div class="medium-12 columns">
+												<h5 class="travel-feature-card-subtitle">Rental Company</h5>
+												<div class="travel-feature-card-header-controls">
+													
+												</div>
+										</div>
+									</div>  
+								</div>
+								<div class="travel-feature-card-details">
+									<div class="small-4 medium-2 columns travel-feature-card-image" >
+											<img src="https://iplegalforum.files.wordpress.com/2017/04/virgin-america-logo.jpg" alt="car" />
+											<h6>Flght No</h6>
+									</div>
+										<div class="small-12 medium-9 columns travel-feature-card-content">
+											<h6 class="travel-feature-card-date-range">Jan 31 - Feb 7</h6> 
+													<h6 class="travel-feature-card-title">Origin : Destination</h6>
+													<p>Deaprture Time : Arrival time</p>   
+										</div>
 
-	                                  <div class="small-12 medium-3 columns travel-feature-card-price">
-	                                    <h6>$249</h6>
-	                                    
-	                                  </div>
-	                                 
-	                              </div>
-	                          </div>
+										<div class="small-12 medium-3 columns travel-feature-card-price">
+											<h6>$249</h6>
+											
+										</div>
+										
+								</div>
+							</div>
 						)}
 				</div> 
 			</section>

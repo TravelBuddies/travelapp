@@ -9,7 +9,7 @@ const Review = () =>
     <div className="row">
       <div className="small-12 medium-4 columns" id="teamLeft">
         <div className="author-image">
-          <img className="aboutImg" src={"https://statusandphoto.weebly.com/uploads/6/0/1/5/60158603/8347592_orig.png"}/>
+          <img alt=" " className="aboutImg" src={"https://statusandphoto.weebly.com/uploads/6/0/1/5/60158603/8347592_orig.png"}/>
         </div>
         
       </div>
@@ -27,7 +27,7 @@ const Review = () =>
     <div className="row">
       <div className="small-12 medium-4 columns" id="teamLeft">
         <div className="author-image">
-          <img className="aboutImg" src={"http://www.pak101.com/gallery/ActressesTv/Sumbul_Iqbal/2016/4/25/Sumbul_Iqbal_Pakistani_Female_Television_Actress_Celebrity_48_qblbq_Pak101(dot)com.jpg"}/>
+          <img alt=" " className="aboutImg" src={"http://www.pak101.com/gallery/ActressesTv/Sumbul_Iqbal/2016/4/25/Sumbul_Iqbal_Pakistani_Female_Television_Actress_Celebrity_48_qblbq_Pak101(dot)com.jpg"}/>
         </div>
         
       </div>
@@ -45,7 +45,7 @@ const Review = () =>
     <div className="row">
       <div className="small-12 medium-4 columns" id="teamLeft">
         <div className="author-image">
-          <img className="aboutImg" src={"https://style.pk/wp-content/uploads/2016/01/Sataesh-Khan-Pictures-And-Profile.jpg"}/>
+          <img alt=" " className="aboutImg" src={"https://style.pk/wp-content/uploads/2016/01/Sataesh-Khan-Pictures-And-Profile.jpg"}/>
         </div>
         
       </div>
@@ -63,7 +63,7 @@ const Review = () =>
     <div className="row">
       <div className="small-12 medium-4 columns" id="teamLeft">
         <div className="author-image">
-          <img className="aboutImg" src={"http://community.mis.temple.edu/files/avatars/16942/5a70d5a92dfde-bpfull.jpg"}/>
+          <img alt=" " className="aboutImg" src={"http://community.mis.temple.edu/files/avatars/16942/5a70d5a92dfde-bpfull.jpg"}/>
         </div>
         
       </div>

@@ -32,18 +32,6 @@ class Login extends Component {
       .then(res =>
         this.setState({ 
           User: res.data }))
-
-  //         // username: "",
-  //         // firstName: "",
-  //         // lastName: "",
-  //         // password: "",
-  //         // address: '',
-  //         // city: '',
-  //         // state: '',
-  //         // zipcode: '',
-  //         // phoneNumber: '',
-  //         // paymentMethod: '',
-  //         // date: ""
       .catch(err => console.log(err));
   };
 
@@ -56,9 +44,6 @@ class Login extends Component {
 
   handleFormSubmit = event => {
     event.preventDefault();
-    // if (this.state.username && this.state.firstName && this.state.lastName && this.state.password
-    // && this.state.address && this.state.city && this.state.state && this.state.zipcode 
-    // && this.state.phoneNumber) {
       API.saveUser({
         
         username: this.state.username,
