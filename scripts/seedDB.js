@@ -87,26 +87,26 @@ const userSeed = [
 
 const travelHistorySeed = [
 {
-        "_id": "5a6717a0b0d8d644f14228f5",
-        "fightNumber": "12543",
-        "flightDest": "JFK",
-        "flightOrg": "SFO",
-        "flightDate": "2018-01-23",
-        "flightPrice": "359.00",
-        "hotelName": "",
-        "hotelCheckIn": "",
-        "hotelCheckOut": "",
-        "hotelPrice": "",
-        "carCompany": "",
-        "carLocation": "",
-        "carType": "",
-        "carPrice": "",
-        "grandTotalPrice": "359.00",
-        "paymentMethod": "Bitcoin",
-        "_user": "5a669cfdfbcce50ee4c0a8b2",
-        "__v": 0,
-        "paymentDate": "2018-01-23T02:25:01.111Z"
-    }
+    "_id" : ObjectId("5a6717a0b0d8d644f14228f5"),
+    "fightNumber" : "12543",
+    "flightDest" : "JFK",
+    "flightOrg" : "SFO",
+    "flightDate" : "2018-01-23",
+    "flightPrice" : "359.00",
+    "hotelName" : "Crowne Plaza",
+    "hotelCheckIn" : "2018-01-23",
+    "hotelCheckOut" : "2018-01-28",
+    "hotelPrice" : "750.00",
+    "carCompany" : "Hertz",
+    "carLocation" : "New York",
+    "carType" : "Sedan",
+    "carPrice" : "800.00",
+    "grandTotalPrice" : "1,909.00",
+    "paymentMethod" : "Bitcoin",
+    "_user" : ObjectId("5a72a59ad7106e08775c4d0f"),
+    "paymentDate" : ISODate("2018-01-23T02:25:01.111Z"),
+    "__v" : 0
+}
 ]
 
 // db.User

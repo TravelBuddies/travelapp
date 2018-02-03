@@ -98,21 +98,177 @@ render() {
                                     <div className="row columns">
                                     
                                    
-                                    <h1>Your Travel History</h1>
+                                    <h1>Your Upcoming Journey</h1>
                                       <div className="floated-label-wrapper">             
                                           {this.state.UserHistory.length ? (
-                                          <div>    
+                                          <div> 
                                             
                                             <List>
+                                            <h2>Booked Flight</h2>   
+                                                {this.state.UserHistory.map(result => {
+                                                  return (
+                                                  <div>
+                                                    <p>
+                                                    To: 
+                                                    
+                                                    {result.flightDest}
+                                                    </p>
+                                                  
+                                                  </div>)
+                                                   })}
+
                                                 {this.state.UserHistory.map(result => {
                                                   return (
                                                   <div>
                                                   <p>
-                                                  flight Number:
-                                                  {result.fightNumber}
+                                                  From:
+                                                  {result.flightOrg}
                                                   </p>
+                                                  
+                                                  
                                                   </div>)
                                                    })}
+
+                                                {this.state.UserHistory.map(result => {
+                                                  return (
+                                                  <div>
+                                                  <p>
+                                                  Date:
+                                                  {result.flightDate}
+                                                  </p>
+                                                  
+                                                  
+                                                  </div>)
+                                                   })}
+                                                {this.state.UserHistory.map(result => {
+                                                  return (
+                                                  <div>
+                                                  <p>
+                                                  Total Price: $
+                                                  {result.flightPrice}
+                                                  </p>
+                                                  
+                                                  
+                                                  </div>)
+                                                   })}
+
+                                            </List>
+                                            <List>
+                                            <h2>Hotel Stay</h2>   
+                                                {this.state.UserHistory.map(result => {
+                                                  return (
+                                                  <div>
+                                                    <p>
+                                                    Hotel Name: 
+                                                    
+                                                    {result.hotelName}
+                                                    </p>
+                                                  
+                                                  </div>)
+                                                   })}
+
+                                                {this.state.UserHistory.map(result => {
+                                                  return (
+                                                  <div>
+                                                  <p>
+                                                  Check-in Date:
+                                                  {result.hotelCheckIn}
+                                                  </p>
+                                                  
+                                                  
+                                                  </div>)
+                                                   })}
+
+                                                {this.state.UserHistory.map(result => {
+                                                  return (
+                                                  <div>
+                                                  <p>
+                                                  Check-out Date:
+                                                  {result.hotelCheckOut}
+                                                  </p>
+                                                  
+                                                  
+                                                  </div>)
+                                                   })}
+                                                {this.state.UserHistory.map(result => {
+                                                  return (
+                                                  <div>
+                                                  <p>
+                                                  Total Price: $
+                                                  {result.hotelPrice}
+                                                  </p>
+                                                  
+                                                  
+                                                  </div>)
+                                                   })}
+
+                                            </List>
+                                            <List>
+                                            <h2>Car Rental</h2>   
+                                                {this.state.UserHistory.map(result => {
+                                                  return (
+                                                  <div>
+                                                    <p>
+                                                    Location: 
+                                                    
+                                                    {result.carLocation}
+                                                    </p>
+                                                  
+                                                  </div>)
+                                                   })}
+
+                                                {this.state.UserHistory.map(result => {
+                                                  return (
+                                                  <div>
+                                                  <p>
+                                                  Company:
+                                                  {result.carCompany}
+                                                  </p>
+                                                  
+                                                  
+                                                  </div>)
+                                                   })}
+
+                                                {this.state.UserHistory.map(result => {
+                                                  return (
+                                                  <div>
+                                                  <p>
+                                                  Car Type:
+                                                  {result.carType}
+                                                  </p>
+                                                  
+                                                  
+                                                  </div>)
+                                                   })}
+                                                {this.state.UserHistory.map(result => {
+                                                  return (
+                                                  <div>
+                                                  <p>
+                                                  Total Price: $
+                                                  {result.carPrice}
+                                                  </p>
+                                                  
+                                                  
+                                                  </div>)
+                                                   })}
+
+                                            </List>
+                                            <List>
+                                             
+                                                {this.state.UserHistory.map(result => {
+                                                  return (
+                                                  <div>
+                                                    <p>
+                                                    Grand Total: $ 
+                                                    
+                                                    {result.grandTotalPrice}
+                                                    </p>
+                                                  
+                                                  </div>)
+                                                   })}
+
+                                                
+
                                             </List>
                                           </div>
                                           ) : ( <div>
