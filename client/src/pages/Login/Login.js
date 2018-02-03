@@ -14,31 +14,20 @@ import { DateRangePicker } from 'react-dates';
 import { Link } from "react-router-dom";
 import { List, ListItem } from "../../components/List";
 
-class NewUser extends Component {
-
+class Login extends Component {
+    
   state = {
-    NewUser: []
-    // username: "",
-    // firstName: "",
-    // lastName: "",
-    // password: "",
-    // address: '',
-    // city: '',
-    // state: '',
-    // zipcode: '',
-    // phoneNumber: '',
-    // paymentMethod: '',
-    // date: new Date(Date.now())
+    Login: []
   };
 
   componentDidMount() {
     this.loadUser();
     $(document).foundation();
-    console.log(NewUser)
+    console.log(Login)
     // this.autoComp()
   }
 
-  loadUser = (res) => {
+  loadUser = () => {
     API.getUser()
       .then(res =>
         this.setState({ 
@@ -220,5 +209,4 @@ class NewUser extends Component {
   }
 }
 
-export default NewUser;
-
+export default Login;

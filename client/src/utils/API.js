@@ -33,20 +33,30 @@ export default {
       return axios.get(URL);
   },
   
+  userLogin: function(credentials) {
+    console.log(credentials)
+    return axios.post('/login', credentials)
+
+  },
+
   // Gets all users
-  getUser: function() {
+  getUser: function(req) {
       return axios.get("/api/user");
   },
 
   // Saves a user to the database
   saveUser: function(userData) {
-    return axios.post("/signup", userData);
+    return axios.post("/api/user", userData);
   },
 
   
   // Get user travel history
   getTripHistory: function() {
       return axios.get("/api/user/travelhistory");
+  },
+
+  checkForSession: function(re, res) {
+    return (axios.get('/session'))
   }
 
 };

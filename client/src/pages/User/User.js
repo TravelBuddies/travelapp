@@ -170,8 +170,8 @@ render() {
                           <li>Last Name --
                             <span> {User.lastName}</span>
                           </li>
-                          <li>Street --
-                            <span> {User.address}</span>
+                          <li>password --
+                            <span> {User.password}</span>
                           </li>
                           <li>City --
                             <span> {User.city}</span>
