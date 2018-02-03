@@ -4,7 +4,7 @@ console.log('check yo')
 module.exports = {
   findAll: function(req, res) {
     console.log("check check")
-        console.log("yoyoyoyoyp", req.query)
+    console.log("yoyoyoyoyp", req.query)
 
     db.TripHistory
       .find({})
@@ -14,7 +14,8 @@ module.exports = {
   },
   findById: function(req, res) {
     db.TripHistory
-      .findById(req.params.id)
+      //.findById(req.params.id)
+      .find({ _user: req.params.userId })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },

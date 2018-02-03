@@ -40,8 +40,13 @@ export default {
   },
 
   // Gets all users
-  getUser: function(req) {
-      return axios.get("/api/user");
+  getUser: function() {
+      return axios.get("user");
+  },
+
+  // Gets one user
+  getUserById: function(id) {
+      return axios.get("/api/user/" + id);
   },
 
   // Saves a user to the database
@@ -49,16 +54,14 @@ export default {
     return axios.post("/api/user", userData);
   },
 
-  
   // Get user travel history
-  getTripHistory: function() {
-      return axios.get("/api/user/travelhistory");
-  },
 
   checkForSession: function(re, res) {
     return (axios.get('/session'))
   }
-
+getUserHistory: function(userId) {
+      return axios.get("/api/triphistory/" + userId);
+  }
 };
    
 

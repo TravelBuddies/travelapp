@@ -41,7 +41,8 @@
 }
 
 /*PASSWORD STYLE NOT WORKING????*/
-input[type=signup-password] {
+#pass {
+  display: -webkit-inline-box;
 	width: 300px;
 	padding: 6px;
 	margin: 6px;

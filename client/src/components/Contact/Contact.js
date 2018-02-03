@@ -18,12 +18,9 @@ const Contact = () =>
           </div>
         </div>  
         <div className="row">
-          <label>Message *
             <textarea placeholder="Describe your needs" rows="3"></textarea>
-          </label>
         </div>
         <div className="contact-panel-actions">
-          <button className="cancel-button" data-toggle="contact-panel">Nevermind</button>
           <input type="submit" className="button submit-button" value="Submit" />
         </div>
       </form>

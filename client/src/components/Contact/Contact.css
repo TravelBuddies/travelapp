@@ -15,6 +15,9 @@
   top: -30px;
   right: 20px;
   transition: background 0.25s ease-in-out;
+  z-index: 1;
+
+
 }
 
 .contact-panel-button:after {
@@ -33,7 +36,7 @@
 
 .contact-panel {
   padding: 1rem;
-  z-index: 1;
+
   background: #0a0a0a;
   width: 350px;
   height: 375px;
@@ -80,12 +83,6 @@
   margin-bottom: 0;
 }
 
-.contact-panel .cancel-button {
-  margin-bottom: 0;
-  padding: 0.75rem 1rem;
-  color: #fefefe;
-  transition: background 0.25s ease-in-out;
-}
 
 .contact-panel .cancel-button:hover {
   background: #242424;
@@ -94,6 +91,8 @@
 
 .contact-panel.is-active {
   bottom: 0;
+  z-index: 10;
+  height: 300px;
 }
 
 @media screen and (max-width: 39.9375em) {
