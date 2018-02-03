@@ -3,7 +3,8 @@ import $ from 'jquery';
 import 'foundation-sites';
 import "./Checkout.css";
 import Contact from "../../components/Contact";
-import CartItems from "../../components/CartItems";
+import CheckoutItems from "../../components/CheckoutItems";
+
 
 class Checkout extends Component {
   state = {
@@ -27,11 +28,11 @@ class Checkout extends Component {
 
             <div className="hero-checkout-text">
               <h1>Complete your purchase</h1>
-              <h3>Don't let the deals fly away!</h3>
+              <h3>Don't let the deals walk away!</h3>
             </div>
           </div>
         </section>  
-        <CartItems></CartItems>
+        <CheckoutItems></CheckoutItems>
         <Contact></Contact>
         
       </div>  
