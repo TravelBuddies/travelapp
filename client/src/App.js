@@ -14,6 +14,7 @@ import Packages from "./pages/Packages";
 import NoMatch from "./pages/NoMatch";
 import Contact from "./components/Contact";
 import User from "./pages/User";
+import Login from "./pages/Login"
 
 import NewUser from "./pages/Signup"
 // import Checkout from "./pages/Checkout";
@@ -30,14 +31,14 @@ const App = () =>
       <Switch>
         
 
-        <Route exact path="/" component={Home} />
+        <Route exact path="/" component={Login} />
         <Route exact path="/flights" component={Flights} />
         <Route exact path="/cars" component={Cars} />
         <Route exact path="/hotels" component={Hotels} />
         <Route exact path="/packages" component={Packages} />
         <Route exact path="/user" component={User} />
 
-        <Route exact path="/login" component={Auth} />
+        <Route exact path="/home" component={Home} />
         <Route exact path="/About" component={About} />
         <Route exact path='/signup' component={NewUser} />
         <Route exact path="/Cards" component={Cards} />

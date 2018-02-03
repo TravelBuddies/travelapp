@@ -47,8 +47,7 @@ npm manifest:
       "passport": "^0.4.0",
       "passport-local": "^1.0.0",
       "passport-local-mongoose": "^4.4.0",
-      "react-dates": "^16.2.0",
-      "react-material-navbar": "^1.2.0"
+      "react-dates": "^16.2.1"
     },
     "peerDependencies": {
       "react-dates": "^16.2.0"
@@ -248,7 +247,7 @@ Lockfile:
       mixin-deep "^1.2.0"
       pascalcase "^0.1.1"
   
-  bcrypt-nodejs@^0.0.3:
+  bcrypt-nodejs@0.0.3:
     version "0.0.3"
     resolved "https://registry.yarnpkg.com/bcrypt-nodejs/-/bcrypt-nodejs-0.0.3.tgz#c60917f26dc235661566c681061c303c2b28842b"
   
@@ -521,6 +520,10 @@ Lockfile:
     version "1.0.2"
     resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
   
+  crc@3.4.4:
+    version "3.4.4"
+    resolved "https://registry.yarnpkg.com/crc/-/crc-3.4.4.tgz#9da1e980e3bd44fc5c93bf5ab3da3378d85e466b"
+  
   create-error-class@^3.0.0:
     version "3.0.2"
     resolved "https://registry.yarnpkg.com/create-error-class/-/create-error-class-3.0.2.tgz#06be7abef947a3f14a30fd610671d401bca8b7b6"
@@ -551,6 +554,10 @@ Lockfile:
     dependencies:
       hyphenate-style-name "^1.0.2"
   
+  cssom@0.2.x:
+    version "0.2.5"
+    resolved "https://registry.yarnpkg.com/cssom/-/cssom-0.2.5.tgz#2682709b5902e7212df529116ff788cd5b254894"
+  
   dashdash@^1.12.0:
     version "1.14.1"
     resolved "https://registry.yarnpkg.com/dashdash/-/dashdash-1.14.1.tgz#853cfa0f7cbe2fed5de20326b8dd581035f6e2f0"
@@ -561,15 +568,15 @@ Lockfile:
     version "1.29.0"
     resolved "https://registry.yarnpkg.com/date-fns/-/date-fns-1.29.0.tgz#12e609cdcb935127311d04d33334e2960a2a54e6"
   
-  debug@2.6.9, debug@^2.2.0, debug@^2.3.3:
-    version "2.6.9"
-    resolved "https://registry.yarnpkg.com/debug/-/debug-2.6.9.tgz#5d128515df134ff327e90a4c93f4e077a536341f"
+  debug@*, debug@^3.1.0:
+    version "3.1.0"
+    resolved "https://registry.yarnpkg.com/debug/-/debug-3.1.0.tgz#5bb5a0672628b64149566ba16819e61518c67261"
     dependencies:
       ms "2.0.0"
   
-  debug@^3.1.0:
-    version "3.1.0"
-    resolved "https://registry.yarnpkg.com/debug/-/debug-3.1.0.tgz#5bb5a0672628b64149566ba16819e61518c67261"
+  debug@2.6.9, debug@^2.2.0, debug@^2.3.3:
+    version "2.6.9"
+    resolved "https://registry.yarnpkg.com/debug/-/debug-2.6.9.tgz#5d128515df134ff327e90a4c93f4e077a536341f"
     dependencies:
       ms "2.0.0"
   
@@ -732,6 +739,20 @@ Lockfile:
       snapdragon "^0.8.1"
       to-regex "^3.0.1"
   
+  express-session@^1.15.6:
+    version "1.15.6"
+    resolved "https://registry.yarnpkg.com/express-session/-/express-session-1.15.6.tgz#47b4160c88f42ab70fe8a508e31cbff76757ab0a"
+    dependencies:
+      cookie "0.3.1"
+      cookie-signature "1.0.6"
+      crc "3.4.4"
+      debug "2.6.9"
+      depd "~1.1.1"
+      on-headers "~1.0.1"
+      parseurl "~1.3.2"
+      uid-safe "~2.1.5"
+      utils-merge "1.0.1"
+  
   express@^4.15.4:
     version "4.16.2"
     resolved "https://registry.yarnpkg.com/express/-/express-4.16.2.tgz#e35c6dfe2d64b7dca0a5cd4f21781be3299e076c"
@@ -874,6 +895,13 @@ Lockfile:
     dependencies:
       jquery ">=3.0.0"
       what-input "^4.1.3"
+  
+  foundation@^4.2.1-1:
+    version "4.2.1-1"
+    resolved "https://registry.yarnpkg.com/foundation/-/foundation-4.2.1-1.tgz#4e497e2d9737533334b1e68354cd8dd039cbc47b"
+    dependencies:
+      stylus "~0.32.1"
+      stylus-type-utils "~0.0.3"
   
   fragment-cache@^0.2.1:
     version "0.2.1"
@@ -1534,6 +1562,10 @@ Lockfile:
       for-in "^1.0.2"
       is-extendable "^1.0.1"
   
+  mkdirp@0.3.x:
+    version "0.3.5"
+    resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-0.3.5.tgz#de3e5f8961c88c787ee1368df849ac4413eca8d7"
+  
   "mkdirp@>=0.5 0", mkdirp@^0.5.1:
     version "0.5.1"
     resolved "https://registry.yarnpkg.com/mkdirp/-/mkdirp-0.5.1.tgz#30057438eac6cf7f8c4767f38648d6697d75c903"
@@ -1766,6 +1798,10 @@ Lockfile:
     dependencies:
       ee-first "1.1.1"
   
+  on-headers@~1.0.1:
+    version "1.0.1"
+    resolved "https://registry.yarnpkg.com/on-headers/-/on-headers-1.0.1.tgz#928f5d0f470d49342651ea6794b0857c100693f7"
+  
   once@^1.3.0, once@^1.3.3:
     version "1.4.0"
     resolved "https://registry.yarnpkg.com/once/-/once-1.4.0.tgz#583b1aa775961d4b113ac17d9c50baef9dd76bd1"
@@ -1808,6 +1844,23 @@ Lockfile:
     version "0.1.1"
     resolved "https://registry.yarnpkg.com/pascalcase/-/pascalcase-0.1.1.tgz#b363e55e8006ca6fe21784d2db22bd15d7917f14"
   
+  passport-local@^1.0.0:
+    version "1.0.0"
+    resolved "https://registry.yarnpkg.com/passport-local/-/passport-local-1.0.0.tgz#1fe63268c92e75606626437e3b906662c15ba6ee"
+    dependencies:
+      passport-strategy "1.x.x"
+  
+  passport-strategy@1.x.x:
+    version "1.0.0"
+    resolved "https://registry.yarnpkg.com/passport-strategy/-/passport-strategy-1.0.0.tgz#b5539aa8fc225a3d1ad179476ddf236b440f52e4"
+  
+  passport@^0.4.0:
+    version "0.4.0"
+    resolved "https://registry.yarnpkg.com/passport/-/passport-0.4.0.tgz#c5095691347bd5ad3b5e180238c3914d16f05811"
+    dependencies:
+      passport-strategy "1.x.x"
+      pause "0.0.1"
+  
   path-dirname@^1.0.0:
     version "1.0.2"
     resolved "https://registry.yarnpkg.com/path-dirname/-/path-dirname-1.0.2.tgz#cc33d24d525e099a5388c0336c6e32b9160609e0"
@@ -1833,6 +1886,10 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/pause-stream/-/pause-stream-0.0.11.tgz#fe5a34b0cbce12b5aa6a2b403ee2e73b602f1445"
     dependencies:
       through "~2.3"
+  
+  pause@0.0.1:
+    version "0.0.1"
+    resolved "https://registry.yarnpkg.com/pause/-/pause-0.0.1.tgz#1d408b3fdb76923b9543d96fb4c9dfd535d9cb5d"
   
   performance-now@^0.2.0:
     version "0.2.0"
@@ -1909,6 +1966,10 @@ Lockfile:
   qs@~6.4.0:
     version "6.4.0"
     resolved "https://registry.yarnpkg.com/qs/-/qs-6.4.0.tgz#13e26d28ad6b0ffaa91312cd3bf708ed351e7233"
+  
+  random-bytes@~1.0.0:
+    version "1.0.0"
+    resolved "https://registry.yarnpkg.com/random-bytes/-/random-bytes-1.0.0.tgz#4f68a1dc0ae58bd3fb95848c30324db75d64360b"
   
   range-parser@~1.2.0:
     version "1.2.0"
@@ -2385,6 +2446,18 @@ Lockfile:
     version "2.0.1"
     resolved "https://registry.yarnpkg.com/strip-json-comments/-/strip-json-comments-2.0.1.tgz#3c531942e908c2697c0ec344858c286c7ca0a60a"
   
+  stylus-type-utils@~0.0.3:
+    version "0.0.3"
+    resolved "https://registry.yarnpkg.com/stylus-type-utils/-/stylus-type-utils-0.0.3.tgz#f048334728bb5144ecd599c627553db64ea0a6bb"
+  
+  stylus@~0.32.1:
+    version "0.32.1"
+    resolved "https://registry.yarnpkg.com/stylus/-/stylus-0.32.1.tgz#3d28275bd9f181085f8dd0fa52a8559696978212"
+    dependencies:
+      cssom "0.2.x"
+      debug "*"
+      mkdirp "0.3.x"
+  
   supports-color@^0.2.0:
     version "0.2.0"
     resolved "https://registry.yarnpkg.com/supports-color/-/supports-color-0.2.0.tgz#d92de2694eb3f67323973d7ae3d8b55b4c22190a"
@@ -2497,6 +2570,12 @@ Lockfile:
   uid-number@^0.0.6:
     version "0.0.6"
     resolved "https://registry.yarnpkg.com/uid-number/-/uid-number-0.0.6.tgz#0ea10e8035e8eb5b8e4449f06da1c730663baa81"
+  
+  uid-safe@~2.1.5:
+    version "2.1.5"
+    resolved "https://registry.yarnpkg.com/uid-safe/-/uid-safe-2.1.5.tgz#2b3d5c7240e8fc2e58f8aa269e5ee49c0857bd3a"
+    dependencies:
+      random-bytes "~1.0.0"
   
   undefsafe@^2.0.1:
     version "2.0.1"

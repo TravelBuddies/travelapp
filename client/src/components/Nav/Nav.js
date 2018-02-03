@@ -45,7 +45,7 @@ const Nav = () =>
       <li><a href="/TravelBuddy">Travel Buddy</a></li>
       <li><a href="/Cards">Card Reviews</a></li>
       <li><a href="/TravelReview">Reviews</a></li>
-      <li><a href="/">Account</a></li>
+      <li><a href="/user">Account</a></li>
     </ul>
   </nav>
 

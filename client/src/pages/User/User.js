@@ -22,7 +22,7 @@ class User extends Component {
   }
   // pass in the userId param when the user signs in or signs up
   loadUser = () => {
-    API.getUserById("5a669cfdfbcce50ee4c0a8b2")
+    API.getUserById()
       .then(res =>
         this.setState({ 
           User: res.data }))
@@ -32,7 +32,7 @@ class User extends Component {
   // pass in the userId param when the user signs in or signs up
 
   loadUserHistory = () => {
-    API.getUserHistory("5a669cfdfbcce50ee4c0a8b2")
+    API.getUserHistory()
       .then(res =>
         this.setState({ 
           UserHistory: res.data }))
@@ -67,7 +67,7 @@ render() {
                     <section className="row columns">
                         <div className="hero-section">
                         <div className="hero-section-text">
-                            <h1>Welcome {this.state.User.username}</h1>
+                            <h1>Welcome Carmen</h1>
                             
                             <h3>Here are some trip suggestions to get you going on your next journey!</h3>
                         </div>

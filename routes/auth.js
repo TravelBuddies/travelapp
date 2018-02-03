@@ -14,7 +14,8 @@ module.exports = (app, passport) => {
   // Otherwise send an error
 
   app.post('/login', passport.authenticate('local'), ({user}, res) => {
-    res.redirect('/user')
+    console.log('auth.js line 17')
+    res.redirect('/')
  
   })
 

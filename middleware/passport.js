@@ -18,7 +18,8 @@ module.exports = function (passport) {
       // When a user tries to sign in this code runs
       let uname = username
       const dbUser = await db.User.find({username: uname})
-      
+      console.log(dbUser)
+
       if ( !dbUser ) {
         console.log('no user, sorry')
         return done(null, false, {
