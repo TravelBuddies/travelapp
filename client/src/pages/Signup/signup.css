@@ -4,6 +4,7 @@
   background-size: cover;
   height:95vh;
   text-align: center;
+  overflow: scroll;
 
 }
 .sign-up-form {
@@ -37,7 +38,7 @@
 	width: 300px;
 	padding: 3px;
 	margin: 8px;
-	overflow: auto;
+	overflow: scroll;
 }
 
 /*PASSWORD STYLE NOT WORKING????*/
