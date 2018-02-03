@@ -12,7 +12,7 @@ const Nav = () =>
     </div>
       <div id="topbar-responsive" className="topbar-responsive-links">
       <div className="top-bar-right">
-        <ul className="menu simple vertical medium-horizontal dropdown menu" data-dropdown-menu>
+        <ul className="menu simple vertical medium-horizontal dropdown menu navMenu" data-dropdown-menu>
           <li><a href="/flights">Flight</a></li>
           <li><a href="/hotels">Hotel</a></li>
           <li><a href="/cars">Car</a></li>

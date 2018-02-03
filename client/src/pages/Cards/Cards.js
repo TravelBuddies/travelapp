@@ -103,16 +103,16 @@ class Cards extends Component {
 
 
       <div className="reveal" id="requestConsultation" data-reveal>
-        <h2>Request a Card Consultation</h2>
+        <h4>Request a Card Consultation</h4>
         <form>
           <div className="grid-container">
             <div className="grid-x grid-padding-x">
-              <div className="medium-9 cell">
+              <div className="medium-6 cell">
                 <label>Name:
                   <input type="text" id="name" placeholder="Name"/>
                 </label>
               </div>
-              <div className="medium-9 cell">
+              <div className="medium-6 cell">
                 <label>Email:
                   <input type="text" id="Email" placeholder="Email"/>
                 </label>

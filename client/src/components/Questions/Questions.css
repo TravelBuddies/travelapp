@@ -3,6 +3,7 @@
   background-size: cover;
   height: 100vh;
   text-align: center;
+  overflow: scroll;
 }
 
 .hero-FAQs .hero-FAQs-text {
@@ -17,12 +18,13 @@ h4 {
 
 .material-accordion {
     margin-top: 5%;
+    height: auto;
 }
 
 .material-accordion .menu li {
     background: transparent;
     cursor: pointer;
-    color: #777;
+    color: white;
     border-bottom: 1px solid #e1e1e1;
     -webkit-transition: 0.4s;
     -moz-transition: 0.4s;
@@ -46,16 +48,12 @@ h4 {
     color: #fff;
 }
 
-.material-accordion .menu li[aria-expanded="true"] ul li[aria-expanded="true"] > a {
-        background: #e3e3e3;
-    color: #444;
-}
 
 .faq {
-  color: black;
+  color: white;
 }
 
 .answers {
-  background: rgba(128, 128, 128, 0.5);
+  background: rgba(128, 128, 128, 0.7);
   margin-left: 0px !important;
 }

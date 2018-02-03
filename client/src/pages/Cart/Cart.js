@@ -6,14 +6,14 @@ import React, { Component } from "react";
 // import Navpills from "../../components/Nav"
 import $ from 'jquery';
 import 'foundation-sites';
-import "./Checkout.css";
+import "./Cart.css";
 import Contact from "../../components/Contact";
-import CartItems from "../../components/CartItems";
 import TeamMembers from "../../components/TeamMembers";
+import CartItems from "../../components/CartItems";
 
-class Checkout extends Component {
+class Cart extends Component {
   state = {
-    currentPage: "Checkout",
+    currentPage: "Cart",
   // update here if any form details that are needed to be empty.
   };
 
@@ -54,15 +54,15 @@ class Checkout extends Component {
     return (
       <div>        
         <section>
-          <div className="hero-checkout">
-
-            <div className="hero-checkout-text">
-              <h1>Complete your purchase</h1>
-              <h3>Don't let the deals fly away!</h3>
+          <div className="hero-cart">
+            <div className="hero-cart-text">
+              <h1>Review your cart</h1>
+            </div>
+            <div className="row">
             </div>
           </div>
-        </section>  
-        <CartItems></CartItems>
+        </section> 
+        <CartItems></CartItems> 
         <Contact></Contact>
         
       </div>  
@@ -70,4 +70,4 @@ class Checkout extends Component {
   }
 } // End of class 
 
-export default Checkout;
+export default Cart;

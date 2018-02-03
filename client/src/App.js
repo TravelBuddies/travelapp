@@ -22,6 +22,7 @@ import Footer from "./components/Footer";
 import TravelReview from "./pages/TravelReview";
 import TravelBuddy from "./pages/TravelBuddy";
 import Checkout from "./pages/Checkout";
+import Cart from "./pages/Cart";
 const App = () =>
   <Router>
     <div>
@@ -44,6 +45,7 @@ const App = () =>
         <Route exact path="/TravelReview" component={TravelReview} />
         <Route exact path="/TravelBuddy" component={TravelBuddy} />
         <Route exact path="/Checkout" component={Checkout} />
+        <Route exact path="/Cart" component={Cart} />
 
         {/* <PrivateRoute exact path='/user' component={User} /> */}
         {/* <PrivateRoute exact path='/checkout' component={Checkout} /> */}
