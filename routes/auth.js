@@ -18,10 +18,11 @@ module.exports = (app, passport) => {
   // Otherwise send an error
 
   app.post('/login', passport.authenticate('local'), ({user}, res) => {
-    
+    res.redirect('/user')
     console.log('Log in is working!!!')
     console.log({user})
     // res.send({ user })
+    
     
   })
 
@@ -61,14 +62,15 @@ module.exports = (app, passport) => {
     }
 
   }, 
-  // passport.authenticate('local'), ({ user }, res) => {
-  //   console.log('new user added')
-  //   res.send({ user })
-  )
+  passport.authenticate('local'), ({ user }, res) => {
+    console.log('new user added')
+    res.redirect('/user')
+    res.send({ user })
+  });
 
-  app.get('/user', (req, res) =>{
-    res.redirect('/')
-  })
+  // app.get('/user', (req, res) =>{
+  //   res.redirect('/user')
+  // })
 
   // Route for logging user out
   app.get('/logout', (req, res) => {

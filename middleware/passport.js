@@ -21,9 +21,9 @@ module.exports = function (passport) {
      async function(username, password, done) {
       // When a user tries to sign in this code runs
       console.log("passport.js file line 18 " + username, password)
-
+      let uname = username
       // const dbUser = await db.User.findOne({ {username} })
-      const dbUser = await db.User.findAll()
+      const dbUser = await db.User.find({username: uname})
       
       console.log(dbUser + " line 27")
 
