@@ -2,6 +2,7 @@ const router = require("express").Router();
 const userController = require("../../controllers/userController");
 
 // Matches with "/api/flights"
+
 router.route("/")
   .get(userController.findAll)
   // .delete(userController.remove);

@@ -16,7 +16,8 @@ import { List, ListItem } from "../../components/List";
 
 class NewUser extends Component {
   state = {
-    NewUser: []
+    NewUser: [],
+    currentPage: "signup"
     // username: "",
     // firstName: "",
     // lastName: "",
@@ -39,23 +40,24 @@ class NewUser extends Component {
 
   loadUser = () => {
 
-    API.getUser()
-      .then(res =>
-        this.setState({ 
-          User: res.data }))
+  //   API.getUser()
+  //     .then(res =>
+  //       this.setState({ 
+  //         User: res.data }))
 
-  //         // username: "",
-  //         // firstName: "",
-  //         // lastName: "",
-  //         // password: "",
-  //         // address: '',
-  //         // city: '',
-  //         // state: '',
-  //         // zipcode: '',
-  //         // phoneNumber: '',
-  //         // paymentMethod: '',
-  //         // date: ""
-      .catch(err => console.log(err));
+  // //         // username: "",
+  // //         // firstName: "",
+  // //         // lastName: "",
+  // //         // password: "",
+  // //         // address: '',
+  // //         // city: '',
+  // //         // state: '',
+  // //         // zipcode: '',
+  // //         // phoneNumber: '',
+  // //         // paymentMethod: '',
+  // //         // date: ""
+  //     .catch(err => console.log(err));
+  console.log("poop")
   };
 
   handleInputChange = event => {
@@ -85,6 +87,10 @@ class NewUser extends Component {
         .then(res => this.loadUser())
         .catch(err => console.log(err));
     }
+
+handlePageChange = page => {
+    this.setState({ currentPage: page });
+  };
     
 
   render() {
@@ -136,9 +142,10 @@ class NewUser extends Component {
                                         <Input 
                                             value={this.state.password}
                                             onChange={this.handleInputChange} 
-                                            id="signup-input" 
+                                            id="pass" 
                                             name="password" 
-                                            type="signup-password" 
+                                            type="password" 
+                                            placeholder="Password"
                                         /> 
                                     </div>
                                     <div className="floated-label-wrapper">             
