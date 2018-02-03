@@ -22,8 +22,8 @@ const Jumbotron = ({ children }) =>
 	            <input className="userInput" type="email" id="email" name="email input" placeholder="Email" /> 
 	          </div>
 	          <div className="floated-label-wrapper">
-	            <label for="pass">Password</label>
-	            <input className="userInput" type="password" id="pass" name="password input" placeholder="Password" />
+	            <label for="passw">Password</label>
+	            <input className="userInput" type="password" id="passw" name="password input" placeholder="Password" />
 	          </div>
 	          <div className="row columns">
 	            <div id="rememberMe">
