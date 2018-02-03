@@ -31,7 +31,15 @@
   text-transform: uppercase;
   color: #fff;
 }
-
+.travel-feature-card-subtitle {
+  padding-right:600px;
+}
+.travel-feature-card-header-address {
+  color:dodgerblue;
+  margin-top: 30px;
+  background-color: #56524b;
+  /* position: relative; */
+}
 .travel-feature-card-image {
   margin-top: 5px;
   width: 100px;
@@ -148,4 +156,11 @@
 
 .bookingSearch {
   width: 5%;
+}
+
+.car-card{
+  border: solid cornflowerblue 1px;
+  padding:20px;
+  margin: 15px;
+
 }

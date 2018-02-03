@@ -121,37 +121,41 @@ render() {
 								return [
 									 
 											<li>
-											<div class="travel-feature-card">
-				                                <div class="travel-feature-card-header">
-					                                <div class="row">
-					                                   <div class="medium-12 columns">
-					                                     <h5 class="travel-feature-card-subtitle">{result.provider.company_name}</h5>
-					                                      <div class="travel-feature-card-header-address">
+												<div className="travel-feature-card">
+				                                	<div className="travel-feature-card-header">
+					                                	<div className="row">
+					                                   		<div className="medium-12 columns">
+					                                     		<h5 className="travel-feature-card-subtitle">{result.provider.company_name}</h5>
+					                                      	<div className="travel-feature-card-header-address">
 					                                        <h5>{result.address.line1} | {result.address.city} </h5>
 					                                     </div>
 					                                  </div>
 					                                </div>  
-					                              </div>
-					                              
+												</div>
 					                          </div>
+
 												{result.cars.map((car, index) => { 
 												    return(
-													
-													
 													    <ListItem key={index}>
-															
-																<h5>
-																	<span>Rate: { car.rates["0"].price.amount }</span>
-																	<span>Rate Type: { car.rates["0"].type }</span>
-																	<span>Estimated Total: {car.estimated_total.amount} </span>
-																</h5>
-																<img src={ car.images["0"].url } alt="car" /> 
-																VEHICLE INFO:
-																<h6>Category: { car.vehicle_info.category } 
-																Transmission: { car.vehicle_info.transmission } 
-																Type: { car.vehicle_info.type } 
-																acriss_code: { car.vehicle_info.acriss_code} </h6>
-															
+															<div className= "car-card">
+																<div className="car-card-header">
+																	<div className="row">
+																		<div className="medium-12 columns">
+																			<h5>
+																				<span>Rate: { car.rates["0"].price.amount }</span>
+																				<span>Rate Type: { car.rates["0"].type }</span>
+																				<span>Estimated Total: {car.estimated_total.amount} </span>
+																			</h5>
+																			<img src={ car.images["0"].url } alt="car" /> 
+																			VEHICLE INFO:
+																			<h6>Category: { car.vehicle_info.category } 
+																			Transmission: { car.vehicle_info.transmission } 
+																			Type: { car.vehicle_info.type } 
+																			acriss_code: { car.vehicle_info.acriss_code} </h6>
+																		</div>
+																	</div>
+																</div>
+															</div>		
 														 </ListItem>
 													
 													)
