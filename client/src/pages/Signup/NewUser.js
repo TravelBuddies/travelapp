@@ -33,7 +33,7 @@ class NewUser extends Component {
       .then(res =>
         this.setState({ 
           User: res.data }))
-
+}
   
   handleInputChange = event => {
     const { name, value } = event.target;

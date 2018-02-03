@@ -58,7 +58,7 @@ export default {
 
   checkForSession: function(re, res) {
     return (axios.get('/session'))
-  }
+  },
 getUserHistory: function(userId) {
       return axios.get("/api/triphistory/" + userId);
   }
