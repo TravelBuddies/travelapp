@@ -80,10 +80,10 @@ class Flights extends Component {
                                     <h1>Flights</h1>
                                     <h5>Where would you like to go?</h5>
                                 </div>
-                                <div className="translucent-form-overlay">
+                                <div className="translucent-form-overlay-booking">
                                     <form>
                                         
-                                        <div className="floated-label-wrapper">
+                                        <div className="floated-label-wrapper-booking">
                                             <Input
                                                 value={this.state.origin}
                                                 onChange={this.handleInputChange}
@@ -92,7 +92,7 @@ class Flights extends Component {
                                                 placeholder="Departure Airport"
                                             />
                                         </div>
-                                        <div className="floated-label-wrapper">
+                                        <div className="floated-label-wrapper-booking">
                                             <Input
                                                 value={this.state.destination}
                                                 onChange={this.handleInputChange}
@@ -101,7 +101,7 @@ class Flights extends Component {
                                                 placeholder="Destination Airport"
                                             />
                                         </div>
-                                        <div className="floated-label-wrapper">
+                                        <div className="floated-label-wrapper-booking">
                                             <DateRangePicker
                                                 startDate={this.state.startDate} // momentPropTypes.momentObj or null,
                                                 startDateId="your_unique_start_date_id" // PropTypes.string.isRequired,
@@ -112,10 +112,10 @@ class Flights extends Component {
                                                 onFocusChange={focusedInput => this.setState({ focusedInput })} // PropTypes.func.isRequired,
                                             />
                                         </div>
-                                        <div> </div>
+        
                                         <FormBtn
                                             disabled={!(this.state.startDate && this.state.origin && this.state.destination)} //&& this.state.endDate
-                                            onClick={this.handleFormSubmit}>
+                                            onClick={this.handleFormSubmit} className="bookingSearch">
                                             Search
                                         </FormBtn>
                                     </form>
