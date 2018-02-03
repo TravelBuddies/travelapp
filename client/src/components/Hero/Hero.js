@@ -32,9 +32,9 @@ const Jumbotron = ({ children }) =>
 	            </div>
 	          </div>
 	          <div className="row columns">
-	            <button type="button" className="primary button expanded search-button" id="logInButton">
+	            <button type="button" className="primary button expanded search-button" id="logInButton"><a href="/" className="register">
 	                Login
-	            </button>
+	            </a></button>
 	          </div>
 	            <p id="register"><a href="/signup" className="register">New users Register Here</a></p>
 	       </form>

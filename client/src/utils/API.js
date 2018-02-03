@@ -33,9 +33,15 @@ export default {
       return axios.get(URL);
   },
   
+  userLogin: function(credentials) {
+    console.log(credentials)
+    return axios.post('/login', credentials)
+
+  },
+
   // Gets all users
   getUser: function() {
-      return axios.get("/api/user");
+      return axios.get("user");
   },
 
   // Gets one user
@@ -45,11 +51,15 @@ export default {
 
   // Saves a user to the database
   saveUser: function(userData) {
-    return axios.post("/signup", userData);
+    return axios.post("/api/user", userData);
   },
 
   // Get user travel history
-  getUserHistory: function(userId) {
+
+  checkForSession: function(re, res) {
+    return (axios.get('/session'))
+  }
+getUserHistory: function(userId) {
       return axios.get("/api/triphistory/" + userId);
   }
 };

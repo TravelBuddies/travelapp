@@ -4,7 +4,7 @@ console.log('check yo')
 module.exports = {
   findAll: function(req, res) {
     console.log("check check")
-        console.log("yoyoyoyoyp", req.query)
+        console.log("yoyoyoyoyp", req.body)
 
     db.User
       .find({})
@@ -13,13 +13,14 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
   findById: function(req, res) {
-    console.log(req.params.id)
+    console.log("jake", req.params.id)
     db.User
       .findById(req.params.id)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
   create: function(req, res) {
+    console.log(req.body)
     db.User
       .create(req.body)
       .then(dbModel => res.json(dbModel))

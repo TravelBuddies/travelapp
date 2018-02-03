@@ -24,13 +24,14 @@ class Auth extends Component {
     API.checkForSession()
       .then( res => {
         const { user } = res.data
-
+        
         if ( user ) {
           AuthInterface.login( user )
           this.setState({ loggedIn: true })
         }
       })
       .catch(() => {})
+
   }
 
   handleInputChange = event => {
@@ -43,13 +44,16 @@ class Auth extends Component {
   handleFormSubmit = event => {
     event.preventDefault()
 
-    const { username, password, newUser } = this.state
+    const { username, password } = this.state
+    console.log(this.state)
 
     if ( !(username && password) ) return
 
-    const authMethod = newUser ? 'signup' : 'login'
+    // const authMethod = NewUser ? 'signup' : 'login'
+    const credentials = { username, password }
+    console.log(credentials)
 
-    API[ authMethod ]({ username, password })
+    API.userLogin( credentials )
       .then( res => {
         const { errors, user } = res.data
 
@@ -64,6 +68,21 @@ class Auth extends Component {
       .catch(console.error)
   }
 
+  //   API.getUser( {username, password} )
+  //     .then( res => {
+  //       const { errors, user } = res.data
+
+  //       if ( errors ) {
+  //         return this.setState({ errors })
+  //       }
+
+  //       AuthInterface.login( user )
+  //       this.setState({ loggedIn: true })
+
+  //     })
+  //     .catch(console.error)
+  // }
+
   dismissError = idx => {
     const { errors } = this.state
 
@@ -74,7 +93,7 @@ class Auth extends Component {
 
   render() {
     const { loggedIn, newUser, errors, username, password } = this.state
-
+    console.log(this.state)
     if ( loggedIn ) {
       return (
         <Redirect to='/' />
