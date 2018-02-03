@@ -72,10 +72,10 @@ render() {
 						<h1>Cars</h1>
 						<h5>Need a car?</h5>
 					</div>
-					<div className="translucent-form-overlay">
+					<div className="translucent-form-overlay-booking">
 						<form>
 							<div className="row columns"></div>
-							<div className="floated-label-wrapper">	            
+							<div className="floated-label-wrapper-booking">	            
 								<Input 
 									value={this.state.location}
 									onChange={this.handleInputChange} 
@@ -84,7 +84,7 @@ render() {
 									placeholder="City" 
 								/>
 							</div>
-							<div className="floated-label-wrapper">	            
+							<div className="floated-label-wrapper-booking">	            
 								<Input 
 									value={this.state.category}
 									onChange={this.handleInputChange} 
@@ -93,16 +93,16 @@ render() {
 									placeholder="Category" 
 								/>
 							</div>
-							<div className="floated-label-wrapper">	            
+							<div className="floated-label-wrapper-booking">	            
 								<Input 
 									value={this.state.type}
 									onChange={this.handleInputChange} 
 									id="type" 
 									name="type" 
-									placeholder="Type (Sedan, Coupe, SUV)" 
+									placeholder="Type(Sedan, Coupe)" 
 								/>
 							</div>
-							<div className="floated-label-wrapper">
+							<div className="floated-label-wrapper-booking">
 							<DateRangePicker
 								startDate={this.state.startDate} // momentPropTypes.momentObj or null,
 								startDateId="your_unique_start_date_id" // PropTypes.string.isRequired,

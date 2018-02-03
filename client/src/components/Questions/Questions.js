@@ -4,9 +4,9 @@ import "./Questions.css";
 
 const Questions = () =>
 <section>    
-<header>    
+<div className="faq-hero">    
     <h1>FAQs</h1>
-</header>
+</div>
 <section className="cd-faq">
     <ul className="cd-faq-categories">
         <li><a href="#basics">Basics</a></li>

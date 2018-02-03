@@ -190,3 +190,30 @@
   width: 20px;
   margin-left: 10px;
 }
+
+
+
+.floated-label-wrapper-booking {
+  padding: 10px;
+  background-color: rgba(128, 128, 128, .5);
+}
+
+
+
+.DateRangePickerInput__withBorder {
+  border: none !important;
+}
+
+.DateRangePickerInput {
+  background-color: transparent !important;
+  
+}
+
+.DateInput_input {
+  margin: 0px;
+  display: inline-block;
+}
+
+.bookingSearch {
+  width: 5%;
+}

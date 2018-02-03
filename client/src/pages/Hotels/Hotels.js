@@ -73,10 +73,10 @@ render() {
 								<h1>Hotels</h1>
 								<h5>Need a Place to Stay?</h5>
 							</div>
-							<div className="translucent-form-overlay">
+							<div className="translucent-form-overlay-booking">
 								<form>
 									<div className="row columns"></div>
-									<div className="floated-label-wrapper">	            
+									<div className="floated-label-wrapper-booking">	            
 										<Input 
 											value={this.state.location}
 											onChange={this.handleInputChange} 
@@ -85,7 +85,7 @@ render() {
 											placeholder="City" 
 										/>
 									</div>
-									<div className="floated-label-wrapper">
+									<div className="floated-label-wrapper-booking">
 									<DateRangePicker
 										startDate={this.state.startDate} // momentPropTypes.momentObj or null,
 										startDateId="your_unique_start_date_id" // PropTypes.string.isRequired,
