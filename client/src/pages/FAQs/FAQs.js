@@ -10,6 +10,7 @@ import Questions from "../../components/Questions";
 import Contact from "../../components/Contact";
 
 
+
 class FAQs extends Component {
   state = {
     currentPage: "FAQs",
@@ -52,7 +53,6 @@ class FAQs extends Component {
   render() {
     return (
       <div>        
-        
         <Questions></Questions>
         <Contact></Contact>
         

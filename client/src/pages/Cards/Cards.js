@@ -96,7 +96,7 @@ class Cards extends Component {
               <option value="option2">United Airlines</option>
               
             </select>
-            <button className="basic button">Search</button>
+            <button className="basic button cardSearch">Search</button>
           </div>
         </div>
       </div>

@@ -26,3 +26,9 @@ form {
 label {
   display: block;
 }
+
+.cardSearch {
+  margin-top: 10px;
+  padding-left: 12px;
+  padding-right: 12;
+}

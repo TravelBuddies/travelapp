@@ -13,7 +13,7 @@ const SideNav = () =>
         <span className="show-for-sr">Recent</span>
       </label>
     </div>
-    <span>Recent</span>
+    <span className="reviewSwitch">Recent</span>
   </div>
 
   <div className="switch-toggle-wrapper">
@@ -23,7 +23,7 @@ const SideNav = () =>
         <span className="show-for-sr">Best Offer</span>
       </label>
     </div>
-    <span>Best Offer</span>
+    <span className="reviewSwitch">Best Offer</span>
   </div>
 
   <div className="switch-toggle-wrapper">
@@ -33,7 +33,7 @@ const SideNav = () =>
         <span className="show-for-sr">No FX Fee</span>
       </label>
     </div>
-    <span>No FX Fee</span>
+    <span className="reviewSwitch">No FX Fee</span>
   </div>
 
   <div className="switch-toggle-wrapper">
@@ -43,7 +43,7 @@ const SideNav = () =>
         <span className="show-for-sr">No Annual Fee</span>
       </label>
     </div>
-    <span>No Annual Fee</span>
+    <span className="reviewSwitch">No Annual Fee</span>
   </div>
 
   <div className="switch-toggle-wrapper">
@@ -53,7 +53,7 @@ const SideNav = () =>
         <span className="show-for-sr">Airport Lounges</span>
       </label>
     </div>
-    <span>Airport Lounges</span>
+    <span className="reviewSwitch">Airport Lounges</span>
   </div>
 
 </aside>

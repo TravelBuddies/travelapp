@@ -118,7 +118,7 @@ const CardReview = () =>
           <button className="button basic apply small">Apply</button>
         </div>
         <div className="cardDesc">
-          <h3 className="cardName">Citi AAdvantage Executive World Elite </h3>
+          <h3 className="cardName">AA Executive World Elite </h3>
           <h4 className="annualFee">Annual Fee: $450</h4>
           <h5>Benefits</h5>
           <ul className="listOne">
